@@ -1,0 +1,48 @@
+{
+    "name": "dekos-ag",
+    "version": "1.0.0",
+    "description": "DEK-OS otimizado para orquestração via Antigravity",
+    "squads": {
+        "creative": {
+            "path": "squads/creative",
+            "agents": [
+                "copywriter",
+                "social-media",
+                "designer"
+            ]
+        },
+        "engineering": {
+            "path": "squads/engineering",
+            "agents": [
+                "developer",
+                "qa-tester"
+            ]
+        },
+        "growth": {
+            "path": "squads/growth",
+            "agents": [
+                "scout",
+                "onboarding"
+            ]
+        },
+        "performance": {
+            "path": "squads/performance",
+            "agents": [
+                "media-buyer",
+                "auditor"
+            ]
+        },
+        "success": {
+            "path": "squads/success",
+            "agents": [
+                "concierge",
+                "reporting",
+                "data-scientist",
+                "seo-specialist"
+            ]
+        }
+    },
+    "playbooks": "playbooks/",
+    "skills": "skills/",
+    "workflows": ".agents/workflows/"
+}
