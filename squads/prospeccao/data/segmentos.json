@@ -1,0 +1,35 @@
+{
+  "_descricao": "Segmentos priorizados pela DekMidia com ticket estimado e gancho de abertura.",
+  "tier_1": {
+    "descricao": "Ticket alto - R$ 2.000 a R$ 8.000/mes",
+    "segmentos": [
+      { "nome": "clinica odontologica", "ticket_min": 2000, "ticket_max": 5000, "gancho": "pacientes nao encontram via Google" },
+      { "nome": "clinica estetica",     "ticket_min": 2000, "ticket_max": 6000, "gancho": "alta concorrencia - diferenciacao digital urgente" },
+      { "nome": "clinica medica",       "ticket_min": 2500, "ticket_max": 7000, "gancho": "busca local altissima, poucos investem em trafego" },
+      { "nome": "academia",             "ticket_min": 1500, "ticket_max": 4000, "gancho": "sazonalidade exige captacao constante" },
+      { "nome": "imobiliaria",          "ticket_min": 3000, "ticket_max": 8000, "gancho": "leads qualificados sao caros - SEO reduz custo" },
+      { "nome": "construtora",          "ticket_min": 3000, "ticket_max": 8000, "gancho": "ciclo de venda longo exige presenca permanente" },
+      { "nome": "auto center",          "ticket_min": 1500, "ticket_max": 4000, "gancho": "busca local altissima por revisao e reparo" },
+      { "nome": "escritorio contabil",  "ticket_min": 1500, "ticket_max": 4000, "gancho": "diferenciacao digital quase zero no setor" },
+      { "nome": "escola de idiomas",    "ticket_min": 1500, "ticket_max": 3500, "gancho": "matriculas sazonais precisam de captacao antecipada" },
+      { "nome": "advogado",             "ticket_min": 1500, "ticket_max": 5000, "gancho": "reputacao digital e decisiva na escolha" }
+    ]
+  },
+  "tier_2": {
+    "descricao": "Ticket medio - R$ 800 a R$ 2.000/mes",
+    "segmentos": [
+      { "nome": "restaurante",        "ticket_min": 800,  "ticket_max": 2000, "gancho": "delivery e reservas dependem de visibilidade local" },
+      { "nome": "salao de beleza",    "ticket_min": 800,  "ticket_max": 1800, "gancho": "fidelizacao via Instagram e Google" },
+      { "nome": "pet shop",           "ticket_min": 800,  "ticket_max": 1800, "gancho": "mercado em crescimento, poucas PMEs investem em digital" },
+      { "nome": "clinica veterinaria","ticket_min": 1000, "ticket_max": 2500, "gancho": "urgencias veterinarias sao buscas de alta intencao" },
+      { "nome": "loja de roupas",     "ticket_min": 800,  "ticket_max": 2000, "gancho": "Instagram e vendas online como canal principal" }
+    ]
+  },
+  "tier_3": {
+    "descricao": "Ticket basico - R$ 400 a R$ 800/mes",
+    "segmentos": [
+      { "nome": "profissional autonomo", "ticket_min": 400, "ticket_max": 800 },
+      { "nome": "comercio geral",        "ticket_min": 400, "ticket_max": 800 }
+    ]
+  }
+}

@@ -2,8 +2,7 @@
 title: Sistema de Lead Scoring DekMidia
 tags: [scoring, qualificacao, leads, priorizacao]
 author: DekMidia
-version: 1.0
-updated: 2025-01
+version: "1.0.0"
 squads_que_usam: [Prospeccao]
 ---
 
@@ -11,55 +10,60 @@ squads_que_usam: [Prospeccao]
 
 ## Logica do Sistema
 
-O scoring DekMidia avalia 4 dimensoes (A, B, C, D) com peso total de 100 pontos.
-O objetivo e priorizar o tempo da equipe: leads quentes primeiro, sempre.
+O scoring avalia 4 dimensoes (A, B, C, D) com peso total de 100 pontos.
+Use a skill `skills/lead-scoring.ts` para calcular automaticamente.
 
-## Dimensao A — Potencial de Receita (0-30 pts)
+## Dimensao A - Potencial de Receita (0-30)
 
-| Criterio | Pontos | Como Verificar |
-|---|---|---|
-| Segmento de ticket alto | +10 | Comparar com tabela de segmentos Tier 1 |
-| Cidade com >100k hab. ou alto fluxo turistico | +10 | Populacao estimada ou cidade de litoral |
-| Negocio operando ha mais de 3 anos | +10 | Volume de reviews + data das primeiras |
++10: Segmento Tier 1 (data/segmentos.json)
++10: Cidade > 100k hab. ou alto fluxo turistico
++10: Negocio com sinais de mais de 3 anos de operacao
 
-## Dimensao B — Dor Digital (0-30 pts)
+## Dimensao B - Dor Digital (0-30)
 
-| Criterio | Pontos | Como Verificar |
-|---|---|---|
-| Sem site ou PageSpeed mobile < 50 | +10 | Google PageSpeed Insights |
-| Sem anuncios pagos (Google + Meta) | +10 | Ad Library + Transparency Center |
-| Google Meu Negocio desatualizado (>30 dias) | +10 | Verificar data do ultimo post/foto |
++10: Sem site ou PageSpeed mobile < 50 (pagespeed.web.dev)
++10: Sem anuncios pagos Google + Meta
++10: Google Meu Negocio desatualizado (> 30 dias sem post)
 
-## Dimensao C — Validacao do Negocio (0-20 pts)
+## Dimensao C - Validacao do Negocio (0-20)
 
-| Criterio | Pontos | Como Verificar |
-|---|---|---|
-| Avaliacao Google > 4.2 com >30 reviews | +10 | Google Maps |
-| Decisor identificado com LinkedIn ativo | +10 | LinkedIn search |
++10: Avaliacao Google > 4.2 com mais de 30 reviews
++10: Decisor identificado com LinkedIn ativo
 
-## Dimensao D — Acessibilidade (0-20 pts)
+## Dimensao D - Acessibilidade para Contato (0-20)
 
-| Criterio | Pontos | Como Verificar |
-|---|---|---|
-| WhatsApp comercial identificado | +10 | Google Maps ou site |
-| E-mail ou LinkedIn do decisor | +10 | Hunter.io, Apollo.io ou LinkedIn |
++10: WhatsApp comercial identificado e verificado
++10: E-mail comercial ou LinkedIn do decisor
+
+---
 
 ## Tabela de Classificacao
 
-| Range | Status | SLA de Abordagem | Servico Mais Provavel |
-|---|---|---|---|
-| 80-100 | QUENTE | 24 horas | Pacote completo ou servico principal |
-| 50-79 | MORNO | 72 horas | Servico especifico + diagnostico gratuito |
-| 20-49 | FRIO | Nutricao | Conteudo educativo por email/social |
-| 0-19 | DESQUALIFICADO | Arquivar | N/A |
+| Score  | Status         | SLA      | Acao                        |
+|--------|----------------|----------|-----------------------------|
+| 80-100 | QUENTE         | 24 horas | Acionar Agente Abordagem    |
+| 50-79  | MORNO          | 72 horas | Diagnostico como isca       |
+| 20-49  | FRIO           | Mensal   | Sequencia de nutricao       |
+| 0-19   | DESQUALIFICADO | -        | Arquivar com motivo         |
+
+---
 
 ## Exemplos Praticos
 
-**Lead Quente (score 85):**
-Clinica estetica em SJC, 4.5 estrelas, 120 reviews, sem site, sem anuncios, WhatsApp Business verificado, decisora identificada no LinkedIn. Score: A(30) + B(20) + C(20) + D(15) = 85.
+### Lead Quente - Score 85
 
-**Lead Morno (score 55):**
-Restaurante em Santos, 4.1 estrelas, 45 reviews, tem site lento, sem anuncios, WhatsApp identificado, sem LinkedIn do decisor. Score: A(10) + B(20) + C(10) + D(10) = 50.
+Clinica estetica em SJC, 4.5 estrelas, 120 reviews, sem site,
+sem anuncios, WhatsApp Business, decisora no LinkedIn.
+A(30) + B(20) + C(20) + D(15) = 85 - QUENTE
 
-**Lead Frio (score 20):**
-Loja de roupas em cidade pequena, 3.8 estrelas, 8 reviews, tem site ok, ja roda Meta Ads, so tem telefone fixo. Score: A(0) + B(10) + C(0) + D(10) = 20.
+### Lead Morno - Score 50
+
+Restaurante em Santos, 4.1 estrelas, 45 reviews, site lento
+(PageSpeed 38), sem anuncios, WhatsApp identificado.
+A(20) + B(20) + C(0) + D(10) = 50 - MORNO
+
+### Lead Frio - Score 10
+
+Loja em cidade pequena, 3.8 estrelas, 8 reviews, site ok,
+ja roda Meta Ads, so tem telefone fixo.
+A(10) + B(0) + C(0) + D(0) = 10 - DESQUALIFICADO

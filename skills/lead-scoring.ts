@@ -1,103 +1,116 @@
 /**
  * Skill: Lead Scoring
  * Squad: Prospeccao
- * Versao: 1.0
+ * Versao: 1.0.0
  *
- * Calcula o score de um lead com base nos criterios do sistema DekMidia.
- * Retorna score (0-100), classificacao e proxima acao recomendada.
+ * Calcula o score de um lead com base nos 4 criterios DekMidia (A, B, C, D).
+ * Retorna score (0-100), classificacao, nivel de maturidade e proxima acao.
+ *
+ * Uso:
+ *   import { calcularLeadScore } from '../skills/lead-scoring';
+ *   const result = calcularLeadScore(dadosDoLead);
  */
 
-interface LeadData {
-  segmento: string;
-  cidade: string;
-  populacao_estimada?: number;
-  anos_operacao_estimado?: number;
+export interface LeadData {
+  // Dimensao A - Potencial de Receita
+  segmento_tier: 1 | 2 | 3;
+  populacao_cidade_acima_100k: boolean;
+  anos_operacao_estimado: number;
+
+  // Dimensao B - Dor Digital
   tem_site: boolean;
-  pagespeed_mobile?: number;
+  pagespeed_mobile?: number;           // 0-100, undefined se nao verificado
   tem_ads_google: boolean;
   tem_ads_meta: boolean;
-  google_perfil_atualizado: boolean; // posts nos ultimos 30 dias
+  google_perfil_atualizado: boolean;   // true = posts nos ultimos 30 dias
+
+  // Dimensao C - Validacao do Negocio
   google_avaliacao?: number;
   google_reviews_count?: number;
   decisor_linkedin_ativo: boolean;
+
+  // Dimensao D - Acessibilidade
   whatsapp_comercial: boolean;
-  email_decisor: boolean;
+  email_ou_linkedin_decisor: boolean;
 }
 
-interface ScoreResult {
+export interface ScoreResult {
   score: number;
   breakdown: { A: number; B: number; C: number; D: number };
   classificacao: 'quente' | 'morno' | 'frio' | 'desqualificado';
+  sla: string;
   nivel_maturidade: 0 | 1 | 2 | 3 | 4;
   servico_recomendado: string;
   proximo_passo: string;
   justificativa: string;
 }
 
-const SEGMENTOS_TIER1 = [
-  'clinica odontologica', 'clinica estetica', 'clinica medica',
-  'academia', 'imobiliaria', 'construtora', 'auto center',
-  'escritorio contabil', 'escola de idiomas', 'advogado'
-];
+const SERVICO_POR_NIVEL: Record<number, string> = {
+  0: 'pacote-completo',
+  1: 'site + google-ads',
+  2: 'google-ads + meta-ads',
+  3: 'whatsapp-auto + funil-vendas',
+  4: 'auditoria + gestao-integrada',
+};
 
-function calcularLeadScore(lead: LeadData): ScoreResult {
-  let A = 0, B = 0, C = 0, D = 0;
+export function calcularLeadScore(lead: LeadData): ScoreResult {
+  // Dimensao A
+  let A = 0;
+  if (lead.segmento_tier === 1)           A += 10;
+  if (lead.populacao_cidade_acima_100k)   A += 10;
+  if (lead.anos_operacao_estimado >= 3)   A += 10;
 
-  // Dimensao A — Potencial de Receita
-  if (SEGMENTOS_TIER1.some(s => lead.segmento.toLowerCase().includes(s))) A += 10;
-  if ((lead.populacao_estimada && lead.populacao_estimada > 100000)) A += 10;
-  if (lead.anos_operacao_estimado && lead.anos_operacao_estimado >= 3) A += 10;
-
-  // Dimensao B — Dor Digital
-  if (!lead.tem_site || (lead.pagespeed_mobile !== undefined && lead.pagespeed_mobile < 50)) B += 10;
+  // Dimensao B
+  let B = 0;
+  const siteFraco = !lead.tem_site ||
+    (lead.pagespeed_mobile !== undefined && lead.pagespeed_mobile < 50);
+  if (siteFraco)                          B += 10;
   if (!lead.tem_ads_google && !lead.tem_ads_meta) B += 10;
-  if (!lead.google_perfil_atualizado) B += 10;
+  if (!lead.google_perfil_atualizado)     B += 10;
 
-  // Dimensao C — Validacao
-  if (lead.google_avaliacao && lead.google_avaliacao >= 4.2 &&
-      lead.google_reviews_count && lead.google_reviews_count >= 30) C += 10;
-  if (lead.decisor_linkedin_ativo) C += 10;
+  // Dimensao C
+  let C = 0;
+  const avaliacaoOk =
+    (lead.google_avaliacao ?? 0) >= 4.2 &&
+    (lead.google_reviews_count ?? 0) >= 30;
+  if (avaliacaoOk)                        C += 10;
+  if (lead.decisor_linkedin_ativo)        C += 10;
 
-  // Dimensao D — Acessibilidade
-  if (lead.whatsapp_comercial) D += 10;
-  if (lead.email_decisor) D += 10;
+  // Dimensao D
+  let D = 0;
+  if (lead.whatsapp_comercial)            D += 10;
+  if (lead.email_ou_linkedin_decisor)     D += 10;
 
   const score = A + B + C + D;
 
-  // Classificacao
-  let classificacao: ScoreResult['classificacao'];
-  if (score >= 80) classificacao = 'quente';
-  else if (score >= 50) classificacao = 'morno';
-  else if (score >= 20) classificacao = 'frio';
-  else classificacao = 'desqualificado';
+  const classificacao =
+    score >= 80 ? 'quente' :
+    score >= 50 ? 'morno'  :
+    score >= 20 ? 'frio'   : 'desqualificado';
 
-  // Nivel de maturidade digital
-  let nivel_maturidade: ScoreResult['nivel_maturidade'] = 0;
-  if (!lead.tem_site) nivel_maturidade = 0;
-  else if (!lead.tem_ads_google && !lead.tem_ads_meta) nivel_maturidade = 2;
-  else nivel_maturidade = 3;
+  const sla =
+    classificacao === 'quente'        ? 'Abordar em ate 24h'        :
+    classificacao === 'morno'         ? 'Abordar em ate 72h'        :
+    classificacao === 'frio'          ? 'Nutricao mensal'           :
+                                        'Arquivar com justificativa';
 
-  // Servico recomendado
-  const servicoMap: Record<number, string> = {
-    0: 'pacote-completo',
-    1: 'site + google-ads',
-    2: 'google-ads + meta-ads',
-    3: 'whatsapp-auto + funil',
-    4: 'auditoria-gestao-integrada'
-  };
+  let nivel_maturidade: ScoreResult['nivel_maturidade'];
+  if (!lead.tem_site)                                     nivel_maturidade = 0;
+  else if (!lead.tem_ads_google && !lead.tem_ads_meta)    nivel_maturidade = 2;
+  else if (lead.tem_ads_google || lead.tem_ads_meta)      nivel_maturidade = 3;
+  else                                                    nivel_maturidade = 4;
 
   return {
     score,
     breakdown: { A, B, C, D },
     classificacao,
+    sla,
     nivel_maturidade,
-    servico_recomendado: servicoMap[nivel_maturidade],
-    proximo_passo: classificacao === 'quente' ? 'Abordar em 24h via WhatsApp'
-                  : classificacao === 'morno' ? 'Agendar abordagem em 72h'
-                  : classificacao === 'frio' ? 'Incluir em sequencia de nutricao'
-                  : 'Arquivar com justificativa',
-    justificativa: `Score ${score}/100 — A:${A} B:${B} C:${C} D:${D}. Classificado como ${classificacao}.`
+    servico_recomendado: SERVICO_POR_NIVEL[nivel_maturidade],
+    proximo_passo: sla,
+    justificativa:
+      `Score ${score}/100 | A:${A} B:${B} C:${C} D:${D} | ` +
+      `${classificacao.toUpperCase()} | Nivel ${nivel_maturidade} | ` +
+      `Servico: ${SERVICO_POR_NIVEL[nivel_maturidade]}`,
   };
 }
-
-export { calcularLeadScore, LeadData, ScoreResult };

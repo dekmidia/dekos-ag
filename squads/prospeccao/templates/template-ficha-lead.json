@@ -1,0 +1,51 @@
+{
+  "_instrucoes": "Use este template para cada novo lead. Nunca entregue com campos obrigatorios vazios.",
+  "_campos_obrigatorios": ["id", "nome_empresa", "segmento", "cidade", "regiao"],
+
+  "id": "YYYYMMDD-SEGMENTO-001",
+  "data_captura": "ISO8601",
+  "fonte": "google-maps|linkedin|indicacao",
+
+  "nome_empresa": "",
+  "segmento": "",
+  "segmento_tier": "1|2|3",
+  "cidade": "",
+  "regiao": "vale-paraiba|rmsp|litoral-norte|litoral-sul|campinas",
+  "endereco": "",
+
+  "contato_whatsapp": "",
+  "contato_email": "",
+  "contato_linkedin_empresa": "",
+  "contato_linkedin_decisor": "",
+  "nome_decisor": "",
+  "cargo_decisor": "",
+
+  "site_url": "",
+  "site_speed_mobile": null,
+  "site_speed_desktop": null,
+  "tem_site": false,
+
+  "google_avaliacao": null,
+  "google_reviews_count": null,
+  "google_perfil_ativo": null,
+  "google_ultima_atualizacao": "",
+
+  "tem_ads_google": false,
+  "tem_ads_meta": false,
+  "instagram_handle": "",
+  "instagram_ultima_postagem": "",
+
+  "score": 0,
+  "score_breakdown": { "A": 0, "B": 0, "C": 0, "D": 0 },
+  "classificacao": "nao-qualificado",
+  "nivel_maturidade_digital": null,
+  "dor_principal": "",
+  "servico_recomendado": "",
+  "ticket_estimado_mensal": "",
+  "justificativa_score": "",
+  "proximo_passo": "",
+
+  "historico_contatos": [],
+  "status": "novo",
+  "observacoes": ""
+}

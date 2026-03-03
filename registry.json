@@ -1,48 +1,93 @@
 {
-    "name": "dekos-ag",
-    "version": "1.0.0",
-    "description": "DEK-OS otimizado para orquestração via Antigravity",
-    "squads": {
-        "creative": {
-            "path": "squads/creative",
-            "agents": [
-                "copywriter",
-                "social-media",
-                "designer"
-            ]
-        },
-        "engineering": {
-            "path": "squads/engineering",
-            "agents": [
-                "developer",
-                "qa-tester"
-            ]
-        },
-        "growth": {
-            "path": "squads/growth",
-            "agents": [
-                "scout",
-                "onboarding"
-            ]
-        },
-        "performance": {
-            "path": "squads/performance",
-            "agents": [
-                "media-buyer",
-                "auditor"
-            ]
-        },
-        "success": {
-            "path": "squads/success",
-            "agents": [
-                "concierge",
-                "reporting",
-                "data-scientist",
-                "seo-specialist"
-            ]
-        }
+  "_descricao": "Mapa mental completo do DEK-OS AG. Primeiro arquivo que o Antigravity deve ler.",
+  "_versao": "2.0.0",
+
+  "sistema": {
+    "nome": "DEK-OS Antigravity",
+    "empresa": "DekMidia Marketing Digital e IA",
+    "instrucao_ao_agente": "Leia este registry antes de qualquer acao. Ele define onde encontrar cada recurso."
+  },
+
+  "convencoes": {
+    "task_first": "O ponto de entrada e sempre uma task, nao um agente. Tasks definem scope, inputs, outputs e acceptance_criteria.",
+    "checklist_gate": "Toda entrega passa pelo checklist antes de ir ao proximo agente ou usuario.",
+    "data_layer": "Agentes consultam data/*.json antes de usar conhecimento proprio do LLM.",
+    "human_approval": "human_approval_required=true exige confirmacao explicita antes de acao irreversivel.",
+    "handoff": "Todo agente declara o handoff ao final: qual agente recebe e com quais dados.",
+    "squad_manifest": "Todo squad tem squad.yaml na raiz listando todos os seus componentes."
+  },
+
+  "squads": {
+    "prospeccao": {
+      "squad_yaml": "squads/prospeccao/squad.yaml",
+      "descricao": "Prospeccao ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico",
+      "agents": {
+        "pesquisador":    "squads/prospeccao/pesquisador.md",
+        "qualificador":   "squads/prospeccao/qualificador.md",
+        "abordagem":      "squads/prospeccao/abordagem.md",
+        "diagnosticador": "squads/prospeccao/diagnosticador.md"
+      },
+      "tasks": {
+        "mapear-leads":      "squads/prospeccao/tasks/task-mapear-leads.md",
+        "qualificar-lista":  "squads/prospeccao/tasks/task-qualificar-lista.md",
+        "criar-mensagem":    "squads/prospeccao/tasks/task-criar-mensagem.md",
+        "gerar-diagnostico": "squads/prospeccao/tasks/task-gerar-diagnostico.md",
+        "executar-followup": "squads/prospeccao/tasks/task-executar-followup.md"
+      },
+      "checklists": {
+        "ficha-lead":          "squads/prospeccao/checklists/checklist-ficha-lead.md",
+        "mensagem-abordagem":  "squads/prospeccao/checklists/checklist-mensagem-abordagem.md",
+        "diagnostico-entrega": "squads/prospeccao/checklists/checklist-diagnostico-entrega.md"
+      },
+      "templates": {
+        "ficha-lead":           "squads/prospeccao/templates/template-ficha-lead.json",
+        "relatorio-prospeccao": "squads/prospeccao/templates/template-relatorio-prospeccao.md",
+        "diagnostico-digital":  "squads/prospeccao/templates/template-diagnostico-digital.md"
+      },
+      "data": {
+        "segmentos":         "squads/prospeccao/data/segmentos.json",
+        "cidades-regioes":   "squads/prospeccao/data/cidades-regioes.json",
+        "frases-proibidas":  "squads/prospeccao/data/frases-proibidas.json",
+        "servicos-dekmidia": "squads/prospeccao/data/servicos-dekmidia.json"
+      },
+      "playbooks": [
+        "playbooks/prospeccao-pme-regiao.md",
+        "playbooks/lead-scoring-system.md",
+        "playbooks/cadencia-followup.md"
+      ],
+      "skills": ["skills/lead-scoring.ts"],
+      "workflows": [
+        ".agents/workflows/prospectar-nicho.md",
+        ".agents/workflows/abordar-lead.md",
+        ".agents/workflows/diagnostico-gratuito.md"
+      ]
+    }
+  },
+
+  "workflows": {
+    "prospectar-nicho":     ".agents/workflows/prospectar-nicho.md",
+    "abordar-lead":         ".agents/workflows/abordar-lead.md",
+    "diagnostico-gratuito": ".agents/workflows/diagnostico-gratuito.md"
+  },
+
+  "projetos": {
+    "base_path": "PROJETOS/",
+    "prospeccao": {
+      "leads_brutos": "PROJETOS/_prospeccao/leads-brutos/",
+      "quentes":      "PROJETOS/_prospeccao/leads-qualificados/quentes/",
+      "mornos":       "PROJETOS/_prospeccao/leads-qualificados/mornos/",
+      "frios":        "PROJETOS/_prospeccao/leads-qualificados/frios/",
+      "arquivados":   "PROJETOS/_prospeccao/leads-arquivados/",
+      "contatos":     "PROJETOS/_prospeccao/contatos-realizados/",
+      "diagnosticos": "PROJETOS/_prospeccao/diagnosticos/",
+      "relatorios":   "PROJETOS/_prospeccao/relatorios/",
+      "mensagens":    "PROJETOS/_prospeccao/mensagens-prontas/"
     },
-    "playbooks": "playbooks/",
-    "skills": "skills/",
-    "workflows": ".agents/workflows/"
+    "cliente": {
+      "briefing":    "PROJETOS/[cliente]/briefing.md",
+      "referencias": "PROJETOS/[cliente]/referencias/",
+      "performance": "PROJETOS/[cliente]/performance/",
+      "creative":    "PROJETOS/[cliente]/creative/"
+    }
+  }
 }

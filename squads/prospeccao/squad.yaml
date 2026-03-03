@@ -1,0 +1,58 @@
+name: Squad de Prospeccao
+version: "1.0.0"
+description: >
+  Squad responsavel pela prospeccao ativa de PMEs nas regioes de
+  atuacao da DekMidia. Cobre o ciclo completo: pesquisa, qualificacao,
+  abordagem, diagnostico e acompanhamento.
+dekos:
+  minVersion: "1.0"
+agents:
+  - pesquisador
+  - qualificador
+  - abordagem
+  - diagnosticador
+tasks:
+  - task-mapear-leads
+  - task-qualificar-lista
+  - task-criar-mensagem
+  - task-gerar-diagnostico
+  - task-executar-followup
+checklists:
+  - checklist-ficha-lead
+  - checklist-mensagem-abordagem
+  - checklist-diagnostico-entrega
+templates:
+  - template-ficha-lead
+  - template-relatorio-prospeccao
+  - template-diagnostico-digital
+data:
+  - segmentos.json
+  - cidades-regioes.json
+  - frases-proibidas.json
+  - servicos-dekmidia.json
+skills:
+  - lead-scoring
+output_dirs:
+  - PROJETOS/_prospeccao/leads-brutos/
+  - PROJETOS/_prospeccao/leads-qualificados/quentes/
+  - PROJETOS/_prospeccao/leads-qualificados/mornos/
+  - PROJETOS/_prospeccao/leads-qualificados/frios/
+  - PROJETOS/_prospeccao/leads-arquivados/
+  - PROJETOS/_prospeccao/contatos-realizados/
+  - PROJETOS/_prospeccao/diagnosticos/
+  - PROJETOS/_prospeccao/relatorios/
+  - PROJETOS/_prospeccao/mensagens-prontas/
+kpis:
+  semanal:
+    leads_mapeados: 50
+    leads_qualificados: 20
+    leads_abordados: 10
+    taxa_resposta_alvo: "20%"
+    reunioes_agendadas: 1
+  mensal:
+    leads_mapeados: 200
+    leads_qualificados: 80
+    leads_abordados: 40
+    reunioes_agendadas: 4
+    clientes_fechados: 2
+tags: [prospeccao, leads, pme, outreach, marketing-digital]

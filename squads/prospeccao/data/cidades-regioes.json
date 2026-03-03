@@ -1,0 +1,28 @@
+{
+  "_descricao": "Cidades de atuacao da DekMidia organizadas por regiao.",
+  "vale_do_paraiba": {
+    "label": "Vale do Paraiba", "slug": "vale-paraiba",
+    "cidades": ["Sao Jose dos Campos","Taubate","Jacarei","Cacapava","Pindamonhangaba","Guaratingueta","Lorena","Aparecida"],
+    "notas": "Polo industrial e tecnologico. Alta concentracao de clinicas, autocenters e escolas."
+  },
+  "rmsp_satelite": {
+    "label": "RMSP (cidades satelite)", "slug": "rmsp",
+    "cidades": ["Guarulhos","Santo Andre","Sao Bernardo do Campo","Maua","Osasco","Cotia","Barueri","Carapicuiba","Taboao da Serra"],
+    "notas": "Alta densidade comercial. Concorrencia acirrada exige diferenciacao digital forte."
+  },
+  "litoral_norte": {
+    "label": "Litoral Norte", "slug": "litoral-norte",
+    "cidades": ["Ubatuba","Caraguatatuba","Sao Sebastiao","Ilhabela"],
+    "notas": "Sazonalidade alta - populacao flutuante 3-5x no verao."
+  },
+  "litoral_sul": {
+    "label": "Litoral Sul", "slug": "litoral-sul",
+    "cidades": ["Santos","Praia Grande","Sao Vicente","Guaruja","Itanhaem","Mongagua","Bertioga"],
+    "notas": "Maior densidade urbana que litoral norte. Clinicas, academias e comercio local."
+  },
+  "campinas_regiao": {
+    "label": "Campinas e Regiao", "slug": "campinas",
+    "cidades": ["Campinas","Sumare","Hortolandia","Indaiatuba","Valinhos","Vinhedo","Americana","Paulinia"],
+    "notas": "Hub de tecnologia e servicos. Alta receptividade a marketing digital."
+  }
+}

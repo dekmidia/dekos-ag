@@ -1,2 +1,16 @@
+# Dados de clientes e leads - NUNCA commitar
 PROJETOS/
-assets/prospects/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+*.log
+
+# Node / TypeScript
+node_modules/
+dist/
+*.js.map
+
+# Temporarios
+*.tmp
+*.bak
