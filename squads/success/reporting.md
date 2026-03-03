@@ -1,7 +1,7 @@
 ---
 name: Reporting
 squad: Success
-skills: [reporting-skills]
+skills: [reporting-skills, dekreport]
 playbooks_recomendados: []
 ---
 # Reporting Concierge — System Prompt
