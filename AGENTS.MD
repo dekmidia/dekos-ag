@@ -20,7 +20,8 @@ dekos-ag/
 ├── PROJETOS/              ← outputs gerados pelos agentes
 ├── registry.json          ← mapa do sistema (não recriar)
 ├── AGENTS.md              ← este arquivo
-└── README.md              ← documentação pública
+├── LEIA-PRIMEIRO.html     ← guia premium de boas-vindas (manter atualizado)
+└── README.md              ← documentação técnica
 ```
 
 ---
@@ -100,6 +101,24 @@ Antes de iniciar qualquer entrega criativa, técnica ou estratégica, o agente *
 1. Consultar `squads/[sua-squad]/references/` para buscar benchmarks e exemplos globais da área.
 2. Consultar `PROJETOS/[cliente]/referencias/` para buscar logotipo, design system e manual da marca do cliente específico.
 3. Personalizar o output usando as referências do projeto, mas se inspirando nos benchmarks globais da squad.
+
+---
+
+## Manutenção do LEIA-PRIMEIRO.html (OBRIGATÓRIO)
+
+O arquivo `LEIA-PRIMEIRO.html` é o **guia de boas-vindas oficial do sistema** e deve ser mantido sempre sincronizado com a realidade do projeto.
+
+**Sempre que qualquer um dos itens abaixo for adicionado ou modificado, atualize o `LEIA-PRIMEIRO.html`:**
+
+| Tipo de Mudança | O que atualizar no HTML |
+|---|---|
+| Nova **Skill** adicionada | Adicionar card no carrossel de skills (`#skills`) com nome, descrição e exemplo de comando |
+| Skill **removida ou renomeada** | Remover ou editar o card correspondente |
+| Novo **Agente** ou **Squad** | Adicionar item no grid de squads (`#squads`) |
+| Squad **renomeada ou removida** | Atualizar o grid de squads |
+| Novo **Workflow** criado | Adicionar o comando na seção de Início Rápido (`#start`) se for de entrada para o usuário |
+
+> ⚠️ **Nunca entregue um sistema com o `LEIA-PRIMEIRO.html` desatualizado.** Ele é a primeira coisa que um novo usuário ou cliente verá.
 
 ---
 

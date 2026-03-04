@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEK-OS AG — Leia Primeiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0D0D12;
+      --surface: #16161E;
+      --border: #2a2a38;
+      --accent: #7B61FF;
+      --accent2: #C9A84C;
+      --text: #E8E6EF;
+      --muted: #8b8a9b;
+      --success: #3ecf8e;
+      --warn: #f5a623;
+      --danger: #E63B2E;
+      --code-bg: #1a1a28;
+      --r: 1.5rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky;
+      top: 1.25rem;
+      width: fit-content;
+      margin: 1.25rem auto 3rem;
+      background: rgba(22, 22, 30, 0.7);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.65rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      z-index: 100;
+    }
+
+    nav .brand {
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    nav .cta-btn {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+
+    nav .cta-btn:hover {
+      opacity: 0.85;
+      transform: scale(1.03);
+    }
+
+    /* ── LAYOUT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 4rem 0 3rem;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(123, 97, 255, 0.15);
+      border: 1px solid rgba(123, 97, 255, 0.4);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 1rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--success);
+      background: rgba(62, 207, 142, 0.08);
+      border: 1px solid rgba(62, 207, 142, 0.2);
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+    }
+
+    .dot-pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    /* ── DIVIDER ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── SECTION HEADING ── */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    /* ── ALERT BLOCKS ── */
+    .alert {
+      border-radius: var(--r);
+      padding: 1rem 1.4rem;
+      margin: 1.5rem 0;
+      border-left: 3px solid;
+      font-size: 0.92rem;
+    }
+
+    .alert.important {
+      background: rgba(123, 97, 255, 0.08);
+      border-color: var(--accent);
+    }
+
+    .alert.tip {
+      background: rgba(62, 207, 142, 0.07);
+      border-color: var(--success);
+    }
+
+    .alert.warn {
+      background: rgba(245, 166, 35, 0.07);
+      border-color: var(--warn);
+    }
+
+    .alert-title {
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .alert.important .alert-title {
+      color: var(--accent);
+    }
+
+    .alert.tip .alert-title {
+      color: var(--success);
+    }
+
+    .alert.warn .alert-title {
+      color: var(--warn);
+    }
+
+    .alert p {
+      margin: 0;
+      color: var(--text);
+      opacity: 0.85;
+    }
+
+    /* ── FLOW GRID ── */
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.25rem;
+      position: relative;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .flow-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .flow-card .step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .flow-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    .flow-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── SKILLS CAROUSEL ── */
+    .carousel-wrapper {
+      position: relative;
+      margin: 1.5rem 0;
+    }
+
+    .skill-cards {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .skill-card {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem;
+      transition: border-color .3s, transform .3s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .skill-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-card .desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .skill-card .example-box {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .skill-card .example-box strong {
+      color: var(--accent2);
+    }
+
+    .skill-card .example-box em {
+      font-style: normal;
+      color: #ccc;
+    }
+
+    /* ── SQUADS TABLE ── */
+    .squad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .squad-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      transition: border-color .2s;
+    }
+
+    .squad-item:hover {
+      border-color: var(--accent2);
+    }
+
+    .squad-item .s-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .squad-item .s-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── QUICK STEPS ── */
+    .steps {
+      list-style: none;
+      counter-reset: steps;
+      margin: 1.5rem 0;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      position: relative;
+      padding: 0.8rem 1.25rem 0.8rem 3.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      transition: border-color .2s;
+    }
+
+    .steps li:hover {
+      border-color: var(--accent);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.6rem;
+      height: 1.6rem;
+      background: rgba(123, 97, 255, 0.15);
+      border: 1px solid rgba(123, 97, 255, 0.4);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82em;
+      background: rgba(123, 97, 255, 0.12);
+      color: var(--accent);
+      border-radius: 0.4rem;
+      padding: 0.1em 0.45em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-radius: 2rem 2rem 0 0;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--text);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .4;
+        transform: scale(0.85);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero,
+    main>* {
+      animation: fadeUp .6s ease both;
+    }
+
+    .hero {
+      animation-delay: .1s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <span class="brand">🪐 DEK-OS AG</span>
+    <a href="#skills">Skills</a>
+    <a href="#squads">Squads</a>
+    <a href="#start">Início Rápido</a>
+    <a class="cta-btn" href="#start">▶ Começar</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="badge">v2.1 — Framework Agêntico</span>
+      <h1>O Sistema Operacional<br>que <em>executa por você</em></h1>
+      <p>DEK-OS AG não é um chatbot. É uma estrutura de orquestração com agentes especializados, playbooks e skills de
+        precisão.</p>
+      <span class="status">
+        <span class="dot-pulse"></span>
+        Sistema Operacional · Online
+      </span>
+    </section>
+
+    <hr>
+
+    <!-- COMO FUNCIONA -->
+    <div class="section-label">01 — Arquitetura</div>
+    <h2>Como o sistema funciona</h2>
+    <p>Cada comando percorre um pipeline de execução inteligente antes de chegar ao resultado.</p>
+
+    <div class="flow-grid">
+      <div class="flow-card">
+        <div class="step-num">STEP 01</div>
+        <h4>👤 Você fala</h4>
+        <p>Linguagem natural ou um comando <code>/workflow</code>.</p>
+      </div>
+      <div class="flow-card">
+        <div class="step-num">STEP 02</div>
+        <h4>🪐 Antigravity lê</h4>
+        <p>O orquestrador consulta o <code>registry.json</code> e identifica o squad responsável.</p>
+      </div>
+      <div class="flow-card">
+        <div class="step-num">STEP 03</div>
+        <h4>👥 Squad age</h4>
+        <p>O agente carrega o playbook de conhecimento e executa com a skill adequada.</p>
+      </div>
+      <div class="flow-card">
+        <div class="step-num">STEP 04</div>
+        <h4>📂 Resultado salvo</h4>
+        <p>Todo output vai para <code>PROJETOS/[cliente]/</code> automaticamente.</p>
+      </div>
+    </div>
+
+    <div class="alert important">
+      <div class="alert-title">⚡ Importante</div>
+      <p>Este não é um repositório comum. Trate os agentes como especialistas seniores e as skills como ferramentas de
+        precisão para obter os melhores resultados.</p>
+    </div>
+
+    <hr>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section-label">02 — Super-Poderes</div>
+    <h2>Skills disponíveis</h2>
+    <p>Arraste para ver todas as capacidades disponíveis. Cada card mostra como acionar a skill com linguagem natural.
+    </p>
+
+    <div class="carousel-wrapper">
+      <div class="skill-cards">
+
+        <div class="skill-card">
+          <span class="icon">💎</span>
+          <h3>Landing Pages Cinematográficas</h3>
+          <p class="desc">Sites 1:1 Pixel Perfect com React 19, GSAP, animações cinematográficas e presets de design
+            premium.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Cria uma landing page cinematográfica para a marca [Nome], analisando o site [URL] como
+              referência."</em>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="icon">📍</span>
+          <h3>Google Maps → Web (Map2Web)</h3>
+          <p class="desc">Extrai dados de negócios locais e gera um site completo com SEO on-page agressivo e Tailwind
+            CSS.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Gere um site para este negócio no Google Maps: [Link do Maps]. Use o logo na pasta de
+              referências."</em>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="icon">🔬</span>
+          <h3>Diagnóstico Digital</h3>
+          <p class="desc">Relatório de presença online para conversão de leads. Analisa site, redes sociais e
+            posicionamento.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Crie um diagnóstico digital gratuito para o lead [Nome] focado em [Segmento]."</em>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="icon">📊</span>
+          <h3>Qualificação & Scoring</h3>
+          <p class="desc">Analisa listas de leads brutos e atribui pontuações baseadas em critérios de fit comercial do
+            playbook.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Qualifique a lista de leads brutos gerada hoje, aplicando o scoring do playbook de PMEs."</em>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="icon">🔍</span>
+          <h3>Análise de Landing Pages</h3>
+          <p class="desc">Estuda a estrutura de conversão, CTA, hierarquia visual e pontos de atrito de sites
+            concorrentes.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Analise a landing page do concorrente [URL] e extraia os pontos positivos de CRO."</em>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="icon">🔄</span>
+          <h3>Sincronização de Docs</h3>
+          <p class="desc">Mantém tabelas de agentes e skills do <code>help.md</code> e <code>README.md</code> sempre
+            atualizadas com o registry.</p>
+          <div class="example-box">
+            <strong>Como pedir:</strong><br>
+            <em>"Sincronize as tabelas de agentes e skills do sistema para refletir as mudanças de hoje."</em>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="alert tip">
+      <div class="alert-title">💡 Dica de mestre</div>
+      <p>Você não precisa saber o nome da skill. Basta descrever o que quer em linguagem natural — o Antigravity
+        identifica e aciona a skill certa automaticamente.</p>
+    </div>
+
+    <hr>
+
+    <!-- SQUADS -->
+    <div id="squads" class="section-label">03 — Times</div>
+    <h2>Squads &amp; Especialistas</h2>
+    <p>Cada squad é um time de agentes com foco e playbooks próprios. Você pode invocar qualquer um diretamente.</p>
+
+    <div class="squad-grid">
+      <div class="squad-item">
+        <div class="s-name">🔍 Prospecção</div>
+        <div class="s-desc">Hunting, qualificação e abordagem de novos leads.</div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">✍️ Creative</div>
+        <div class="s-desc">Copy, design UI/UX e conteúdo para social media.</div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">💻 Engineering</div>
+        <div class="s-desc">Desenvolvimento web, landing pages e QA pré-deploy.</div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">📈 Performance</div>
+        <div class="s-desc">Tráfego pago (Google Ads, Meta Ads) e compliance.</div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">🤝 Growth</div>
+        <div class="s-desc">Onboarding de novos clientes e expansão de contas.</div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">📋 Success</div>
+        <div class="s-desc">Relatórios, SEO local e retenção de clientes.</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- QUICK START -->
+    <div id="start" class="section-label">04 — Início Rápido</div>
+    <h2>Seus primeiros 3 passos</h2>
+    <p>Siga esta sequência para tirar o máximo do sistema logo de início.</p>
+
+    <ol class="steps">
+      <li>Digite <code>/help</code> e explore o time completo de agentes e skills disponíveis.</li>
+      <li>Inicie um projeto de cliente com <code>/onboarding-cliente</code> para criar toda a estrutura de pastas
+        automaticamente.</li>
+      <li>Peça uma prospecção com <code>/prospectar-nicho</code> e veja o ciclo completo de hunting funcionando.</li>
+    </ol>
+
+    <div class="alert warn">
+      <div class="alert-title">⚠️ Regra de Ouro</div>
+      <p><strong>Todo output vai para <code>PROJETOS/[cliente]/</code>.</strong> Nunca mova arquivos manualmente — deixe
+        os agentes organizar o "ERP" de arquivos por você.</p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Desenvolvido com precisão pela <strong>DekMídia Marketing Digital e IA</strong><br>
+      <em style="opacity:.6; font-size:.9em">"Acelerando o futuro através da automação inteligente."</em>
+    </p>
+  </footer>
+
+</body>
+
+</html>

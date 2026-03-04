@@ -17,7 +17,8 @@
     "output_rule": "Todo output vai para PROJETOS/. NUNCA usar assets/ como destino.",
     "delegation": "Todo agente tem secao NAO usar para indicando fronteiras e delegacao.",
     "references_squad": "Cada squad possui uma pasta references/ com benchmarks e exemplos globais da area.",
-    "references_projeto": "Cada projeto em PROJETOS/[cliente]/ possui uma pasta references/ com logotipo, design system e manual da marca do cliente."
+    "references_projeto": "Cada projeto em PROJETOS/[cliente]/ possui uma pasta references/ com logotipo, design system e manual da marca do cliente.",
+    "leia_primeiro": "SEMPRE que uma skill, squad ou agente for adicionado ou modificado, atualize o arquivo LEIA-PRIMEIRO.html na raiz do projeto para manter o guia de boas-vindas sincronizado com o estado real do sistema."
   },
   "squads": {
     "prospeccao": {
@@ -100,6 +101,9 @@
       "playbooks": [
         "playbooks/docs-wordpress.md",
         "playbooks/docs-elementor.md"
+      ],
+      "skills": [
+        "skills/lp-cinematografica/SKILL.md"
       ]
     },
     "performance": {
