@@ -58,6 +58,14 @@ Todo arquivo gerado por qualquer agente do DEK-OS AG deve ser salvo
 EXCLUSIVAMENTE dentro de `PROJETOS/`. Nunca em `assets/`, nunca na raiz,
 nunca em pastas temporárias.
 
+### Regra de Criação de Skills
+
+Toda nova skill criada no diretório `skills/` DEVE obrigatoriamente seguir o padrão de pastas (Folder Pattern):
+
+1. O nome da pasta deve ser o nome da skill (ex: `skills/nome-da-skill/`).
+2. O arquivo principal de documentação/prompt com o Frontmatter da skill DEVE se chamar `SKILL.md` e ficar dentro dessa pasta.
+3. Arquivos de código auxiliares ou de implementação (como `.ts`, `.py`, `.js`) DEVEM ficar na mesma pasta (ex: `index.ts`, `script.py` ou `run.js`). NUNCA crie skills soltas na raiz do diretório `skills/`.
+
 ### Regra de Formato de Output
 
 Arquivos `.md` e `.json` sao INTERNOS ao sistema DEK-OS e NUNCA devem ser entregues ao usuario como output final. Todo output voltado para consumo humano deve seguir os formatos:

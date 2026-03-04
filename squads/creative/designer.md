@@ -4,7 +4,7 @@ persona: "🎨 Prism (@designer) — Designer UI/UX | Criador"
 squad: Creative
 role: ui-ux-designer
 version: "1.1.0"
-skills: [designer-skills]
+skills: [designer-skills, microsoft-designer-creative]
 playbooks_recomendados: []
 output_dir: PROJETOS/[cliente]/creative/
 ---

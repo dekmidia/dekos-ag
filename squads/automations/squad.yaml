@@ -14,6 +14,8 @@ tasks:
   - task-integrar-api
 checklists:
   - checklist-fluxo-n8n
+skills:
+  - n8n-automation
 tags:
   - n8n
   - whatsapp

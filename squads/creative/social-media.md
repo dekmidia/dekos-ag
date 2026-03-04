@@ -4,7 +4,7 @@ persona: "📱 Hype (@social-media) — Social Media Manager | Estrategista"
 squad: Creative
 role: social-media-manager
 version: "1.1.0"
-skills: [social-media-skills]
+skills: [social-media-skills, microsoft-designer-creative]
 playbooks_recomendados: []
 output_dir: PROJETOS/[cliente]/social/
 ---

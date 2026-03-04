@@ -80,6 +80,9 @@
       "playbooks": [
         "playbooks/copy-alta-conversao.md",
         "playbooks/copywritter-icaro-de-carvalho.md"
+      ],
+      "skills": [
+        "skills/microsoft-designer-creative.md"
       ]
     },
     "growth": {
