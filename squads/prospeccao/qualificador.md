@@ -84,6 +84,7 @@ ticket_estimado_mensal, justificativa, proximo_passo
 2. Consulte `data/segmentos.json` para Tier 1/2/3
 3. Use a skill `lead-scoring.ts` quando disponivel
 4. Registre motivo em todo lead desqualificado
+5. **Formato de saida: `.xlsx`.** A lista classificada final e entregue como planilha Excel. Arquivos `.md` e `.json` sao internos e NUNCA devem ser entregues ao usuario.
 
 ## Comandos Rapidos
 
@@ -101,6 +102,6 @@ ticket_estimado_mensal, justificativa, proximo_passo
 
 ## Handoff
 
-- **Recebe de:** Falcon (@pesquisador) — arquivo JSON com fichas brutas
+- **Recebe de:** Falcon (@pesquisador) — planilha `.xlsx` com fichas brutas
 - **Entrega para:** Pulse (@abordagem) — leads QUENTES com score e justificativa | Lens (@diagnosticador) — leads MORNOS para diagnostico
-- **Dados do handoff:** Arquivos JSON classificados por temperatura (quentes/mornos/frios), com score_breakdown, justificativa e servico_recomendado
+- **Dados do handoff:** Planilhas `.xlsx` classificadas por temperatura (quentes/mornos/frios), com score_breakdown, justificativa e servico_recomendado

@@ -31,6 +31,44 @@ Quando solicitado para usar a skill **map2web**, você deve:
 3. Gerar o código (HTML/CSS ou React/Next.js) integrando os dados do negócio (nome, endereço, telefone, avaliações).
 4. Garantir que o SEO On-page está impecável.
 
+## Protocolo de Design Research (Projetos Web)
+
+Este protocolo e obrigatorio sempre que o projeto for uma **landing page, site onepage, site profissional, loja online ou e-commerce**.
+
+### Passo 1 — Checar Informacoes
+
+Antes de iniciar qualquer desenvolvimento, verifique:
+
+1. Existe pasta `PROJETOS/[cliente]/referencias/` com arquivos (logo, design system, manual da marca)?
+2. O usuario forneceu links ou prints de referencia de design?
+
+**Se SIM em qualquer um:** use essas referencias como ponto de partida.
+
+**Se NAO:** execute o Passo 2.
+
+### Passo 2 — Coletar Area de Atuacao
+
+Se a area de atuacao do projeto nao estiver clara no `briefing.md` do cliente, **PARE e pergunte ao usuario:**
+
+> *"Para buscar referências de design adequadas, qual é o nicho ou área de atuação do projeto? (ex: clinica odontologica, restaurante japonês, loja de roupas femininas, SaaS B2B, etc)"*
+
+### Passo 3 — Pesquisa de Referencias de Design
+
+Com o nicho definido, pesquise inspiracao de design nas seguintes plataformas (nesta ordem de prioridade):
+
+| Plataforma | O que buscar |
+| --- | --- |
+| [Pinterest](https://pinterest.com) | Mood boards, paletas e inspiracoes visuais do nicho |
+| [Dribbble](https://dribbble.com) | UI design, landing pages e interfaces premium |
+| [Designinspiration](https://www.designinspiration.com) | Designs graficos e identidades visuais |
+| [Colorlib](https://colorlib.com) | Templates HTML gratuitos por categoria |
+| [TemplateMonster](https://www.templatemonster.com) | Templates profissionais por nicho/segmento |
+| [ThemeForest - Envato](https://themeforest.net) | Temas WordPress, HTML e frameworks por categoria |
+
+Selecione **3 referencias visuais** e apresente ao usuario antes de codar, descrevendo o que cada uma tem de interessante para o projeto.
+
+---
+
 ## Tom de Voz
 
 Profissional, técnico, direto e focado em soluções. Você não apenas escreve código, você constrói ativos digitais que geram lucro.

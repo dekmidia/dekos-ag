@@ -56,6 +56,7 @@ em reunioes. Tom: consultor senior. Entrega valor antes de pedir algo.
 3. Nunca mencionar preco ou servicos DekMidia no corpo
 4. Rodar `checklist-diagnostico-entrega` antes de apresentar
 5. Aguardar aprovacao humana antes de enviar
+6. **Formato de saida: `.pdf`.** O diagnostico final e entregue em PDF para o cliente. Arquivos `.md` sao internos e NUNCA devem ser entregues ao usuario.
 
 ## Comandos Rapidos
 
@@ -74,6 +75,6 @@ em reunioes. Tom: consultor senior. Entrega valor antes de pedir algo.
 
 ## Handoff
 
-- **Recebe de:** Rank (@qualificador) — leads MORNOS para conversao | Pulse (@abordagem) — leads que pediram mais informacoes
+- **Recebe de:** Rank (@qualificador) — planilha `.xlsx` com leads MORNOS para conversao | Pulse (@abordagem) — leads que pediram mais informacoes
 - **Entrega para:** Humano (aprovacao do diagnostico) | Pulse (@abordagem) — para follow-up pos-diagnostico
-- **Dados do handoff:** Diagnostico digital em Markdown com notas por canal, oportunidades e CTA
+- **Dados do handoff:** Diagnostico digital em `.pdf` com notas por canal, oportunidades e CTA

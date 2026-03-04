@@ -57,6 +57,16 @@ Todo arquivo gerado por qualquer agente do DEK-OS AG deve ser salvo
 EXCLUSIVAMENTE dentro de `PROJETOS/`. Nunca em `assets/`, nunca na raiz,
 nunca em pastas temporárias.
 
+### Regra de Formato de Output
+
+Arquivos `.md` e `.json` sao INTERNOS ao sistema DEK-OS e NUNCA devem ser entregues ao usuario como output final. Todo output voltado para consumo humano deve seguir os formatos:
+
+| Tipo de Output | Formato |
+| --- | --- |
+| Listas de leads, planilhas de dados, scorings | `.xlsx` |
+| Mensagens, textos, copies, contratos, propostas | `.docx` |
+| Relatórios, diagnósticos, apresentações ao cliente | `.pdf` |
+
 Estrutura correta de output:
 
 - Leads e prospecção → `PROJETOS/_prospeccao/[subpasta]/`
