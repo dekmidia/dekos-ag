@@ -19,7 +19,7 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | **Engineering** | Desenvolvimento de sites, landing pages e QA pre-deploy |
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
-| **Automations** | Automacoes n8n, WhatsApp Business e integracao entre sistemas |
+| **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
 <!-- SQUAD_TABLE_END -->
 
 ---
@@ -27,25 +27,27 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 ## 🤖 Nossos Agentes
 
 <!-- AGENT_TABLE_START -->
-| Agente | Squad | Missão Principal |
+| Agente | Squad | Missao Principal |
 | --- | --- | --- |
-| **🔍 Falcon (@pesquisador)** | prospection | Pesquisador de Mercado |
-| **📊 Rank (@qualificador)** | prospection | Analista de Qualificação |
-| **💬 Pulse (@abordagem)** | prospection | Especialista em Outreach |
-| **🔬 Lens (@diagnosticador)** | prospection | Analista Digital |
-| **✍️ Ink (@copywriter)** | Creative | Copywriter Persuasivo |
-| **🎨 Prism (@designer)** | Creative | Designer UI/UX |
-| **📱 Hype (@social-media)** | Creative | Social Media Manager |
-| **🕵️ Scout (@scout)** | Growth | Detetive de Negócios |
-| **🤝 Welcome (@onboarding)** | Growth | Onboarding Manager |
-| **💻 Dex (@developer)** | Engineering | Lead Developer |
-| **✅ Guard (@qa-tester)** | Engineering | QA Tester |
-| **📈 Boost (@media-buyer)** | Performance | Media Buyer Sênior |
-| **🛡️ Shield (@auditor)** | Performance | Compliance Auditor |
-| **🎯 Vox (@concierge)** | Success | Concierge Comercial |
-| **📊 Cipher (@data-scientist)** | Success | Data Scientist de Marketing |
-| **📋 Relay (@reporting)** | Success | Reporting Concierge |
-| **🔎 Apex (@seo-specialist)** | Success | SEO Specialist |
+| **🔍 Falcon (@pesquisador)** | Prospection | Pesquisador de Mercado | Hunter |
+| **📊 Rank (@qualificador)** | Prospection | Analista de Qualificação | Scorer |
+| **💬 Pulse (@abordagem)** | Prospection | Especialista em Outreach | Conector |
+| **🔬 Lens (@diagnosticador)** | Prospection | Analista Digital | Consultor |
+| **✍️ Ink (@copywriter)** | Creative | Copywriter Persuasivo | Conversor |
+| **🎨 Prism (@designer)** | Creative | Designer UI/UX | Criador |
+| **📱 Hype (@social-media)** | Creative | Social Media Manager | Estrategista |
+| **🕵️ Scout (@scout)** | Growth | Detetive de Negócios | Explorer |
+| **🤝 Welcome (@onboarding)** | Growth | Onboarding Manager | Integrador |
+| **💻 Dex (@developer)** | Engineering | Lead Developer | Builder |
+| **✅ Guard (@qa-tester)** | Engineering | QA Tester | Guardian |
+| **📈 Boost (@media-buyer)** | Performance | Media Buyer Sênior | Optimizer |
+| **🛡️ Shield (@auditor)** | Performance | Compliance Auditor | Porteiro |
+| **🎯 Vox (@concierge)** | Success | Concierge Comercial | Qualificador |
+| **📊 Cipher (@data-scientist)** | Success | Data Scientist de Marketing | Analista |
+| **📋 Relay (@reporting)** | Success | Reporting Concierge | Comunicador |
+| **🔎 Apex (@seo-specialist)** | Success | SEO Specialist | Otimizador |
+| **🔌 Wire (@wire)** | Automations | Arquiteto de Fluxos n8n | Builder |
+| **🌉 Bridge (@bridge)** | Automations | Integrador de APIs e Sistemas | Connector |
 <!-- AGENT_TABLE_END -->
 
 ---
@@ -53,16 +55,15 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 ## 🛠️ Skills Disponíveis
 
 <!-- SKILL_TABLE_START -->
-| Skill | Descrição e Exemplo de Uso |
+| Skill | Descricao |
 | --- | --- |
-| `lp-cinematografica` | **Criação de sites premium.** "Cria uma landing page cinematográfica para a marca [X], analisando o site [URL] como referência." |
-| `map2web` | **Google Maps p/ Web.** "Gere um site para este negócio local no Google Maps: [Link do Maps]." |
-| `diagnostico-digital` | **Vendas Consultivas.** "Crie um diagnóstico digital gratuito para o lead [Nome] focado em [Segmento]." |
-| `landing-page-analyzer` | **Análise de CRO.** "Analise a landing page do concorrente [URL] e extraia os pontos positivos." |
-| `doc-synchronizer` | **Manutenção do Sistema.** "Sincronize as tabelas de agentes e skills do sistema." |
-| `playbook-formatter` | **Base de Conhecimento.** "Formate este rascunho de conhecimento como um novo playbook." |
-| `skill-formatter` | **Padronização Técnica.** "Garante que novas skills sigam o padrão técnico do DEK-OS." |
-| `lead-scoring` | **Qualificação de Dados.** "Qualifique a lista de leads brutos gerada hoje." |
+| `canva-creative` | Ferramenta do sistema. |
+| `doc-synchronizer` | Sincroniza tabelas de Agentes, Squads e Skills do registry.json com README.md e help.md. |
+| `lead-scoring` | Script utilitario do sistema. |
+| `lp-cinematografica` | Use esta skill sempre que for solicitada a criação de uma landing page ou site de alta fidelidade com estética cinematográfica. Suporta captura de sites de referência via MCP Firecrawl (instalado automaticamente se necessário). Gera código React 19 + Tailwind CSS + GSAP com animações premium, design system completo e presets estéticos. |
+| `microsoft-designer-creative` | Ferramenta do sistema. |
+| `playbook-formatter` | Garante que novos playbooks sigam o padrão técnico do DEK-OS (YAML frontmatter + Markdown estruturado). |
+| `skill-formatter` | Garante que novas skills (Markdown ou Código) sigam o padrão técnico do DEK-OS. |
 <!-- SKILL_TABLE_END -->
 
 ---

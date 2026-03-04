@@ -4,7 +4,7 @@ type: prompt-skill
 squad: automation
 inputs: [objetivo, trigger, integradores, tem_agente_ai, precisa_rag, squad, urgencia]
 outputs: [workflow-structure, node-configs, expressions, agent-system-prompt, sub-workflow-list, error-handling-strategy, production-checklist]
-playbooks_recomendados: [playbook-n8n]
+playbooks_recomendados: [docs-n8n]
 mcp_dependency: n8n-mcp
 ---
 
@@ -121,7 +121,7 @@ npm install -g n8n-mcp
 
 ## Playbook de Referência
 
-`playbooks/playbook-n8n.md`
+`playbooks/docs-n8n.md`
 
 ## Nodes Principais Cobertos
 

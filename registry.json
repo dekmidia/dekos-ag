@@ -79,10 +79,13 @@
       },
       "playbooks": [
         "playbooks/copy-alta-conversao.md",
-        "playbooks/copywritter-icaro-de-carvalho.md"
+        "playbooks/copywritter-icaro-de-carvalho.md",
+        "playbooks/docs-canva.md",
+        "playbooks/docs-microsoft-designer.md"
       ],
       "skills": [
-        "skills/microsoft-designer-creative.md"
+        "skills/microsoft-designer-creative/SKILL.md",
+        "skills/canva-creative/SKILL.md"
       ]
     },
     "growth": {
@@ -149,7 +152,10 @@
       },
       "checklists": {
         "fluxo-n8n": "squads/automations/checklists/checklist-fluxo-n8n.md"
-      }
+      },
+      "playbooks": [
+        "playbooks/docs-n8n.md"
+      ]
     }
   },
   "workflows": {

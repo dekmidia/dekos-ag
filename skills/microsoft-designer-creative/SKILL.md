@@ -4,7 +4,7 @@ type: prompt-skill
 squad: creative
 inputs: [produto, objetivo, publico, plataforma, tom, estilo, formato, integracao]
 outputs: [design-prompt, image-prompt, creative-brief, copy-set, edit-checklist, export-specs, qa-checklist]
-playbooks_recomendados: [playbook-microsoft-designer]
+playbooks_recomendados: [docs-microsoft-designer]
 ---
 
 # Microsoft Designer Creative — Skill
@@ -69,7 +69,7 @@ e integracao com o ecossistema Microsoft 365.
 
 ## Playbook de Referencia
 
-`playbooks/playbook-microsoft-designer.md`
+`playbooks/docs-microsoft-designer.md`
 
 ## Diferenciais em relacao a Skill Canva
 

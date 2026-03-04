@@ -25,10 +25,11 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 | --- | --- |
 | **Prospection** | Prospection ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico |
 | **Creative** | Criacao de conteudo, copies, design e social media |
-| **Growth** | Prospection exploratoria e onboarding de novos clientes |
+| **Growth** | prospection exploratoria e onboarding de novos clientes |
 | **Engineering** | Desenvolvimento de sites, landing pages e QA pre-deploy |
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
+| **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
 <!-- SQUAD_TABLE_END -->
 
 ## 🤖 Agentes Ativos
@@ -54,6 +55,34 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 | **Relay** (@reporting) | Success | Traduzir métricas em relatórios claros para o cliente. |
 | **Apex** (@seo-specialist) | Success | Otimizar posicionamento orgânico e SEO local. |
 <!-- AGENT_TABLE_END -->
+
+---
+
+## 🧩 Skills Ativas (Ferramentas)
+
+As *Skills* são scripts executáveis ou prompts estruturados que os Agentes usam para realizar seu trabalho.
+
+<!-- SKILL_TABLE_START -->
+| Skill | Categoria | Descrição |
+| --- | --- | --- |
+| **canva-creative** | Creative | Direções criativas completas de design para rápida execução no Canva. |
+| **compliance-checker** | Performance | Validador de copies/imagens contra bloqueios nas políticas do Meta/Google. |
+| **copywriting-prospection** | Prospection | Variações personalizadas de abordagem para Cold Email, LinkedIn e WhatsApp. |
+| **dekreport** | Success | Geração automatizada de relatórios em PDF com dados consolidados. |
+| **diagnostico-digital** | Prospection | Avaliação rápida da presença digital para criar iscas de qualificação. |
+| **doc-synchronizer** | Dev Tools | Script que sincroniza os MDs documentais com os dados do registry.json. |
+| **document-generator** | Success | Geração programática de contratos e apresentações em DOCX/PDF. |
+| **landing-page-analyzer** | Marketing | Analisa páginas concorrentes focando em conversão e CRO. |
+| **lead-scoring** | Prospection | *(Código)* Algoritmo Typescript de ponderação para prioridade de leads. |
+| **lp-cinematografica** | Engineering | Design visual e técnico para Landing Pages ultrarrealistas (React+GSAP). |
+| **map2web** | Engineering | Crawler que converte perfis do Maps em Landing Pages on-page SEO. |
+| **metrics-analyzer** | Performance | Analisador cross-channel de ROAS, CTR e CPC para otimização de campanhas. |
+| **microsoft-designer-creative** | Creative | Geração de prompts ricos (DALL-E 3) para imagens hiper-realistas integradas ao M365. |
+| **n8n-automation** | Automations | Desenha e documenta workflows complexos para n8n (Nodes, Expressoes, RAG). |
+| **playbook-formatter** | Dev Tools | Padronizador de playbooks Markdown usando regras de linter fixas. |
+| **scoring-leads** | Prospection | Avaliação via Prompt LLM dos critérios de oportunidade de leads. |
+| **sentiment-analyzer** | Success | NLP para analisar o tom de reviews no GMB e redes sociais. |
+<!-- SKILL_TABLE_END -->
 
 ---
 

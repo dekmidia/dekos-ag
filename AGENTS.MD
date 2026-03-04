@@ -116,15 +116,19 @@ Antes de iniciar qualquer entrega criativa, técnica ou estratégica, o agente *
 
 O arquivo `LEIA-PRIMEIRO.html` é o **guia de boas-vindas oficial do sistema** e deve ser mantido sempre sincronizado com a realidade do projeto.
 
-**Sempre que qualquer um dos itens abaixo for adicionado ou modificado, atualize o `LEIA-PRIMEIRO.html`:**
+**Sempre que qualquer um dos itens abaixo for adicionado ou modificado, atualize OBRIGATORIAMENTE os seguintes arquivos:**
 
-| Tipo de Mudança | O que atualizar no HTML |
+1. `LEIA-PRIMEIRO.html`
+2. `README.md`
+3. `registry.json`
+
+| Tipo de Mudança | O que atualizar |
 |---|---|
-| Nova **Skill** adicionada | Adicionar card no carrossel de skills (`#skills`) com nome, descrição e exemplo de comando |
-| Skill **removida ou renomeada** | Remover ou editar o card correspondente |
-| Novo **Agente** ou **Squad** | Adicionar item no grid de squads (`#squads`) |
-| Squad **renomeada ou removida** | Atualizar o grid de squads |
-| Novo **Workflow** criado | Adicionar o comando na seção de Início Rápido (`#start`) se for de entrada para o usuário |
+| Nova **Skill** adicionada | Adicionar card no carrossel de skills (`#skills`) no `LEIA-PRIMEIRO.html`, atualizar tabela de Skills no `README.md` e registrar no `registry.json` |
+| Skill **removida ou mod.*** | Atualizar documentação nos 3 arquivos acima |
+| Novo **Agente** ou **Squad** | Adicionar item no grid de squads do HTML, na tabela do README e no JSON |
+| Squad **renomeada/remov.** | Atualizar HTML, README e JSON |
+| Novo **Workflow** criado | Adicionar o comando na seção de Início Rápido se for de entrada para o usuário |
 
 > ⚠️ **Nunca entregue um sistema com o `LEIA-PRIMEIRO.html` desatualizado.** Ele é a primeira coisa que um novo usuário ou cliente verá.
 

@@ -4,7 +4,7 @@ type: prompt-skill
 squad: creative
 inputs: [produto, objetivo, publico, plataforma, tom, estilo, formato]
 outputs: [creative-brief, copy-set, canva-execution-guide, qa-checklist, format-specs]
-playbooks_recomendados: [playbook-canva]
+playbooks_recomendados: [docs-canva]
 ---
 
 # Canva Creative — Skill
@@ -65,7 +65,7 @@ execução no Canva com qualidade de agência.
 
 ## Playbook de Referência
 
-`playbooks/playbook-canva.md`
+`playbooks/docs-canva.md`
 
 ## Restrições
 
