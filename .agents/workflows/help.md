@@ -13,12 +13,13 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 <!-- SQUAD_TABLE_START -->
 | Squad | Area de Responsabilidade |
 | --- | --- |
-| **Prospeccao** | Prospeccao ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico |
+| **Prospection** | Prospection ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico |
 | **Creative** | Criacao de conteudo, copies, design e social media |
-| **Growth** | Prospeccao exploratoria e onboarding de novos clientes |
+| **Growth** | prospection exploratoria e onboarding de novos clientes |
 | **Engineering** | Desenvolvimento de sites, landing pages e QA pre-deploy |
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
+| **Automations** | Automacoes n8n, WhatsApp Business e integracao entre sistemas |
 <!-- SQUAD_TABLE_END -->
 
 ---
@@ -28,10 +29,10 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 <!-- AGENT_TABLE_START -->
 | Agente | Squad | Missão Principal |
 | --- | --- | --- |
-| **🔍 Falcon (@pesquisador)** | Prospeccao | Pesquisador de Mercado |
-| **📊 Rank (@qualificador)** | Prospeccao | Analista de Qualificação |
-| **💬 Pulse (@abordagem)** | Prospeccao | Especialista em Outreach |
-| **🔬 Lens (@diagnosticador)** | Prospeccao | Analista Digital |
+| **🔍 Falcon (@pesquisador)** | prospection | Pesquisador de Mercado |
+| **📊 Rank (@qualificador)** | prospection | Analista de Qualificação |
+| **💬 Pulse (@abordagem)** | prospection | Especialista em Outreach |
+| **🔬 Lens (@diagnosticador)** | prospection | Analista Digital |
 | **✍️ Ink (@copywriter)** | Creative | Copywriter Persuasivo |
 | **🎨 Prism (@designer)** | Creative | Designer UI/UX |
 | **📱 Hype (@social-media)** | Creative | Social Media Manager |
@@ -95,5 +96,5 @@ squads_que_usam: [Squad1, Squad2]
 
 - `/help` — Abre esta página de ajuda.
 - `/criar-squad` — Inicia o fluxo de criação de uma nova squad padronizada.
-- `/prospectar-nicho` — Inicia ciclo completo de prospecção.
+- `/prospection-nicho` — Inicia ciclo completo de prospecção.
 - `/onboarding-cliente` — Inicia estruturação de novo projeto de cliente.

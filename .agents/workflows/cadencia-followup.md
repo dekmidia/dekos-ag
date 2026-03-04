@@ -10,7 +10,7 @@ description: Executa a cadencia completa de follow-up para um lead que nao respo
 
 ## Passo 1: Verificacao
 
-Leia a ficha do lead em PROJETOS/_prospeccao/leads-qualificados/quentes/
+Leia a ficha do lead em PROJETOS/_prospection/leads-qualificados/quentes/
 Se o lead JA respondeu: encerre e notifique equipe. Se nao: continue.
 
 ## D+3: Follow-Up com Conteudo de Valor
@@ -40,4 +40,4 @@ Se ainda sem resposta: arquivar por 30 dias.
 
 Respondeu: notifique equipe, agende reuniao, status = CONVERTIDO
 Nao respondeu: status = ARQUIVADO, data reativacao = +30 dias
-Salve relatorio em PROJETOS/_prospeccao/relatorios/followup-{id_lead}.md
+Salve relatorio em PROJETOS/_prospection/relatorios/followup-{id_lead}.md

@@ -45,7 +45,7 @@ Antes de realizar qualquer uma das ações abaixo, PARE e pergunte:
 1. Criar qualquer pasta nova na raiz do repositório
 2. Criar qualquer arquivo diretamente na raiz (exceto os já existentes)
 3. Modificar o `registry.json` (apenas adições a squads existentes são livres)
-4. Criar subpastas dentro de `PROJETOS/` fora do padrão `PROJETOS/[cliente]/` ou `PROJETOS/_prospeccao/`
+4. Criar subpastas dentro de `PROJETOS/` fora do padrão `PROJETOS/[cliente]/` ou `PROJETOS/_prospection/`
 5. Criar qualquer pasta com nome `assets/`, `temp/`, `tmp/`, `backup/` ou variações
 6. Renomear ou mover arquivos existentes
 7. Apagar qualquer arquivo ou pasta
@@ -70,7 +70,7 @@ Arquivos `.md` e `.json` sao INTERNOS ao sistema DEK-OS e NUNCA devem ser entreg
 
 Estrutura correta de output:
 
-- Leads e prospecção → `PROJETOS/_prospeccao/[subpasta]/`
+- Leads e prospection → `PROJETOS/_prospection/[subpasta]/`
 - Projetos de clientes → `PROJETOS/[nome-cliente]/[subpasta]/`
 
 Subpastas padrão por cliente:
@@ -156,12 +156,13 @@ acionado. Se não pertencer, delegue ao agente correto conforme indicado.
 
 | Squad | Agentes |
 |-------|---------|
-| **Prospeccao** | 🔍 Falcon (@pesquisador), 📊 Rank (@qualificador), 💬 Pulse (@abordagem), 🔬 Lens (@diagnosticador) |
+| **Prospection** | 🔍 Falcon (@pesquisador), 📊 Rank (@qualificador), 💬 Pulse (@abordagem), 🔬 Lens (@diagnosticador) |
 | **Creative** | ✍️ Ink (@copywriter), 🎨 Prism (@designer), 📱 Hype (@social-media) |
 | **Growth** | 🕵️ Scout (@scout), 🤝 Welcome (@onboarding) |
 | **Engineering** | 💻 Dex (@developer), ✅ Guard (@qa-tester) |
 | **Performance** | 📈 Boost (@media-buyer), 🛡️ Shield (@auditor) |
 | **Success** | 🎯 Vox (@concierge), 📊 Cipher (@data-scientist), 📋 Relay (@reporting), 🔎 Apex (@seo-specialist) |
+| **Automations** | 🔌 Wire (@wire), 🌉 Bridge (@bridge) |
 
 ---
 

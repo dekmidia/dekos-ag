@@ -14,7 +14,7 @@ human_checkpoints:
 
 ## Passo 1 - Carregar e Validar Ficha
 
-Localizar JSON em PROJETOS/_prospeccao/leads-qualificados/
+Localizar JSON em PROJETOS/_prospection/leads-qualificados/
 Confirmar: classificacao=quente, contato valido, dor_principal preenchida.
 
 Se lead MORNO sem diagnostico: executar workflow diagnostico-gratuito.md primeiro.
@@ -44,7 +44,7 @@ Aguardar confirmacao explicita antes de registrar como enviada.
 
 ## Passo 4 - Registrar Contato
 
-Criar PROJETOS/_prospeccao/contatos-realizados/[ID_LEAD].json:
+Criar PROJETOS/_prospection/contatos-realizados/[ID_LEAD].json:
 {
   "id_lead", "data_contato", "canal", "variacao_mensagem",
   "mensagem_enviada", "status": "enviado",

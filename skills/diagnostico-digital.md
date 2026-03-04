@@ -1,7 +1,7 @@
 ---
 name: diagnostico-digital
 type: prompt-skill
-squad: Prospeccao
+squad: prospection
 inputs: [nome_empresa, segmento, cidade, site, instagram, google_meu_negocio]
 outputs: [relatorio_diagnostico_md]
 uso: isca de captacao para leads mornos

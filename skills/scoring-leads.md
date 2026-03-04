@@ -1,7 +1,7 @@
 ---
 name: scoring-leads
 type: prompt-skill
-squad: Prospeccao
+squad: prospection
 inputs: [ficha_lead]
 outputs: [score, classificacao, justificativa, proximo_passo, gancho_sugerido]
 ---

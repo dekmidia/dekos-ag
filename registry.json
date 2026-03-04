@@ -21,40 +21,40 @@
     "leia_primeiro": "SEMPRE que uma skill, squad ou agente for adicionado ou modificado, atualize o arquivo LEIA-PRIMEIRO.html na raiz do projeto para manter o guia de boas-vindas sincronizado com o estado real do sistema."
   },
   "squads": {
-    "prospeccao": {
-      "squad_yaml": "squads/prospeccao/squad.yaml",
-      "descricao": "Prospeccao ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico",
+    "prospection": {
+      "squad_yaml": "squads/prospection/squad.yaml",
+      "descricao": "Prospection ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico",
       "agents": {
-        "pesquisador": "squads/prospeccao/pesquisador.md",
-        "qualificador": "squads/prospeccao/qualificador.md",
-        "abordagem": "squads/prospeccao/abordagem.md",
-        "diagnosticador": "squads/prospeccao/diagnosticador.md"
+        "pesquisador": "squads/prospection/pesquisador.md",
+        "qualificador": "squads/prospection/qualificador.md",
+        "abordagem": "squads/prospection/abordagem.md",
+        "diagnosticador": "squads/prospection/diagnosticador.md"
       },
       "tasks": {
-        "mapear-leads": "squads/prospeccao/tasks/task-mapear-leads.md",
-        "qualificar-lista": "squads/prospeccao/tasks/task-qualificar-lista.md",
-        "criar-mensagem": "squads/prospeccao/tasks/task-criar-mensagem.md",
-        "gerar-diagnostico": "squads/prospeccao/tasks/task-gerar-diagnostico.md",
-        "executar-followup": "squads/prospeccao/tasks/task-executar-followup.md"
+        "mapear-leads": "squads/prospection/tasks/task-mapear-leads.md",
+        "qualificar-lista": "squads/prospection/tasks/task-qualificar-lista.md",
+        "criar-mensagem": "squads/prospection/tasks/task-criar-mensagem.md",
+        "gerar-diagnostico": "squads/prospection/tasks/task-gerar-diagnostico.md",
+        "executar-followup": "squads/prospection/tasks/task-executar-followup.md"
       },
       "checklists": {
-        "ficha-lead": "squads/prospeccao/checklists/checklist-ficha-lead.md",
-        "mensagem-abordagem": "squads/prospeccao/checklists/checklist-mensagem-abordagem.md",
-        "diagnostico-entrega": "squads/prospeccao/checklists/checklist-diagnostico-entrega.md"
+        "ficha-lead": "squads/prospection/checklists/checklist-ficha-lead.md",
+        "mensagem-abordagem": "squads/prospection/checklists/checklist-mensagem-abordagem.md",
+        "diagnostico-entrega": "squads/prospection/checklists/checklist-diagnostico-entrega.md"
       },
       "templates": {
-        "ficha-lead": "squads/prospeccao/templates/template-ficha-lead.json",
-        "relatorio-prospeccao": "squads/prospeccao/templates/template-relatorio-prospeccao.md",
-        "diagnostico-digital": "squads/prospeccao/templates/template-diagnostico-digital.md"
+        "ficha-lead": "squads/prospection/templates/template-ficha-lead.json",
+        "relatorio-prospection": "squads/prospection/templates/template-relatorio-prospection.md",
+        "diagnostico-digital": "squads/prospection/templates/template-diagnostico-digital.md"
       },
       "data": {
-        "segmentos": "squads/prospeccao/data/segmentos.json",
-        "cidades-regioes": "squads/prospeccao/data/cidades-regioes.json",
-        "frases-proibidas": "squads/prospeccao/data/frases-proibidas.json",
-        "servicos-dekmidia": "squads/prospeccao/data/servicos-dekmidia.json"
+        "segmentos": "squads/prospection/data/segmentos.json",
+        "cidades-regioes": "squads/prospection/data/cidades-regioes.json",
+        "frases-proibidas": "squads/prospection/data/frases-proibidas.json",
+        "servicos-dekmidia": "squads/prospection/data/servicos-dekmidia.json"
       },
       "playbooks": [
-        "playbooks/prospeccao-pme-regiao.md",
+        "playbooks/prospection-pme-regiao.md",
         "playbooks/lead-scoring-system.md",
         "playbooks/cadencia-followup.md"
       ],
@@ -65,7 +65,7 @@
         "skills/doc-synchronizer/SKILL.md"
       ],
       "workflows": [
-        ".agents/workflows/prospectar-nicho.md",
+        ".agents/workflows/prospection-nicho.md",
         ".agents/workflows/abordar-lead.md",
         ".agents/workflows/diagnostico-gratuito.md"
       ]
@@ -83,7 +83,7 @@
       ]
     },
     "growth": {
-      "descricao": "Prospeccao exploratoria e onboarding de novos clientes",
+      "descricao": "prospection exploratoria e onboarding de novos clientes",
       "agents": {
         "scout": "squads/growth/scout.md",
         "onboarding": "squads/growth/onboarding.md"
@@ -132,10 +132,25 @@
       "playbooks": [
         "playbooks/docs-google-perfil-da-empresa.md"
       ]
+    },
+    "automations": {
+      "squad_yaml": "squads/automations/squad.yaml",
+      "descricao": "Automações n8n, WhatsApp Business e integração entre sistemas",
+      "agents": {
+        "wire": "squads/automations/wire.md",
+        "bridge": "squads/automations/bridge.md"
+      },
+      "tasks": {
+        "criar-fluxo": "squads/automations/tasks/task-criar-fluxo.md",
+        "integrar-api": "squads/automations/tasks/task-integrar-api.md"
+      },
+      "checklists": {
+        "fluxo-n8n": "squads/automations/checklists/checklist-fluxo-n8n.md"
+      }
     }
   },
   "workflows": {
-    "prospectar-nicho": ".agents/workflows/prospectar-nicho.md",
+    "prospection-nicho": ".agents/workflows/prospection-nicho.md",
     "abordar-lead": ".agents/workflows/abordar-lead.md",
     "diagnostico-gratuito": ".agents/workflows/diagnostico-gratuito.md",
     "onboarding-cliente": ".agents/workflows/onboarding-cliente.md",
@@ -144,16 +159,16 @@
   },
   "projetos": {
     "base_path": "PROJETOS/",
-    "prospeccao": {
-      "leads_brutos": "PROJETOS/_prospeccao/leads-brutos/",
-      "quentes": "PROJETOS/_prospeccao/leads-qualificados/quentes/",
-      "mornos": "PROJETOS/_prospeccao/leads-qualificados/mornos/",
-      "frios": "PROJETOS/_prospeccao/leads-qualificados/frios/",
-      "arquivados": "PROJETOS/_prospeccao/leads-arquivados/",
-      "contatos": "PROJETOS/_prospeccao/contatos-realizados/",
-      "diagnosticos": "PROJETOS/_prospeccao/diagnosticos/",
-      "relatorios": "PROJETOS/_prospeccao/relatorios/",
-      "mensagens": "PROJETOS/_prospeccao/mensagens-prontas/"
+    "prospection": {
+      "leads_brutos": "PROJETOS/_prospection/leads-brutos/",
+      "quentes": "PROJETOS/_prospection/leads-qualificados/quentes/",
+      "mornos": "PROJETOS/_prospection/leads-qualificados/mornos/",
+      "frios": "PROJETOS/_prospection/leads-qualificados/frios/",
+      "arquivados": "PROJETOS/_prospection/leads-arquivados/",
+      "contatos": "PROJETOS/_prospection/contatos-realizados/",
+      "diagnosticos": "PROJETOS/_prospection/diagnosticos/",
+      "relatorios": "PROJETOS/_prospection/relatorios/",
+      "mensagens": "PROJETOS/_prospection/mensagens-prontas/"
     },
     "cliente": {
       "briefing": "PROJETOS/[cliente]/briefing.md",

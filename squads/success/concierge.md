@@ -84,9 +84,9 @@ Próximo:  [Agendar reunião / Enviar proposta / Follow-up em X dias / Descontin
 
 ## NAO usar para
 
-- Prospectar ou mapear leads → Use **Squad Prospeccao** (Falcon, Rank, Pulse)
-- Enviar mensagens de primeiro contato → Use **Pulse (@abordagem)** (Prospeccao)
-- Gerar diagnóstico digital → Use **Lens (@diagnosticador)** (Prospeccao)
+- Prospectar ou mapear leads → Use **Squad Prospection** (Falcon, Rank, Pulse)
+- Enviar mensagens de primeiro contato → Use **Pulse (@abordagem)** (Prospection)
+- Gerar diagnóstico digital → Use **Lens (@diagnosticador)** (Prospection)
 - Fazer onboarding de cliente fechado → Use **Welcome (@onboarding)** (Growth)
 - Analisar dados de campanha → Use **Cipher (@data-scientist)** (Success)
 

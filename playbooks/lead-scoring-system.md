@@ -3,7 +3,7 @@ title: Sistema de Lead Scoring DekMidia
 tags: [scoring, qualificacao, leads, priorizacao]
 author: DekMidia
 version: "1.0.0"
-squads_que_usam: [Prospeccao]
+squads_que_usam: [prospection]
 ---
 
 # Playbook: Sistema de Lead Scoring

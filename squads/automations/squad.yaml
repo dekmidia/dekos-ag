@@ -1,0 +1,22 @@
+name: Squad de Automações
+version: "1.0.0"
+description: >
+  Squad especializada em automações com n8n, WhatsApp Business e
+  integração entre sistemas. Responsável por projetar, construir e
+  documentar fluxos automatizados para clientes da DekMídia.
+dekos:
+  minVersion: "1.0"
+agents:
+  - wire
+  - bridge
+tasks:
+  - task-criar-fluxo
+  - task-integrar-api
+checklists:
+  - checklist-fluxo-n8n
+tags:
+  - n8n
+  - whatsapp
+  - automacao
+  - integracao
+  - api

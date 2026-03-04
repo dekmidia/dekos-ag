@@ -23,9 +23,9 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 <!-- SQUAD_TABLE_START -->
 | Squad | Area de Responsabilidade |
 | --- | --- |
-| **Prospeccao** | Prospeccao ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico |
+| **Prospection** | Prospection ativa de PMEs: pesquisa, qualificacao, abordagem e diagnostico |
 | **Creative** | Criacao de conteudo, copies, design e social media |
-| **Growth** | Prospeccao exploratoria e onboarding de novos clientes |
+| **Growth** | Prospection exploratoria e onboarding de novos clientes |
 | **Engineering** | Desenvolvimento de sites, landing pages e QA pre-deploy |
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
@@ -121,7 +121,7 @@ Basta abrir o Antigravity na raiz da pasta `dekos-ag` e dar os comandos em lingu
 
 **Exemplos de "Comandos":**
 
-- *"Faça o workflow de **prospeccao**, nicho: advogados, cidade: são paulo."*
+- *"Faça o workflow de **prospection**, nicho: advogados, cidade: são paulo."*
 - *"Invoque o **Copywriter** (Creative) e peça para ele criar um carrossel baseando-se no playbook de **Alta Conversão**."*
 - *"Leia este PDF aqui e crie um novo **Playbook** de Atendimento em `playbooks/atendimento-whatsapp.md` com o frontmatter adequado."*
 

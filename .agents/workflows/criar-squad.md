@@ -2,7 +2,7 @@
 description: >
   Cria uma nova squad do zero com estrutura padronizada. Gera pasta,
   agente(s), squad.yaml e registra no registry.json. Garante que toda
-  squad nasce com a mesma qualidade da Squad de Prospeccao.
+  squad nasce com a mesma qualidade da Squad de prospection.
 inputs:
   nome_squad: "string (ex: vendas)"
   descricao: "string (ex: Squad responsavel pelo ciclo de vendas)"

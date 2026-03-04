@@ -3,7 +3,7 @@ title: Cadencia de Follow-Up e Nutricao de Leads
 tags: [followup, cadencia, nutricao, relacionamento, vendas]
 author: DekMidia
 version: "1.0.0"
-squads_que_usam: [Prospeccao]
+squads_que_usam: [prospection]
 ---
 
 # Playbook: Cadencia de Follow-Up

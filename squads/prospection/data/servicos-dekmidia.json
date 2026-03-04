@@ -1,0 +1,41 @@
+{
+  "_descricao": "Servicos DekMidia com ticket e fit por nivel de maturidade digital.",
+  "servicos": [
+    {
+      "id": "site", "nome": "Criacao e Otimizacao de Site",
+      "ticket_setup": "R$ 2.000 a R$ 8.000", "ticket_mensal": "R$ 300 a R$ 800",
+      "fit_nivel_maturidade": [0, 1],
+      "gancho": "Seu negocio e invisivel para quem busca no Google agora"
+    },
+    {
+      "id": "google-ads", "nome": "Gestao Google Ads",
+      "ticket_mensal": "R$ 800 a R$ 3.000 + verba de midia",
+      "fit_nivel_maturidade": [1, 2, 3],
+      "gancho": "Seus concorrentes estao captando os clientes que deveriam ser seus"
+    },
+    {
+      "id": "meta-ads", "nome": "Gestao Meta Ads",
+      "ticket_mensal": "R$ 800 a R$ 2.500 + verba de midia",
+      "fit_nivel_maturidade": [1, 2, 3],
+      "gancho": "Voce posta no Instagram mas nao converte - anuncio muda isso"
+    },
+    {
+      "id": "whatsapp-auto", "nome": "Automacao de Atendimento WhatsApp",
+      "ticket_mensal": "R$ 600 a R$ 1.500",
+      "fit_nivel_maturidade": [2, 3, 4],
+      "gancho": "Voce paga por cliques mas perde clientes no atendimento"
+    },
+    {
+      "id": "funil-vendas", "nome": "Estruturacao de Funil de Vendas",
+      "ticket_setup": "R$ 3.000 a R$ 10.000", "ticket_mensal": "R$ 800 a R$ 2.000",
+      "fit_nivel_maturidade": [2, 3, 4],
+      "gancho": "Voce capta leads mas nao tem processo para converter"
+    },
+    {
+      "id": "pacote-completo", "nome": "Pacote Marketing Digital Completo",
+      "ticket_mensal": "R$ 2.500 a R$ 8.000",
+      "fit_nivel_maturidade": [0],
+      "gancho": "Seu negocio existe mas e invisivel - vamos resolver tudo de uma vez"
+    }
+  ]
+}

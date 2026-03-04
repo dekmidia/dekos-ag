@@ -1,12 +1,12 @@
 ---
-tags: [copywriting, mensagens, whatsapp, linkedin, email, prospeccao]
+tags: [copywriting, mensagens, whatsapp, linkedin, email, prospection]
 author: DekMidia
 versao: 1.0
 ---
 
-# Playbook - Templates de Mensagens de Prospeccao
+# Playbook - Templates de Mensagens de prospection
 
-## Principios de Copywriting para Prospeccao Fria
+## Principios de Copywriting para prospection Fria
 
 1. ESPECIFICIDADE: algo que prova que voce pesquisou sobre eles
 2. RELEVANCIA: uma dor ou oportunidade que impacta o negocio deles agora

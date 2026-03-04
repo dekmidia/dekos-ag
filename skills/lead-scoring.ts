@@ -1,6 +1,6 @@
 /**
  * Skill: Lead Scoring
- * Squad: Prospeccao
+ * Squad: prospection
  * Versao: 1.0.0
  *
  * Calcula o score de um lead com base nos 4 criterios DekMidia (A, B, C, D).

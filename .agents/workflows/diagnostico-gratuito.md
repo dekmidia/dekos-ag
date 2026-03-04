@@ -80,7 +80,7 @@ Posso enviar o PDF? 3 minutos pra ler.
 Mensagem Email:
 Assunto: "Diagnostico Digital - [NEGOCIO] | DekMidia"
 
-Salvar: PROJETOS/_prospeccao/diagnosticos/[EMPRESA]-[DATA].md
+Salvar: PROJETOS/_prospection/diagnosticos/[EMPRESA]-[DATA].md
 Atualizar status do lead para "diagnostico-enviado".
 
 ---

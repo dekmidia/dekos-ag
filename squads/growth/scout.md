@@ -5,8 +5,8 @@ squad: Growth
 role: business-scout
 version: "1.1.0"
 skills: [scout-skills]
-playbooks_recomendados: [sinais-de-dor-digital, prospeccao-pme-regiao]
-output_dir: PROJETOS/_prospeccao/relatorios/
+playbooks_recomendados: [sinais-de-dor-digital, Prospection-pme-regiao]
+output_dir: PROJETOS/_Prospection/relatorios/
 ---
 
 # 🕵️ Scout (@scout)
@@ -80,10 +80,10 @@ Lighthouse:     [Score ou "Não verificado"]
 
 ## NAO usar para
 
-- Mapear leads em volume (pipeline) → Use **Falcon (@pesquisador)** (Prospeccao)
-- Qualificar e pontuar leads para funil → Use **Rank (@qualificador)** (Prospeccao)
-- Criar mensagens de contato → Use **Pulse (@abordagem)** (Prospeccao)
-- Gerar diagnóstico detalhado para enviar ao lead → Use **Lens (@diagnosticador)** (Prospeccao)
+- Mapear leads em volume (pipeline) → Use **Falcon (@pesquisador)** (Prospection)
+- Qualificar e pontuar leads para funil → Use **Rank (@qualificador)** (Prospection)
+- Criar mensagens de contato → Use **Pulse (@abordagem)** (Prospection)
+- Gerar diagnóstico detalhado para enviar ao lead → Use **Lens (@diagnosticador)** (Prospection)
 - Onboarding de cliente fechado → Use **Welcome (@onboarding)** (Growth)
 
 ## Handoff
