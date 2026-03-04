@@ -33,6 +33,8 @@ squads/[nome-squad]/
 ├── squad.yaml              ← manifesto da squad
 ├── [agente-1].md           ← prompt com persona, NOT for, handoff, comandos
 ├── [agente-2].md           ← idem
+├── references/             ← benchmarks e exemplos globais da area
+│   └── README.md           ← orientacoes sobre o que colocar aqui
 ├── tasks/
 │   └── task-[nome].md      ← pelo menos 1 task por agente
 ├── checklists/

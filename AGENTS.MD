@@ -75,13 +75,21 @@ Subpastas padrão por cliente:
 | `seo/` | Apex (@seo-specialist) |
 | `qa/` | Guard (@qa-tester) |
 | `leads/` | Vox (@concierge) |
-| `referencias/` | Materiais do cliente (logos, cores, fotos) |
+| `referencias/` | Materiais do cliente (logos, cores, fotos, manual da marca) |
 
 Se o caminho de destino não existir: criar a subpasta dentro de `PROJETOS/`,
 nunca fora dela.
 
 > ⚠️ **`assets/` está DEPRECADA.** Nenhum agente deve salvar outputs nesta pasta.
 > Todo output deve ir para `PROJETOS/[cliente]/[subpasta]/`.
+
+### Regra de Consulta a Referências
+
+Antes de iniciar qualquer entrega criativa, técnica ou estratégica, o agente **deve**:
+
+1. Consultar `squads/[sua-squad]/references/` para buscar benchmarks e exemplos globais da área.
+2. Consultar `PROJETOS/[cliente]/referencias/` para buscar logotipo, design system e manual da marca do cliente específico.
+3. Personalizar o output usando as referências do projeto, mas se inspirando nos benchmarks globais da squad.
 
 ---
 

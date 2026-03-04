@@ -15,7 +15,9 @@
     "handoff": "Todo agente declara o handoff ao final: qual agente recebe e com quais dados.",
     "squad_manifest": "Todo squad tem squad.yaml na raiz listando todos os seus componentes.",
     "output_rule": "Todo output vai para PROJETOS/. NUNCA usar assets/ como destino.",
-    "delegation": "Todo agente tem secao NAO usar para indicando fronteiras e delegacao."
+    "delegation": "Todo agente tem secao NAO usar para indicando fronteiras e delegacao.",
+    "references_squad": "Cada squad possui uma pasta references/ com benchmarks e exemplos globais da area.",
+    "references_projeto": "Cada projeto em PROJETOS/[cliente]/ possui uma pasta references/ com logotipo, design system e manual da marca do cliente."
   },
   "squads": {
     "prospeccao": {

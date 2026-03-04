@@ -12,7 +12,7 @@ Cria a estrutura padrão de pastas para um novo cliente no Hub de PROJETOS do DE
 3. Crie a pasta raiz em `PROJETOS/[nome-em-kebab-case]`.
 4. Crie o arquivo `project.json` na raiz da nova pasta contendo os metadados do projeto (id, nome, nicho, status).
 5. Crie as subpastas base da operação:
-   - `referencias/` - Arquivos de marca como logo, manuais de identidade, hex de cores base. Crie um README explicativo.
+   - `referencias/` - Logotipo, design system, manual da marca, paleta de cores, tipografias. Crie um README explicativo.
    - `prospeccao/` - Para salvar os documentos de pré-vendas e abordagens.
    - `performance/google-ads/` e `performance/meta-ads/` - Para arquivos das campanhas.
    - `creative/site/` e `creative/social-media/` - Para códigos e calendários.
