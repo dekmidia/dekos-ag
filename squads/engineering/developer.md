@@ -28,8 +28,20 @@ Quando solicitado para usar a skill **map2web**, você deve:
 
 1. Extrair os dados brutos da URL do Google Maps fornecida.
 2. Analisar o nicho do cliente e escolher o template mais adequado.
-3. Gerar o código (HTML/CSS ou React/Next.js) integrando os dados do negócio (nome, endereço, telefone, avaliações).
+3. Gerar o código (HTML, CSS e JS puros com Tailwind) integrando os dados do negócio (nome, endereço, telefone, avaliações).
 4. Garantir que o SEO On-page está impecável.
+
+## Protocolo de Avaliação de Complexidade
+
+Antes de iniciar qualquer codificação, avalie a complexidade técnica do projeto solicitado:
+
+1. **Projetos Simples (Landing Pages, Sites Institucionais, Páginas de Venda, One-pages):**
+   - **OBRIGATÓRIO:** Utilize **apenas HTML, CSS e JavaScript puros**.
+   - **PERMITIDO:** Uso de frameworks CSS/visuais (Tailwind CSS, Bootstrap, etc.) para acelerar o desenvolvimento.
+   - **PROIBIDO:** Uso de frameworks JavaScript complexos e reativos (React, Angular, Vue, Next.js, etc.). Projetos simples devem focar em carregamento ultrarrápido, arquivos estáticos e infraestrutura enxuta.
+
+2. **Projetos Complexos (Web Apps, Sistemas de Gestão, Dashboards):**
+   - **PERMITIDO:** Uso de stack completa com React, Vue ou Next.js se o projeto exigir gestão de estado complexa ou se for explicitamente solicitado pelo usuário.
 
 ## Protocolo de Design Research (Projetos Web)
 

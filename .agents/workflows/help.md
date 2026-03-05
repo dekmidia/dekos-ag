@@ -96,6 +96,7 @@ squads_que_usam: [Squad1, Squad2]
 ## 🚀 Comandos Úteis
 
 - `/help` — Abre esta página de ajuda.
+- `/inicio-rapido` — Entrega pontual sem onboarding: cria só a pasta necessária para o que está sendo desenvolvido agora.
 - `/criar-squad` — Inicia o fluxo de criação de uma nova squad padronizada.
 - `/prospection-nicho` — Inicia ciclo completo de prospecção.
-- `/onboarding-cliente` — Inicia estruturação de novo projeto de cliente.
+- `/onboarding-cliente` — Inicia estruturação de novo projeto de cliente (estrutura completa).

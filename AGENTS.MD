@@ -102,6 +102,35 @@ nunca fora dela.
 > ⚠️ **`assets/` está DEPRECADA.** Nenhum agente deve salvar outputs nesta pasta.
 > Todo output deve ir para `PROJETOS/[cliente]/[subpasta]/`.
 
+---
+
+## Regra de Projeto Rápido (Sem Onboarding)
+
+Quando um agente é invocado diretamente para uma entrega pontual, **sem ter passado pelo workflow de onboarding completo**, ele deve:
+
+1. **Identificar o nome do projeto** (perguntado ao usuário, ou inferido da solicitação).
+2. **Criar SOMENTE a subpasta correspondente ao tipo de entrega** dentro de `PROJETOS/[projeto]/`. Nenhuma outra pasta deve ser criada.
+3. **Nunca criar pastas vazias** — a pasta só é criada no momento em que um arquivo será salvo nela.
+
+### Mapa de Entrega → Subpasta
+
+| Tipo de Entrega | Squad / Agente | Pasta a criar |
+|---|---|---|
+| Landing Page, Site, One-page, Funil | Engineering / Dex | `PROJETOS/[projeto]/creative/lp/` |
+| Site completo, multi-página, e-commerce | Engineering / Dex | `PROJETOS/[projeto]/creative/site/` |
+| Social Media (posts, carrossel, stories) | Creative / Hype | `PROJETOS/[projeto]/creative/social-media/` |
+| Criação de copy (texto, anúncio, email) | Creative / Ink | `PROJETOS/[projeto]/creative/copy/` |
+| Brief de design, especificação visual | Creative / Prism | `PROJETOS/[projeto]/creative/design/` |
+| Campanhas Google Ads | Performance / Boost | `PROJETOS/[projeto]/performance/google-ads/` |
+| Campanhas Meta Ads | Performance / Boost | `PROJETOS/[projeto]/performance/meta-ads/` |
+| Auditoria de anúncios | Performance / Shield | `PROJETOS/[projeto]/performance/auditoria/` |
+| SEO | Success / Apex | `PROJETOS/[projeto]/seo/` |
+| Relatório / Dados | Success / Cipher ou Relay | `PROJETOS/[projeto]/reports/` |
+| Automação / Integração / N8N | Automations / Wire ou Bridge | `PROJETOS/[projeto]/automations/` |
+| QA / Testes | Engineering / Guard | `PROJETOS/[projeto]/qa/` |
+
+> 💡 **Regra de ouro:** crie APENAS a pasta do que está sendo desenvolvido agora. Se o projeto crescer e houver onboarding, as demais pastas serão criadas pelo workflow.
+
 ### Regra de Consulta a Referências
 
 Antes de iniciar qualquer entrega criativa, técnica ou estratégica, o agente **deve**:
