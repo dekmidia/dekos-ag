@@ -8,6 +8,7 @@ Mapeia o processo de encontrar um novo cliente e gerar a primeira abordagem come
 1. Use o Agente `squads/growth/scout.md`.
 2. Busque na web por empresas locais do nicho "{nicho}" na região de "{cidade}".
 3. Identifique 3 empresas que tenham site desatualizado ou não tenham anúncios ativos no Google.
+   * **Instrução Especial:** É OBRIGATÓRIO verificar sempre as informações das empresas no Google Perfil da Empresa (Google Meu Negócio) para validar com precisão a existência ou não de um website.
 4. Para cada empresa, chame o Agente `squads/creative/copywriter.md` e o Playbook `playbooks/copy-alta-conversao.md`.
 5. Gere um email frio de abordagem focado em apontar as falhas detectadas (Agitação) e oferecendo nossos serviços como Solução.
 6. Salve o resultado em `PROJETOS/_prospection/mensagens-prontas/abordagens-{data}.md`.
