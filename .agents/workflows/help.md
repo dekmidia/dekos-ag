@@ -57,12 +57,18 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 <!-- SKILL_TABLE_START -->
 | Skill | Descricao |
 | --- | --- |
+| `agent-orchestration-improve-agent` | Habilidade de metalinguagem para otimizar, melhorar prompts e analisar performance de outros agentes e skills do sistema. |
+| `api-design-principles` | Mestre em princípios de design de APIs REST e GraphQL. Para construir, revisar ou estabelecer padrões escaláveis, legíveis e perfeitos em endpoints e webhooks. |
+| `app-builder` | Orquestrador massivo de geração de apps (Fullstack, SaaS, CLI, Mobile). Analisa requisitos e coordena agentes para criar pastas estruturadas. |
+| `architecture` | Framework de tomada de decisões para arquitetura de software e sistemas (ADRs). Garante solidez e escolhas corretas de stack. |
+| `brainstorming` | Framework de raciocínio lógico obrigatório antes de execuções criativas ou estruturais pesadas. Transforma ideias vagas em designs/planos validados. |
 | `brand-guidelines` | Aplica regras rígidas de branding corporativo (cores, fontes e design systems) a qualquer entregável. Usado para gerar consistência visual em documentos e páginas. |
 | `canva-creative` | Ferramenta do sistema. |
 | `doc-synchronizer` | Sincroniza tabelas de Agentes, Squads e Skills do registry.json com README.md e help.md. |
 | `docx` | Ferramenta avançada para criar, editar e analisar documentos DOCX corporativos com formatação premium. |
 | `lead-scoring` | Script utilitario do sistema. |
 | `lp-cinematografica` | Use esta skill sempre que for solicitada a criação de uma landing page ou site de alta fidelidade com estética cinematográfica. Suporta captura de sites de referência via MCP Firecrawl (instalado automaticamente se necessário). Gera código React 19 + Tailwind CSS + GSAP com animações premium, design system completo e presets estéticos. |
+| `marketing-strategist-reasoning` | Instrui o agente a consultar o playbook docs-estruturas-marketing.md e utilizar frameworks mentais avançados (DECAF, Systems Thinking, etc) antes de gerar propostas, campanhas de growth e SEO. |
 | `mcp-builder` | Guia de desenvolvimento de servidores MCP (Model Context Protocol). Ajuda a planejar, codar, revisar e avaliar servidores MCP robustos baseados nas documentações oficiais da Anthropic. |
 | `microsoft-designer-creative` | Ferramenta do sistema. |
 | `pdf` | Skill de leitura OCR, formatação e geração final de documentos PDF a partir das entregas. |
@@ -109,3 +115,9 @@ squads_que_usam: [Squad1, Squad2]
 - `/criar-squad` — Inicia o fluxo de criação de uma nova squad padronizada.
 - `/prospection-nicho` — Inicia ciclo completo de prospecção.
 - `/onboarding-cliente` — Inicia estruturação de novo projeto de cliente (estrutura completa).
+
+### 🤖 Workflows de Orquestração Avançada (CrewAI Patterns)
+
+- `/workflow-auto-eval` — Loop de Auto-Avaliação: o agente criador entrega, o agente revisor critica, e o ciclo se repete até a qualidade ser aprovada (máx. 2 iterações).
+- `/workflow-multi-crew-content` — Multi-Crew Content: pipeline de criação onde a squad de dados analisa, a criativa escreve (com memória compartilhada) e o design fecha com o visual.
+- `/workflow-human-in-the-loop-prospect` — Prospecção com Aprovação Humana: o agente pesquisa e qualifica leads autonomamente, mas pausa aguardando sua confirmação antes de disparar qualquer mensagem.

@@ -68,7 +68,9 @@
       "workflows": [
         ".agents/workflows/prospection-nicho.md",
         ".agents/workflows/abordar-lead.md",
-        ".agents/workflows/diagnostico-gratuito.md"
+        ".agents/workflows/diagnostico-gratuito.md",
+        ".agents/workflows/workflow-human-in-the-loop-prospect.md",
+        ".agents/workflows/cadencia-followup.md"
       ]
     },
     "creative": {
@@ -82,14 +84,20 @@
         "playbooks/copy-alta-conversao.md",
         "playbooks/copywritter-icaro-de-carvalho.md",
         "playbooks/docs-canva.md",
-        "playbooks/docs-microsoft-designer.md"
+        "playbooks/docs-microsoft-designer.md",
+        "playbooks/docs-estruturas-marketing.md"
       ],
       "skills": [
         "skills/microsoft-designer-creative/SKILL.md",
         "skills/canva-creative/SKILL.md",
         "skills/brand-guidelines/SKILL.md",
         "skills/docx/SKILL.md",
-        "skills/pdf/SKILL.md"
+        "skills/pdf/SKILL.md",
+        "skills/marketing-strategist-reasoning/SKILL.md"
+      ],
+      "workflows": [
+        ".agents/workflows/workflow-auto-eval.md",
+        ".agents/workflows/workflow-multi-crew-content.md"
       ]
     },
     "growth": {
@@ -100,6 +108,12 @@
       },
       "workflows": [
         ".agents/workflows/onboarding-cliente.md"
+      ],
+      "playbooks": [
+        "playbooks/docs-estruturas-marketing.md"
+      ],
+      "skills": [
+        "skills/marketing-strategist-reasoning/SKILL.md"
       ]
     },
     "engineering": {
@@ -117,7 +131,12 @@
         "skills/web-artifacts-builder/SKILL.md",
         "skills/webapp-testing/SKILL.md",
         "skills/mcp-builder/SKILL.md",
-        "skills/skill-creator/SKILL.md"
+        "skills/skill-creator/SKILL.md",
+        "skills/brainstorming/SKILL.md",
+        "skills/architecture/SKILL.md",
+        "skills/agent-orchestration-improve-agent/SKILL.md",
+        "skills/app-builder/SKILL.md",
+        "skills/api-design-principles/SKILL.md"
       ]
     },
     "performance": {
@@ -171,7 +190,10 @@
         "playbooks/docs-n8n.md"
       ],
       "skills": [
-        "skills/mcp-builder/SKILL.md"
+        "skills/mcp-builder/SKILL.md",
+        "skills/brainstorming/SKILL.md",
+        "skills/architecture/SKILL.md",
+        "skills/api-design-principles/SKILL.md"
       ]
     }
   },
