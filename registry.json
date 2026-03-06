@@ -56,7 +56,8 @@
       "playbooks": [
         "playbooks/prospection-pme-regiao.md",
         "playbooks/lead-scoring-system.md",
-        "playbooks/cadencia-followup.md"
+        "playbooks/cadencia-followup.md",
+        "playbooks/docs-experiencia-disney.md"
       ],
       "skills": [
         "skills/lead-scoring.ts",
@@ -87,7 +88,8 @@
         "playbooks/copywritter-icaro-de-carvalho.md",
         "playbooks/docs-canva.md",
         "playbooks/docs-microsoft-designer.md",
-        "playbooks/docs-estruturas-marketing.md"
+        "playbooks/docs-estruturas-marketing.md",
+        "playbooks/docs-experiencia-disney.md"
       ],
       "skills": [
         "skills/microsoft-designer-creative/SKILL.md",
@@ -175,7 +177,8 @@
         "seo-specialist": "squads/success/seo-specialist.md"
       },
       "playbooks": [
-        "playbooks/docs-google-perfil-da-empresa.md"
+        "playbooks/docs-google-perfil-da-empresa.md",
+        "playbooks/docs-experiencia-disney.md"
       ],
       "skills": [
         "skills/pptx/SKILL.md",
