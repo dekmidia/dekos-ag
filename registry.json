@@ -62,7 +62,8 @@
         "skills/lead-scoring.ts",
         "skills/playbook-formatter/SKILL.md",
         "skills/skill-formatter/SKILL.md",
-        "skills/doc-synchronizer/SKILL.md"
+        "skills/doc-synchronizer/SKILL.md",
+        "skills/xlsx/SKILL.md"
       ],
       "workflows": [
         ".agents/workflows/prospection-nicho.md",
@@ -85,7 +86,10 @@
       ],
       "skills": [
         "skills/microsoft-designer-creative/SKILL.md",
-        "skills/canva-creative/SKILL.md"
+        "skills/canva-creative/SKILL.md",
+        "skills/brand-guidelines/SKILL.md",
+        "skills/docx/SKILL.md",
+        "skills/pdf/SKILL.md"
       ]
     },
     "growth": {
@@ -109,7 +113,11 @@
         "playbooks/docs-elementor.md"
       ],
       "skills": [
-        "skills/lp-cinematografica/SKILL.md"
+        "skills/lp-cinematografica/SKILL.md",
+        "skills/web-artifacts-builder/SKILL.md",
+        "skills/webapp-testing/SKILL.md",
+        "skills/mcp-builder/SKILL.md",
+        "skills/skill-creator/SKILL.md"
       ]
     },
     "performance": {
@@ -137,6 +145,12 @@
       },
       "playbooks": [
         "playbooks/docs-google-perfil-da-empresa.md"
+      ],
+      "skills": [
+        "skills/pptx/SKILL.md",
+        "skills/docx/SKILL.md",
+        "skills/xlsx/SKILL.md",
+        "skills/pdf/SKILL.md"
       ]
     },
     "automations": {
@@ -155,6 +169,9 @@
       },
       "playbooks": [
         "playbooks/docs-n8n.md"
+      ],
+      "skills": [
+        "skills/mcp-builder/SKILL.md"
       ]
     }
   },

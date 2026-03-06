@@ -57,13 +57,22 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 <!-- SKILL_TABLE_START -->
 | Skill | Descricao |
 | --- | --- |
+| `brand-guidelines` | Aplica regras rígidas de branding corporativo (cores, fontes e design systems) a qualquer entregável. Usado para gerar consistência visual em documentos e páginas. |
 | `canva-creative` | Ferramenta do sistema. |
 | `doc-synchronizer` | Sincroniza tabelas de Agentes, Squads e Skills do registry.json com README.md e help.md. |
+| `docx` | Ferramenta avançada para criar, editar e analisar documentos DOCX corporativos com formatação premium. |
 | `lead-scoring` | Script utilitario do sistema. |
 | `lp-cinematografica` | Use esta skill sempre que for solicitada a criação de uma landing page ou site de alta fidelidade com estética cinematográfica. Suporta captura de sites de referência via MCP Firecrawl (instalado automaticamente se necessário). Gera código React 19 + Tailwind CSS + GSAP com animações premium, design system completo e presets estéticos. |
+| `mcp-builder` | Guia de desenvolvimento de servidores MCP (Model Context Protocol). Ajuda a planejar, codar, revisar e avaliar servidores MCP robustos baseados nas documentações oficiais da Anthropic. |
 | `microsoft-designer-creative` | Ferramenta do sistema. |
+| `pdf` | Skill de leitura OCR, formatação e geração final de documentos PDF a partir das entregas. |
 | `playbook-formatter` | Garante que novos playbooks sigam o padrão técnico do DEK-OS (YAML frontmatter + Markdown estruturado). |
+| `pptx` | Criação, edição e design avançado de apresentações PowerPoint (PPTX) garantindo legibilidade e beleza. |
+| `skill-creator` | Habilidade meta-linguística que orienta o processo correto de criar, auditar e testar A/B novas Skills para o ecossistema. |
 | `skill-formatter` | Garante que novas skills (Markdown ou Código) sigam o padrão técnico do DEK-OS. |
+| `web-artifacts-builder` | Suite de ferramentas para criar artefatos HTML multi-componentes complexos usando tecnologias frontend modernas (React, Tailwind CSS, shadcn/ui). Use para landing pages, calculadoras e dashboards que precisam de estado ou roteamento. |
+| `webapp-testing` | Ferramentas para interagir e testar aplicações web via Playwright. Suporta navegação automatizada, screenshots e validação de seletores DOM em QA. |
+| `xlsx` | Criação, edição e análise avançada de planilhas Excel (XLSX). Garante fórmulas, formatações e integração com modelos financeiros. |
 <!-- SKILL_TABLE_END -->
 
 ---
