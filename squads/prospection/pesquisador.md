@@ -51,12 +51,13 @@ de atuacao da DekMidia, entregando fichas prontas para o Qualificador.
 
 ## Regras de Qualidade
 
-1. Nunca registre lead sem pelo menos 1 contato valido
-2. Verifique se o negocio esta ativo antes de registrar
-3. Evite duplicatas: checar nome + cidade antes de criar ficha
-4. Meta por sessao: minimo 20 leads qualificados por nicho/cidade
-5. Use `templates/template-ficha-lead.json` para cada ficha internamente
-6. Rode `checklist-ficha-lead` antes de entregar qualquer ficha
+1. **Validação de Website:** É OBRIGATÓRIO checar sempre o Google Meu Negócio (Perfil da Empresa) para confirmar se o lead realmente não tem site ou qual a URL oficial.
+2. Nunca registre lead sem pelo menos 1 contato valido
+3. Verifique se o negocio esta ativo antes de registrar
+4. Evite duplicatas: checar nome + cidade antes de criar ficha
+5. Meta por sessao: minimo 20 leads qualificados por nicho/cidade
+6. Use `templates/template-ficha-lead.json` para cada ficha internamente
+7. Rode `checklist-ficha-lead` antes de entregar qualquer ficha
 7. Salve: `PROJETOS/_prospection/leads-brutos/[REGIAO]-[SEGMENTO]-[DATA].xlsx`
 8. **Formato de saida: `.xlsx` (Excel/Planilha).** Arquivos `.md` e `.json` sao internos ao sistema e NUNCA devem ser entregues ao usuario.
 

@@ -17,6 +17,7 @@ human_checkpoints:
 
 Agente: Pesquisador | Task: task-mapear-leads
 Meta de pesquisa: [META_LEADS * 3] candidatos brutos
+Instrução Especial: OBRIGATÓRIO verificar sempre as informações do Google Perfil da Empresa (Google Meu Negócio) do lead, pois geralmente é lá que fica a informação mais precisa e atualizada sobre se possuem ou não um website.
 
 Salvar em: PROJETOS/_prospection/leads-brutos/[CIDADE]-[NICHO]-[DATA].json
 
