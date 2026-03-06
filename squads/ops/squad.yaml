@@ -1,0 +1,35 @@
+squad: ops
+name: "Ops — Operações do CEO"
+descricao: "Agentes de produtividade pessoal e criatividade do fundador"
+version: "1.0.0"
+
+agents:
+  - id: secretaria
+    name: Donna
+    file: squads/ops/donna.md
+    emoji: "🗂️"
+    missao: "Priorização diária de tarefas com base em impacto no negócio"
+
+  - id: leo
+    name: Leo
+    file: squads/ops/leo.md
+    emoji: "💡"
+    missao: "Captura de ideias e geração criativa de oportunidades"
+
+tasks:
+  - id: task-priorizar-dia
+    agent: donna
+    file: squads/ops/tasks/task-priorizar-dia.md
+  - id: task-capturar-ideia
+    agent: leo
+    file: squads/ops/tasks/task-capturar-ideia.md
+  - id: task-analisar-ideias
+    agent: leo
+    file: squads/ops/tasks/task-analisar-ideias.md
+
+data:
+  - squads/ops/data/tempos-medios.json
+
+output_dirs:
+  donna: PROJETOS/_ops/agenda/
+  leo: PROJETOS/_ideias/

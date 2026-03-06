@@ -30,6 +30,7 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
 | **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
+| **Ops** | Produtividade do CEO: priorização de agenda e curadoria de ideias |
 <!-- SQUAD_TABLE_END -->
 
 ## 🤖 Agentes Ativos
@@ -54,6 +55,8 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 | **Cipher** (@data-scientist) | Success | Analisar dados brutos e gerar insights de marketing. |
 | **Relay** (@reporting) | Success | Traduzir métricas em relatórios claros para o cliente. |
 | **Apex** (@seo-specialist) | Success | Otimizar posicionamento orgânico e SEO local. |
+| **Donna** (@secretaria) | Ops | Priorizar tarefas diárias do CEO com base em impacto e urgência. |
+| **Leo** (@leo) | Ops | Capturar e analisar ideias para gerar novas oportunidades. |
 <!-- AGENT_TABLE_END -->
 
 ---

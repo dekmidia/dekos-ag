@@ -1,0 +1,99 @@
+{
+  "_descricao": "Base de tempos médios por categoria de tarefa. Editável pelo usuário para refletir a realidade da sua rotina.",
+  "_instrucao": "Donna consulta este arquivo para estimar o tempo de cada atividade. Adicione novas categorias conforme necessário.",
+  "categorias": {
+    "reuniao": {
+      "label": "Reunião / Call",
+      "tempo_padrao_horas": 1.0,
+      "variacoes": {
+        "alinhamento_rapido": 0.5,
+        "reuniao_cliente": 1.0,
+        "reuniao_estrategica": 1.5,
+        "workshop": 2.0
+      }
+    },
+    "proposta": {
+      "label": "Criar / Revisar Proposta Comercial",
+      "tempo_padrao_horas": 2.0,
+      "variacoes": {
+        "proposta_simples": 1.0,
+        "proposta_completa": 2.5,
+        "revisao_proposta": 0.5
+      }
+    },
+    "email": {
+      "label": "Responder E-mails / Mensagens",
+      "tempo_padrao_horas": 0.5,
+      "variacoes": {
+        "triagem_inbox": 0.5,
+        "resposta_critica": 0.5,
+        "resposta_complexa": 1.0
+      }
+    },
+    "landing_page": {
+      "label": "Criação / Revisão de Landing Page",
+      "tempo_padrao_horas": 3.0,
+      "variacoes": {
+        "revisao_lp": 1.0,
+        "criacao_lp_simples": 3.0,
+        "criacao_lp_completa": 5.0
+      }
+    },
+    "copy": {
+      "label": "Criação de Copy / Texto",
+      "tempo_padrao_horas": 1.5,
+      "variacoes": {
+        "post_social_media": 0.5,
+        "copy_anuncio": 1.0,
+        "copy_email_marketing": 1.0,
+        "copy_pagina_completa": 2.0
+      }
+    },
+    "relatorio": {
+      "label": "Relatório / Análise de Dados",
+      "tempo_padrao_horas": 1.5,
+      "variacoes": {
+        "relatorio_semanal": 1.0,
+        "relatorio_mensal": 2.0,
+        "analise_ads": 1.5
+      }
+    },
+    "prospecao": {
+      "label": "Prospecção / Pesquisa de Leads",
+      "tempo_padrao_horas": 2.0,
+      "variacoes": {
+        "pesquisa_nicho": 2.0,
+        "qualificacao_lista": 1.0,
+        "abordagem_lead": 0.5
+      }
+    },
+    "administrativo": {
+      "label": "Tarefas Administrativas",
+      "tempo_padrao_horas": 0.5,
+      "variacoes": {
+        "organizacao_arquivos": 0.5,
+        "atualizacao_sistema": 0.5,
+        "faturamento": 1.0,
+        "contrato": 1.0
+      }
+    },
+    "estrategia": {
+      "label": "Planejamento / Estratégia",
+      "tempo_padrao_horas": 2.0,
+      "variacoes": {
+        "planejamento_semanal": 1.0,
+        "planejamento_mensal": 2.0,
+        "revisao_estrategica": 1.5
+      }
+    },
+    "treinamento": {
+      "label": "Aprendizado / Treinamento",
+      "tempo_padrao_horas": 1.5,
+      "variacoes": {
+        "leitura_artigo": 0.5,
+        "curso_modulo": 1.0,
+        "workshop_online": 2.0
+      }
+    }
+  }
+}

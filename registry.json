@@ -210,6 +210,22 @@
         "skills/context-engineering/SKILL.md",
         "skills/n8n-expert/SKILL.md"
       ]
+    },
+    "ops": {
+      "squad_yaml": "squads/ops/squad.yaml",
+      "descricao": "Agentes de produtividade pessoal e criatividade do CEO",
+      "agents": {
+        "secretaria": "squads/ops/donna.md",
+        "leo": "squads/ops/leo.md"
+      },
+      "tasks": {
+        "priorizar-dia": "squads/ops/tasks/task-priorizar-dia.md",
+        "capturar-ideia": "squads/ops/tasks/task-capturar-ideia.md",
+        "analisar-ideias": "squads/ops/tasks/task-analisar-ideias.md"
+      },
+      "data": {
+        "tempos-medios": "squads/ops/data/tempos-medios.json"
+      }
     }
   },
   "workflows": {
@@ -245,6 +261,10 @@
       "seo": "PROJETOS/[cliente]/seo/",
       "qa": "PROJETOS/[cliente]/qa/",
       "leads": "PROJETOS/[cliente]/leads/"
+    },
+    "ops": {
+      "agenda": "PROJETOS/_ops/agenda/",
+      "ideias": "PROJETOS/_ideias/"
     }
   }
 }
