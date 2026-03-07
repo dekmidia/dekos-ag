@@ -1,0 +1,7 @@
+{
+  "_descricao": "Memória do Optimizer. Evita propor a mesma otimização duas vezes. Versionado no Git.",
+  "_versao": "1.0.0",
+  "ultima_varredura": null,
+  "total_varreduras": 0,
+  "propostas": []
+}

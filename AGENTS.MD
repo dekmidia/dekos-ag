@@ -197,7 +197,28 @@ Cada agente possui seções `NAO usar para` e `Handoff` em seu prompt.
 Antes de executar uma tarefa, verifique se ela pertence ao escopo do agente
 acionado. Se não pertencer, delegue ao agente correto conforme indicado.
 
-### Mapa de Squads e Personas
+### Como Chamar os Times — Linguagem de Agência
+
+Use os nomes de departamento abaixo para invocar os times. O sistema traduz automaticamente para a squad técnica correta.
+
+| Como você chama | Squad técnica | O que resolve |
+|---|---|---|
+| **Atendimento** | Growth (Scout + Welcome) | Onboarding de cliente, análise de mercado, expansão de conta |
+| **Criação** | Creative (Ink + Prism) | Copy, design e identidade visual |
+| **Social Media** | Creative (Hype) | Posts, carrosséis, calendário editorial, legendas |
+| **Desenvolvimento** | Engineering (Dex + Guard) | Sites, landing pages, desenvolvimento web e QA |
+| **Tráfego** | Performance (Boost + Shield) | Google Ads, Meta Ads, auditoria de campanhas |
+| **Conteúdo & SEO** | Success (Apex) | Produção de conteúdo orgânico, SEO e blog |
+| **Relatórios & Dados** | Success (Relay + Cipher) | Relatórios de performance e análise de dados |
+| **Prospecção** | Prospection (Falcon + Rank + Pulse + Lens) | Hunting de leads, qualificação, abordagem, diagnóstico |
+| **Automação** | Automations (Wire + Bridge) | Fluxos n8n, integrações, WhatsApp Business |
+| **Operações** | Ops (Donna + Leo) | Agenda do dia, captura de ideias, otimização do sistema |
+
+> 💡 **Exemplo de uso:** Em vez de "invoque o Engineering/Dex", você pode dizer "fala com o **Desenvolvimento**, preciso de uma landing page para [cliente]." O sistema entende e aciona o agente correto.
+
+---
+
+### Mapa de Squads e Personas (referência técnica)
 
 | Squad | Agentes |
 |-------|---------|

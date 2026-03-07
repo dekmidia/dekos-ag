@@ -112,7 +112,7 @@
     main {
       position: relative;
       z-index: 1;
-      max-width: 860px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.5rem 6rem;
     }
@@ -513,6 +513,72 @@
     .hero {
       animation-delay: .1s;
     }
+
+    /* ── PIPELINE FLOW ── */
+    .pipeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pipe-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      flex: 1;
+      min-width: 130px;
+      max-width: 180px;
+      transition: border-color .25s, transform .25s;
+      position: relative;
+    }
+
+    .pipe-step:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .pipe-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pipe-label {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .pipe-desc {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .pipe-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0 0.25rem;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      .pipe-arrow { transform: rotate(90deg); }
+      .pipeline { flex-direction: column; align-items: center; }
+      .pipe-step { max-width: 100%; width: 100%; }
+    }
+
   </style>
 </head>
 
@@ -521,8 +587,8 @@
   <!-- NAVBAR -->
   <nav>
     <span class="brand">🪐 DEK-OS AG</span>
+    <a href="#squads">Departamentos</a>
     <a href="#skills">Skills</a>
-    <a href="#squads">Squads</a>
     <a href="#start">Início Rápido</a>
     <a class="cta-btn" href="#start">▶ Começar</a>
   </nav>
@@ -548,26 +614,35 @@
     <h2>Como o sistema funciona</h2>
     <p>Cada comando percorre um pipeline de execução inteligente antes de chegar ao resultado.</p>
 
-    <div class="flow-grid">
-      <div class="flow-card">
-        <div class="step-num">STEP 01</div>
-        <h4>👤 Você fala</h4>
-        <p>Linguagem natural ou um comando <code>/workflow</code>.</p>
+    <div class="pipeline">
+      <div class="pipe-step">
+        <div class="pipe-icon">👤</div>
+        <div class="pipe-label">Você fala</div>
+        <div class="pipe-desc">Linguagem natural ou comando <code>/workflow</code></div>
       </div>
-      <div class="flow-card">
-        <div class="step-num">STEP 02</div>
-        <h4>🪐 Antigravity lê</h4>
-        <p>O orquestrador consulta o <code>registry.json</code> e identifica o squad responsável.</p>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-icon">🪐</div>
+        <div class="pipe-label">Antigravity lê</div>
+        <div class="pipe-desc">Consulta <code>registry.json</code> e identifica o departamento</div>
       </div>
-      <div class="flow-card">
-        <div class="step-num">STEP 03</div>
-        <h4>👥 Squad age</h4>
-        <p>O agente carrega o playbook de conhecimento e executa com a skill adequada.</p>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-icon">📋</div>
+        <div class="pipe-label">Agente carrega contexto</div>
+        <div class="pipe-desc">Lê playbook, skills e <code>SESSAO_ATIVA.md</code></div>
       </div>
-      <div class="flow-card">
-        <div class="step-num">STEP 04</div>
-        <h4>📂 Resultado salvo</h4>
-        <p>Todo output vai para <code>PROJETOS/[cliente]/</code> automaticamente.</p>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-icon">⚙️</div>
+        <div class="pipe-label">Executa</div>
+        <div class="pipe-desc">Aplica a skill adequada com precisão</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-icon">📂</div>
+        <div class="pipe-label">Resultado salvo</div>
+        <div class="pipe-desc">Output em <code>PROJETOS/[cliente]/</code> automaticamente</div>
       </div>
     </div>
 
@@ -579,8 +654,58 @@
 
     <hr>
 
+    <!-- SQUADS -->
+    <div id="squads" class="section-label">02 — Times</div>
+    <h2>Departamentos da Agência</h2>
+    <p>Chame os times pelo nome do departamento — como em uma agência real. O sistema entende e aciona os agentes certos automaticamente.</p>
+
+    <div class="squad-grid">
+      <div class="squad-item">
+        <div class="s-name">🤝 Atendimento</div>
+        <div class="s-desc">Onboarding de clientes, análise de mercado e expansão de contas. <span style="opacity:0.5;font-size:0.75rem;">→ Growth</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">✍️ Criação</div>
+        <div class="s-desc">Copy, design e identidade visual. <span style="opacity:0.5;font-size:0.75rem;">→ Creative / Ink + Prism</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">📱 Social Media</div>
+        <div class="s-desc">Posts, carrosséis, calendário editorial e legendas. <span style="opacity:0.5;font-size:0.75rem;">→ Creative / Hype</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">💻 Desenvolvimento</div>
+        <div class="s-desc">Sites, landing pages, desenvolvimento web e QA pré-deploy. <span style="opacity:0.5;font-size:0.75rem;">→ Engineering</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">📈 Tráfego</div>
+        <div class="s-desc">Google Ads, Meta Ads, auditoria e compliance de campanhas. <span style="opacity:0.5;font-size:0.75rem;">→ Performance</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">🔎 Conteúdo & SEO</div>
+        <div class="s-desc">Produção de conteúdo orgânico, SEO e blog. <span style="opacity:0.5;font-size:0.75rem;">→ Success / Apex</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">📊 Relatórios & Dados</div>
+        <div class="s-desc">Relatórios de performance e análise de dados. <span style="opacity:0.5;font-size:0.75rem;">→ Success / Relay + Cipher</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">🔍 Prospecção</div>
+        <div class="s-desc">Hunting de leads, qualificação, abordagem e diagnóstico digital. <span style="opacity:0.5;font-size:0.75rem;">→ Prospection</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">🔌 Automação</div>
+        <div class="s-desc">Fluxos n8n, integrações entre sistemas e WhatsApp Business. <span style="opacity:0.5;font-size:0.75rem;">→ Automations</span></div>
+      </div>
+      <div class="squad-item">
+        <div class="s-name">🗂️ Operações</div>
+        <div class="s-desc">Agenda do dia, captura de ideias e otimização do sistema. <span style="opacity:0.5;font-size:0.75rem;">→ Ops</span></div>
+      </div>
+    </div>
+
+    <hr>
+
     <!-- SKILLS -->
-    <div id="skills" class="section-label">02 — Super-Poderes</div>
+    <div id="skills" class="section-label">03 — Super-Poderes</div>
     <h2>Skills disponíveis</h2>
     <p>Arraste para ver todas as capacidades disponíveis. Cada card mostra como acionar a skill com linguagem natural.
     </p>
@@ -750,48 +875,6 @@
       <div class="alert-title">💡 Dica de mestre</div>
       <p>Você não precisa saber o nome da skill. Basta descrever o que quer em linguagem natural — o Antigravity
         identifica e aciona a skill certa automaticamente.</p>
-    </div>
-
-    <hr>
-
-    <!-- SQUADS -->
-    <div id="squads" class="section-label">03 — Times</div>
-    <h2>Squads &amp; Especialistas</h2>
-    <p>Cada squad é um time de agentes com foco e playbooks próprios. Você pode invocar qualquer um diretamente.</p>
-
-    <div class="squad-grid">
-      <div class="squad-item">
-        <div class="s-name">🔍 Prospection</div>
-        <div class="s-desc">Hunting, qualificação e abordagem de novos leads.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">✍️ Creative</div>
-        <div class="s-desc">Copy, design UI/UX e conteúdo para social media.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">💻 Engineering</div>
-        <div class="s-desc">Desenvolvimento web, landing pages e QA pré-deploy.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">📈 Performance</div>
-        <div class="s-desc">Tráfego pago (Google Ads, Meta Ads) e compliance.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">🤝 Growth</div>
-        <div class="s-desc">Onboarding de novos clientes e expansão de contas.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">📋 Success</div>
-        <div class="s-desc">Relatórios, SEO local e retenção de clientes.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">🔌 Automations</div>
-        <div class="s-desc">Automações n8n, WhatsApp Business e integrações entre sistemas.</div>
-      </div>
-      <div class="squad-item">
-        <div class="s-name">🗂️ Ops</div>
-        <div class="s-desc">Produtividade do CEO: agenda priorizada (Donna) e curadoria de ideias (Leo).</div>
-      </div>
     </div>
 
     <hr>

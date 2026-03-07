@@ -1,45 +1,56 @@
 ---
-name: Mapear Leads
-squad: prospection
-agent: pesquisador
-version: "1.0.0"
-inputs:
-  nicho: "string"
-  cidade: "string"
-  meta_leads: "integer (default 20)"
-outputs:
-  - JSON com fichas em PROJETOS/_prospection/leads-brutos/
-  - Resumo Markdown com totais e top 5
-checklist: checklist-ficha-lead
-template: template-ficha-lead
-acceptance_criteria:
-  - Minimo [meta_leads] fichas com contato valido
-  - Nenhuma ficha com nome_empresa ou cidade vazia
-  - Todos campos de presenca digital preenchidos (null aceito se verificado)
-  - checklist-ficha-lead 100% concluido
-  - Arquivo salvo no diretorio correto com nomenclatura padrao
+name: task-mapear-leads
+agent: falcon
+squad: Prospection
+departamento: Prospecção
+version: "2.0.0"
+human_approval_required: false
+output_dir: PROJETOS/_prospection/leads/
 ---
 
 # Task: Mapear Leads
 
-## Objetivo
-Encontrar e documentar PMEs qualificaveis no nicho e cidade indicados.
+## Intake Obrigatório
 
-## Passos de Execucao
+Apresentar o menu abaixo e aguardar escolha:
 
-1. Ler `data/cidades-regioes.json` - confirmar cidade na area de atuacao
-2. Ler `data/segmentos.json` - identificar Tier do nicho
-3. Pesquisar "[nicho] em [cidade]" no Google Maps
-4. Para cada resultado:
-   a. Verificar se negocio esta ativo
-   b. Preencher todos os campos do `template-ficha-lead.json`
-   c. Verificar site no PageSpeed Insights (se tiver)
-   d. Verificar Meta Ad Library
-   e. Tentar identificar decisor no LinkedIn
-5. Rodar `checklist-ficha-lead` em cada ficha
-6. Salvar: `[REGIAO]-[NICHO]-[YYYYMMDD].json`
-7. Gerar resumo Markdown com totais e top 5
+---
 
-## Handoff
+> "Vamos prospectar. O que precisamos?
+>
+> 1. Mapear novos leads por nicho e cidade
+> 2. Enriquecer lista existente com mais dados
+> 3. Outro — descreva"
 
-Notificar **Agente Qualificador** com caminho do JSON, total e nicho/cidade.
+---
+
+Após a escolha, coletar obrigatoriamente:
+
+- [ ] Nicho (ex: clínica estética, restaurante japonês, escritório de advocacia)
+- [ ] Cidade ou região
+- [ ] Quantidade de leads necessária
+- [ ] Critérios de exclusão? *(ex: só com site, só CNPJ, só com WhatsApp visível)*
+
+> ⚠️ Nicho e cidade são obrigatórios. Não iniciar pesquisa sem ambos definidos.
+
+---
+
+## Etapas de Execução
+
+1. **Contextualização** — Confirmar inputs antes de pesquisar.
+2. **Pesquisa** — Mapear leads conforme nicho e região usando fontes disponíveis (Google Maps, redes sociais, diretórios).
+3. **Ficha de lead** — Para cada lead, preencher checklist `checklist-ficha-lead.md`.
+4. **Filtragem** — Aplicar critérios de exclusão informados.
+5. **Entrega** — Salvar lista na pasta de output e acionar Rank para qualificação.
+
+## Outputs
+
+- `leads-[nicho]-[cidade]-[data].md` → Lista de leads mapeados
+
+## Acceptance Criteria
+
+- [ ] Mínimo de informações por lead: nome, endereço, telefone/WhatsApp, Instagram/site se disponível
+- [ ] Critérios de exclusão aplicados
+- [ ] Checklist `checklist-ficha-lead.md` preenchido para cada lead
+- [ ] Lista salva em `PROJETOS/_prospection/leads/`
+- [ ] Rank acionado automaticamente após entrega para qualificação

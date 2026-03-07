@@ -29,6 +29,14 @@ tasks:
 
 data:
   - squads/ops/data/tempos-medios.json
+  - squads/ops/data/activity-log.json
+
+memory:
+  - squads/ops/memory/optimizer-memory.json
+
+skills:
+  - skills/activity-logger/SKILL.md
+  - skills/workflow-optimizer/SKILL.md
 
 output_dirs:
   donna: PROJETOS/_ops/agenda/
