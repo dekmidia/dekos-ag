@@ -3,7 +3,7 @@ name: task-criar-site
 agent: dex
 squad: Engineering
 departamento: Desenvolvimento
-version: "1.0.0"
+version: "2.0.0"
 human_approval_required: true
 output_dir: PROJETOS/[cliente]/creative/
 ---
@@ -41,6 +41,14 @@ Perguntas adicionais por tipo:
 - **Loja Virtual:** Quantos produtos aproximadamente? Tem sistema de pagamento definido?
 
 > ⚠️ Não escrever nenhuma linha de código antes de ter briefing e objetivo principal confirmados.
+
+**Antes de codar, ler obrigatoriamente:** `skills/html-premium-stack/SKILL.md`
+
+Coletar também o **briefing visual** — estas perguntas definem o design system antes do código:
+
+- [ ] Qual o feeling visual da marca? (ex: industrial e bold / elegante e sóbrio / vibrante e jovem / minimalista e limpo)
+- [ ] Tem cores da marca definidas? Se sim, quais? Se não, o sistema vai sugerir com base no nicho
+- [ ] Tem preferência de tema? (dark / light / o sistema decide pelo nicho)
 
 ---
 

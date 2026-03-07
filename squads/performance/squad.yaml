@@ -1,0 +1,19 @@
+name: Squad Performance
+version: "1.0.0"
+description: Gestao de trafego pago e compliance de anuncios
+dekos:
+  minVersion: "1.0"
+agents:
+  - media-buyer
+  - auditor
+playbooks:
+  - playbooks/media-buying.md
+  - playbooks/subido-ads-estrutura.md
+  - playbooks/subido-ads-insta.md
+  - playbooks/docs-google-ads.md
+  - playbooks/docs-meta-ads.md
+  - playbooks/docs-pedro-sobral.md
+  - playbooks/compliance-ads.md
+skills:
+  - context-engineering
+  - activity-logger

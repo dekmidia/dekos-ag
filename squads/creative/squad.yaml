@@ -1,0 +1,32 @@
+name: Squad Creative
+version: "1.0.0"
+description: Criacao de conteudo, copies, design e social media
+dekos:
+  minVersion: "1.0"
+agents:
+  - copywriter
+  - designer
+  - social-media
+playbooks:
+  - playbooks/copy-alta-conversao.md
+  - playbooks/copywritter-icaro-de-carvalho.md
+  - playbooks/docs-canva.md
+  - playbooks/docs-microsoft-designer.md
+  - playbooks/docs-estruturas-marketing.md
+  - playbooks/docs-experiencia-disney.md
+skills:
+  - microsoft-designer-creative
+  - canva-creative
+  - brand-guidelines
+  - docx
+  - pdf
+  - marketing-strategist-reasoning
+  - context-engineering
+  - marketing-stack-cro
+  - creative-director
+  - criar-apresentacao
+  - frontend-design-premium
+  - activity-logger
+workflows:
+  - .agents/workflows/workflow-auto-eval.md
+  - .agents/workflows/workflow-multi-crew-content.md

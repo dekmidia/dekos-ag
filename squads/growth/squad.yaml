@@ -1,0 +1,17 @@
+name: Squad Growth
+version: "1.0.0"
+description: Prospection exploratoria e onboarding de novos clientes
+dekos:
+  minVersion: "1.0"
+agents:
+  - scout
+  - onboarding
+workflows:
+  - .agents/workflows/onboarding-cliente.md
+playbooks:
+  - playbooks/docs-estruturas-marketing.md
+skills:
+  - marketing-strategist-reasoning
+  - context-engineering
+  - marketing-stack-cro
+  - activity-logger
