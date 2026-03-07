@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEK-OS Effects Library — Referência Visual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --primary: #7B61FF;
+      --accent: #00D4FF;
+      --bg: #080810;
+      --surface: #12121e;
+      --surface2: #1a1a2e;
+      --text: #f0f0ff;
+      --muted: #8888aa;
+      --gold: #C9A84C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Sora', sans-serif; }
+
+    /* ===================== PRELOADER ===================== */
+    #preloader {
+      position: fixed; inset: 0; background: var(--bg);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; }
+    .preloader-logo {
+      font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    .preloader-bar {
+      width: 200px; height: 2px; background: var(--surface2);
+      margin-top: 1.5rem; border-radius: 2px; overflow: hidden;
+    }
+    .preloader-bar-fill {
+      height: 100%; width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px; animation: loadBar 1.8s ease forwards;
+    }
+    @keyframes loadBar { to { width: 100%; } }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+    /* ===================== SECTION LABELS ===================== */
+    .section-label {
+      background: var(--surface); border: 1px solid rgba(123,97,255,0.2);
+      border-radius: 100px; display: inline-block;
+      padding: 0.25rem 1rem; font-size: 0.7rem; font-weight: 600;
+      color: var(--primary); letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-divider {
+      border: none; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(123,97,255,0.3), transparent);
+      margin: 0;
+    }
+    .effect-title {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .effect-title::before { content: ''; display: block; width: 20px; height: 1px; background: var(--primary); }
+
+    /* ===================== 01. NAVBAR SHRINK ===================== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
+      transition: padding 0.35s ease, background 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+    }
+    #navbar.scrolled {
+      padding: 0.75rem 2rem;
+      background: rgba(8,8,16,0.85);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(123,97,255,0.15);
+    }
+    .nav-logo { font-family:'Sora',sans-serif; font-size:1.25rem; font-weight:800; color: var(--text); }
+    .nav-logo span { color: var(--primary); }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a { color: var(--muted); text-decoration:none; font-size:0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--primary), #5B41FF);
+      color: #fff; border: none; padding: 0.6rem 1.4rem;
+      border-radius: 100px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(123,97,255,0.4); }
+
+    /* ===================== 02. HERO + BLOB ===================== */
+    .hero-section {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; padding-top: 8rem;
+    }
+    .blob {
+      position: absolute; border-radius: 50%; filter: blur(80px);
+      animation: blobFloat 8s ease-in-out infinite; pointer-events: none;
+    }
+    .blob-1 { width:500px; height:500px; background:rgba(123,97,255,0.18); top:-100px; right:-100px; animation-delay:0s; }
+    .blob-2 { width:400px; height:400px; background:rgba(0,212,255,0.12); bottom:-50px; left:-80px; animation-delay:-3s; }
+    .blob-3 { width:300px; height:300px; background:rgba(123,97,255,0.1); top:40%; left:40%; animation-delay:-5s; }
+    @keyframes blobFloat {
+      0%,100% { transform: translate(0,0) scale(1); }
+      33% { transform: translate(30px,-20px) scale(1.05); }
+      66% { transform: translate(-20px,15px) scale(0.97); }
+    }
+    .dot-grid {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.18;
+      background-image: radial-gradient(rgba(123,97,255,0.6) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(123,97,255,0.1); border: 1px solid rgba(123,97,255,0.3);
+      border-radius: 100px; padding: 0.35rem 1rem; font-size: 0.75rem;
+      color: var(--primary); margin-bottom: 1.5rem;
+    }
+    .hero-badge .dot { width:6px; height:6px; background:var(--primary); border-radius:50%; animation:pulse 1.5s infinite; }
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; line-height: 1.05;
+      letter-spacing: -0.03em; margin-bottom: 1.5rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 520px; line-height: 1.7; margin-bottom: 2.5rem; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: linear-gradient(135deg, var(--primary), #5B41FF);
+      color: #fff; padding: 0.85rem 2rem; border-radius: 100px;
+      font-weight: 600; font-size: 0.95rem; text-decoration: none; border: none; cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(123,97,255,0.4); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--text);
+      padding: 0.85rem 2rem; border-radius: 100px;
+      font-weight: 600; font-size: 0.95rem; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12); cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.25); }
+
+    /* ===================== 03. SCROLL REVEAL ===================== */
+    .reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal:nth-child(1) { transition-delay: 0s; }
+    .reveal:nth-child(2) { transition-delay: 0.1s; }
+    .reveal:nth-child(3) { transition-delay: 0.2s; }
+    .reveal:nth-child(4) { transition-delay: 0.3s; }
+    .reveal:nth-child(5) { transition-delay: 0.4s; }
+
+    /* ===================== 04. CARDS HOVER 3D ===================== */
+    .card-3d-wrap { perspective: 1000px; }
+    .card-3d {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 2rem; cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      transform-style: preserve-3d;
+    }
+    .card-3d:hover {
+      transform: rotateX(-4deg) rotateY(4deg) translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(123,97,255,0.2);
+      border-color: rgba(123,97,255,0.25);
+    }
+    .card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(123,97,255,0.2), rgba(0,212,255,0.1));
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem; color: var(--primary);
+      transition: transform 0.3s;
+    }
+    .card-3d:hover .card-icon { transform: scale(1.1) translateZ(10px); }
+
+    /* ===================== 05. GLASSMORPHISM ===================== */
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+    }
+    .glass-accent {
+      background: rgba(123,97,255,0.08);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(123,97,255,0.2);
+      border-radius: 20px;
+    }
+    .glass-demo-bg {
+      background: linear-gradient(135deg, rgba(123,97,255,0.3), rgba(0,212,255,0.2));
+      border-radius: 24px; padding: 3rem;
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem;
+    }
+
+    /* ===================== 06. CONTADORES ===================== */
+    .counter-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
+    .counter-item { text-align: center; padding: 2rem; background: var(--surface); border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); }
+    .counter-value { font-family:'Sora',sans-serif; font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
+    .counter-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* ===================== 07. ESTRELAS ANIMADAS ===================== */
+    .stars-section { text-align: center; padding: 3rem; }
+    .stars-row { display: flex; justify-content: center; gap: 0.5rem; margin: 1rem 0; }
+    .star {
+      font-size: 2.5rem; opacity: 0; transform: scale(0) rotate(-30deg);
+      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+      color: #FFD700;
+      filter: drop-shadow(0 0 8px rgba(255,215,0,0.6));
+    }
+    .star.show { opacity: 1; transform: scale(1) rotate(0deg); }
+    .star:nth-child(1) { transition-delay: 0s; }
+    .star:nth-child(2) { transition-delay: 0.12s; }
+    .star:nth-child(3) { transition-delay: 0.24s; }
+    .star:nth-child(4) { transition-delay: 0.36s; }
+    .star:nth-child(5) { transition-delay: 0.48s; }
+    .star-glow { animation: starGlow 2s ease-in-out infinite; }
+    @keyframes starGlow { 0%,100%{filter:drop-shadow(0 0 6px rgba(255,215,0,0.5))} 50%{filter:drop-shadow(0 0 16px rgba(255,215,0,0.9))} }
+
+    /* ===================== 08. DEPOIMENTOS UNIFORMES ===================== */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+      align-items: stretch;
+    }
+    .testimonial-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 2rem;
+      display: flex; flex-direction: column;
+      min-height: 280px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); border-color: rgba(123,97,255,0.3); }
+    .testimonial-quote { font-size: 2.5rem; color: rgba(123,97,255,0.3); line-height: 1; margin-bottom: 0.5rem; }
+    .testimonial-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; flex: 1; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: #fff; flex-shrink: 0; }
+    .testimonial-name { font-weight: 600; font-size: 0.9rem; }
+    .testimonial-role { font-size: 0.75rem; color: var(--muted); }
+
+    /* ===================== 09. PRODUTO CUTOUT FLUTUANTE ===================== */
+    .cutout-float {
+      animation: floatY 4s ease-in-out infinite;
+      filter: drop-shadow(0 30px 50px rgba(123,97,255,0.35));
+    }
+    @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+
+    /* ===================== 10. LOGOS PARCEIROS ===================== */
+    .logos-bar {
+      display: flex; align-items: center; justify-content: center;
+      gap: 3rem; flex-wrap: wrap; padding: 2rem 0;
+    }
+    .logo-item {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem;
+      color: rgba(255,255,255,0.2); letter-spacing: 0.08em;
+      transition: color 0.3s;
+      cursor: default;
+    }
+    .logo-item:hover { color: rgba(255,255,255,0.7); }
+
+    /* ===================== 11. NAVBAR SCROLL FX ===================== */
+    .process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; position: relative; }
+    .process-steps::before {
+      content: ''; position: absolute; top: 28px; left: 12%; right: 12%; height: 1px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      z-index: 0;
+    }
+    .process-step { text-align: center; position: relative; z-index: 1; }
+    .process-number {
+      width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 1rem;
+      background: var(--surface2); border: 2px solid var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem; color: var(--primary);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .process-step:hover .process-number { background: var(--primary); color: #fff; transform: scale(1.1); }
+
+    /* ===================== 12. WHATSAPP + SCROLL TOP ===================== */
+    .fab-group { position: fixed; bottom: 2rem; right: 2rem; display: flex; flex-direction: column; gap: 0.75rem; z-index: 200; }
+    .fab {
+      width: 56px; height: 56px; border-radius: 50%; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s; color: #fff; font-size: 1.3rem;
+    }
+    .fab-scroll {
+      background: var(--primary);
+      box-shadow: 0 4px 20px rgba(123,97,255,0.4);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+    .fab-scroll.visible { opacity: 1; pointer-events: auto; }
+    .fab-scroll:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(123,97,255,0.6); }
+    .fab-whatsapp {
+      background: #25D366;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+    .fab-whatsapp:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.6); animation: none; }
+    @keyframes waPulse {
+      0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 35px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
+    }
+
+    /* ===================== 13. GRADIENT MESH BG ===================== */
+    .mesh-bg {
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(123,97,255,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(0,212,255,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(123,97,255,0.07) 0%, transparent 45%),
+        var(--bg);
+      border-radius: 24px; padding: 3rem;
+    }
+
+    /* ===================== 14. NOISE TEXTURE ===================== */
+    .noise-overlay {
+      position: relative; overflow: hidden;
+      border-radius: 20px; padding: 3rem;
+      background: linear-gradient(135deg, #1a1a3e, #0d0d1a);
+    }
+    .noise-overlay::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ===================== 15. LOADING BAR DECORATIVA ===================== */
+    .skill-bars { display: flex; flex-direction: column; gap: 1rem; }
+    .skill-bar-label { display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.4rem; }
+    .skill-bar-track { height: 6px; background: var(--surface2); border-radius: 6px; overflow: hidden; }
+    .skill-bar-fill {
+      height: 100%; border-radius: 6px; width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .counter-grid, .process-steps, .testimonials-grid { grid-template-columns: 1fr; }
+      .glass-demo-bg { grid-template-columns: 1fr; }
+      .process-steps::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== PRELOADER ==================== -->
+<div id="preloader">
+  <div class="preloader-logo">DEK·OS</div>
+  <div style="font-size:0.75rem;color:var(--muted);margin-top:0.5rem;letter-spacing:0.1em">EFFECTS LIBRARY</div>
+  <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar">
+  <div class="nav-logo">DEK<span>·</span>OS</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Hero</a></li>
+    <li><a href="#cards">Cards</a></li>
+    <li><a href="#glass">Glass</a></li>
+    <li><a href="#counters">Counters</a></li>
+    <li><a href="#testimonials">Depoimentos</a></li>
+    <li><a href="#effects">Efeitos</a></li>
+  </ul>
+  <button class="nav-cta">Referência Visual</button>
+</nav>
+
+<!-- ==================== FAB GROUP ==================== -->
+<div class="fab-group">
+  <button class="fab fab-scroll" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+    <i data-lucide="arrow-up" style="width:20px;height:20px"></i>
+  </button>
+  <a href="https://wa.me/5512999999999" target="_blank" class="fab fab-whatsapp" title="Fale conosco">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<div id="hero" class="hero-section">
+  <div class="dot-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 2rem;width:100%">
+    <div class="hero-badge"><span class="dot"></span> DEK-OS Effects Library — Referência Visual</div>
+    <h1 class="hero-title">
+      Efeitos Premium<br>
+      <span class="gradient-text">Prontos para Usar</span>
+    </h1>
+    <p class="hero-sub">Cada seção abaixo demonstra um efeito visual extraído dos melhores templates Envato. O Dex usa este arquivo como receita de código.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <button class="btn-primary"><i data-lucide="play" style="width:16px;height:16px"></i> Ver Efeitos</button>
+      <button class="btn-secondary"><i data-lucide="code" style="width:16px;height:16px"></i> Ver Código</button>
+    </div>
+    <div class="logos-bar" style="margin-top:4rem">
+      <span class="logo-item">ENVATO</span>
+      <span class="logo-item">THEMEFOREST</span>
+      <span class="logo-item">ELEMENTRA</span>
+      <span class="logo-item">MEDWELL</span>
+      <span class="logo-item">BLIIZE</span>
+      <span class="logo-item">FRESHEAT</span>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== SCROLL REVEAL + CARDS 3D ==================== -->
+<section id="cards">
+  <div class="effect-title"><span>Efeito 01</span> Scroll Reveal + Cards Hover 3D</div>
+  <div style="margin-bottom:1.5rem">
+    <span class="section-label">Features</span>
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:0.5rem">Cards com profundidade</h2>
+    <p style="color:var(--muted)">Aparecem ao scroll • Inclinam no hover • Ícone sobe ao passar o mouse</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+    <div class="card-3d-wrap reveal">
+      <div class="card-3d">
+        <div class="card-icon"><i data-lucide="zap" style="width:22px;height:22px"></i></div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem">Performance</h3>
+        <p style="color:var(--muted);font-size:0.875rem;line-height:1.6">Sites otimizados para Core Web Vitals com nota acima de 90 no Lighthouse.</p>
+      </div>
+    </div>
+    <div class="card-3d-wrap reveal">
+      <div class="card-3d">
+        <div class="card-icon" style="background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(123,97,255,0.1));color:var(--accent)"><i data-lucide="shield" style="width:22px;height:22px"></i></div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem">Segurança</h3>
+        <p style="color:var(--muted);font-size:0.875rem;line-height:1.6">Proteção SSL, sanitização de inputs e headers de segurança configurados.</p>
+      </div>
+    </div>
+    <div class="card-3d-wrap reveal">
+      <div class="card-3d">
+        <div class="card-icon" style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,165,0,0.1));color:#FFD700"><i data-lucide="star" style="width:22px;height:22px"></i></div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem">Design Premium</h3>
+        <p style="color:var(--muted);font-size:0.875rem;line-height:1.6">Identidade visual consistente com tipografia cuidadosa e paleta customizada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== GLASSMORPHISM ==================== -->
+<section id="glass">
+  <div class="effect-title"><span>Efeito 02</span> Glassmorphism sobre gradiente</div>
+  <div class="glass-demo-bg reveal">
+    <div class="glass" style="padding:1.5rem">
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-bottom:0.5rem">Glass neutro</div>
+      <div style="font-weight:600">rgba(255,255,255,0.05)</div>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.5rem">backdrop-filter: blur(20px)</div>
+    </div>
+    <div class="glass-accent" style="padding:1.5rem">
+      <div style="font-size:0.75rem;color:rgba(123,97,255,0.7);margin-bottom:0.5rem">Glass accent</div>
+      <div style="font-weight:600">rgba(primary, 0.08)</div>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.5rem">border: 1px solid rgba(primary, 0.2)</div>
+    </div>
+    <div style="background:rgba(0,0,0,0.3);backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,0.05);border-radius:20px;padding:1.5rem">
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-bottom:0.5rem">Glass dark</div>
+      <div style="font-weight:600">rgba(0,0,0,0.3)</div>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.5rem">Ideal para modais e tooltips</div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== CONTADORES ==================== -->
+<section id="counters">
+  <div class="effect-title"><span>Efeito 03</span> Contadores animados ao scroll</div>
+  <div class="counter-grid reveal">
+    <div class="counter-item">
+      <div class="counter-value" data-target="127">0</div>
+      <div class="counter-label">Projetos Entregues</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-value" data-target="98">0</div>
+      <div class="counter-label">% Satisfação</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-value" data-target="8">0</div>
+      <div class="counter-label">Anos de Experiência</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-value" data-target="43">0</div>
+      <div class="counter-label">Clientes Ativos</div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== ESTRELAS ==================== -->
+<section>
+  <div class="effect-title"><span>Efeito 04</span> Estrelas animadas com glow dourado</div>
+  <div class="stars-section glass" id="starsSection">
+    <div style="font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">Avaliação Google</div>
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:0.25rem">Autoridade Comprovada.<br>Reputação Impecável.</h2>
+    <div class="stars-row" id="starsRow">
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+    </div>
+    <div style="font-size:2rem;font-weight:800;color:#FFD700" id="ratingCounter">0.0</div>
+    <div style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem">Baseado em 200+ avaliações reais</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== DEPOIMENTOS ==================== -->
+<section id="testimonials">
+  <div class="effect-title"><span>Efeito 05</span> Cards de depoimento uniformes (altura igual)</div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Atendimento impecável! Precisava de adesivos para a frota da minha empresa e entregaram rápido e com qualidade muito acima do mercado.</p>
+      <div class="testimonial-author">
+        <div class="avatar" style="background:#FF6B35">M</div>
+        <div>
+          <div class="testimonial-name">Marcos V.</div>
+          <div class="testimonial-role">Empresário • São Paulo</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Fiz os adesivos das embalagens do meu delivery. O recorte eletrônico é perfeito e a cola não solta. Apresentação é tudo!</p>
+      <div class="testimonial-author">
+        <div class="avatar" style="background:#7B61FF">J</div>
+        <div>
+          <div class="testimonial-name">Juliana Ribeiro</div>
+          <div class="testimonial-role">Empreendedora • Campinas</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">O pessoal é muito atencioso. Ajudaram com o ajuste do arquivo antes de imprimir. Preço justo para um material extremamente durável. Sou cliente fiel agora.</p>
+      <div class="testimonial-author">
+        <div class="avatar" style="background:#25D366">C</div>
+        <div>
+          <div class="testimonial-name">Carlos Silva</div>
+          <div class="testimonial-role">Designer • São José dos Campos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== PROCESSO ==================== -->
+<section>
+  <div class="effect-title"><span>Efeito 06</span> Como funciona — passos com linha conectora</div>
+  <div class="process-steps reveal">
+    <div class="process-step">
+      <div class="process-number">01</div>
+      <h4 style="font-weight:600;margin-bottom:0.5rem">Briefing</h4>
+      <p style="font-size:0.82rem;color:var(--muted)">Coletamos todas as informações do projeto e objetivos</p>
+    </div>
+    <div class="process-step">
+      <div class="process-number">02</div>
+      <h4 style="font-weight:600;margin-bottom:0.5rem">Design</h4>
+      <p style="font-size:0.82rem;color:var(--muted)">Criamos a identidade visual com paleta e tipografia</p>
+    </div>
+    <div class="process-step">
+      <div class="process-number">03</div>
+      <h4 style="font-weight:600;margin-bottom:0.5rem">Desenvolvimento</h4>
+      <p style="font-size:0.82rem;color:var(--muted)">Codificamos o site com todos os efeitos e animações</p>
+    </div>
+    <div class="process-step">
+      <div class="process-number">04</div>
+      <h4 style="font-weight:600;margin-bottom:0.5rem">Entrega</h4>
+      <p style="font-size:0.82rem;color:var(--muted)">Deploy, testes e entrega com aprovação do cliente</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== GRADIENT MESH + NOISE ==================== -->
+<section id="effects">
+  <div class="effect-title"><span>Efeito 07 + 08</span> Gradient Mesh Background + Noise Texture</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+    <div class="mesh-bg reveal">
+      <h3 style="font-weight:700;margin-bottom:0.5rem">Gradient Mesh</h3>
+      <p style="color:var(--muted);font-size:0.875rem">Múltiplos radial-gradient sobrepostos criam profundidade de cor sem imagem. Ideal para seções de destaque.</p>
+    </div>
+    <div class="noise-overlay reveal">
+      <h3 style="font-weight:700;margin-bottom:0.5rem">Noise Texture</h3>
+      <p style="color:var(--muted);font-size:0.875rem">Ruído de película via SVG inline com opacity 0.035. Adiciona textura cinematográfica sem arquivo externo.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==================== SKILL BARS ==================== -->
+<section>
+  <div class="effect-title"><span>Efeito 09</span> Barras de habilidade animadas</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem" class="reveal" id="skillBars">
+    <div class="skill-bars">
+      <div>
+        <div class="skill-bar-label"><span>Design Premium</span><span style="color:var(--primary)">95%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+      </div>
+      <div style="margin-top:1rem">
+        <div class="skill-bar-label"><span>Performance Web</span><span style="color:var(--primary)">90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div style="margin-top:1rem">
+        <div class="skill-bar-label"><span>Conversão CRO</span><span style="color:var(--primary)">87%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+      </div>
+    </div>
+    <div class="skill-bars">
+      <div>
+        <div class="skill-bar-label"><span>SEO Técnico</span><span style="color:var(--accent)">82%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82" style="background:linear-gradient(90deg,var(--accent),var(--primary))"></div></div>
+      </div>
+      <div style="margin-top:1rem">
+        <div class="skill-bar-label"><span>Mobile-First</span><span style="color:var(--accent)">98%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="98" style="background:linear-gradient(90deg,var(--accent),var(--primary))"></div></div>
+      </div>
+      <div style="margin-top:1rem">
+        <div class="skill-bar-label"><span>Automação</span><span style="color:var(--accent)">75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75" style="background:linear-gradient(90deg,var(--accent),var(--primary))"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section style="text-align:center;padding-bottom:8rem">
+  <div class="mesh-bg" style="padding:4rem 2rem">
+    <div class="section-label">DEK-OS</div>
+    <h2 style="font-size:2.5rem;font-weight:800;margin-bottom:1rem">Todos os efeitos acima<br>são <span class="gradient-text">receita de código</span></h2>
+    <p style="color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">O Dex lê este arquivo como referência e replica qualquer efeito nos projetos dos clientes, adaptando cores e conteúdo ao nicho.</p>
+    <button class="btn-primary" style="margin:0 auto">
+      <i data-lucide="code-2" style="width:16px;height:16px"></i>
+      Arquivo: skills/effects-library/
+    </button>
+  </div>
+</section>
+
+<script>
+  // Init Lucide icons
+  lucide.createIcons();
+
+  // Preloader
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('preloader').classList.add('hidden');
+    }, 1800);
+  });
+
+  // Navbar shrink on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    document.getElementById('scrollTopBtn').classList.toggle('visible', window.scrollY > 300);
+  });
+
+  // Intersection Observer — scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Counters
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.floor(current);
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.counter-grid').forEach(el => counterObserver.observe(el));
+
+  // Stars animation
+  const starsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const stars = entry.target.querySelectorAll('.star');
+        stars.forEach((s, i) => {
+          setTimeout(() => {
+            s.classList.add('show', 'star-glow');
+          }, i * 150);
+        });
+        // Rating counter
+        const ratingEl = document.getElementById('ratingCounter');
+        if (ratingEl) {
+          let r = 0;
+          const rTimer = setInterval(() => {
+            r = Math.min(r + 0.08, 5.0);
+            ratingEl.textContent = r.toFixed(1);
+            if (r >= 5.0) clearInterval(rTimer);
+          }, 20);
+        }
+        starsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  const starsSection = document.getElementById('starsSection');
+  if (starsSection) starsObserver.observe(starsSection);
+
+  // Skill bars
+  const barsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        barsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  const skillBars = document.getElementById('skillBars');
+  if (skillBars) barsObserver.observe(skillBars);
+</script>
+</body>
+</html>

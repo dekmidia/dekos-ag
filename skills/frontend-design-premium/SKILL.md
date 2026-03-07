@@ -224,14 +224,20 @@ Para garantir que a imersão visual não prejudique a usabilidade diária, apliq
 - **QA Visual de Logotipos e Contrastes:**
   - Garantir legibilidade máxima. Antes de finalizar o header e footer, verificar se o logo tem contraste. Se o fundo for escuro e o logo não tiver: aplicar `filter: brightness(0) invert(1)` ou drop-shadow intenso. Se for claro e escurecer, manter original ou adicionar pill badge. Nunca deixe o logo "apagado".
   - Teste de Contraste OBRIGATÓRIO (mínimo WCAG AA) para textos sobre imagens ou color blocks.
-- **Cards de Depoimento - Altura Uniforme:**
-  - Todos os cards de depoimento devem obrigatoriamente ter a mesma altura. No container CSS, garanta `align-items: stretch` (ou Grid com layout esticado).
-  - Cada card deve possuir `display: flex; flex-direction: column; justify-content: space-between` contendo um `min-height` fixo (para lidar com textos pequenos vs grandes).
-  - O texto do depoimento em si deve usar `flex: 1` para preencher o espaço flutuante de forma elegante.
+- **Cards de Depoimento - Layout Obrigatório:**
+  - Grid de 3 colunas com `align-items: stretch` no container: todos os cards devem ter exatamente a mesma altura e alinhar pelo topo.
+  - NUNCA use efeito de cascata/escalonamento em cards de depoimento (isso quebra a percepção visual de organização).
+  - Estrutura de cada card: `display: flex; flex-direction: column`, o texto do depoimento deve incorporar `flex: 1` para preencher os respiros.
+  - Estilos Rígidos: `min-height: 280px` fixo em todos os cards com Padding uniforme (ex: `p-8` em utilitários de CSS). Para criar variação visual, use apenas cor de borda e backgrounds levemente opacos — jamais mude tamanho ou posições-y (vertical).
 - **Estrelas de Avaliação Dinâmicas:**
   - Estrelas estáticas são proibidas. Ao entrarem na viewport (scroll), elas devem explodir (`scale(0) -> scale(1.2) -> scale(1)`) de forma estagiada (delay de 0.15s entre cada estrela).
   - Em casos de nota máxima (5.0), aplicar também um `text-shadow` de Glow Dourado contínuo após a abertura.
   - A nota numérica associada (ex: `5.0`) deve surgir dinamicamente via script com ease interpolado (0 até a nota real).
+- **Botões Flutuantes - Consistência Visual Obrigatória:**
+  - O botão de "Scroll to Top" e o botão do "WhatsApp" devem possuir escala universal fixa: exatamente as mesmas dimensões (ex: `w-14 h-14`), mesmo `border-radius: 50%` e intensidade de `box-shadow`.
+  - O botão de Scroll não deve usar cinzas genéricos, mas herdar o Background da Accent Color ou White Premium com ícone em Accent Color.
+  - Hover Interaction: ambos devem conter trigger de `transform: scale(1.1)` e transição suave.
+  - Posicionamento: O Scroll To Top deve estar posicionado logo acima do WhatsApp, com distanciamento exato de 12px entre eles. O ícone da Seta deve ser limpo e elegante (estilo Lucide ArrowUp).
 - **Navbar Comportamental Responsiva:**
   - Ao scrollar além de 80px, a altura da Navbar deve reduzir suavemente (ex: padding menor, logo levemente reduzido) numa transição `0.3s ease`.
   - Ao retornar ao topo (y=0), deve restaurar a altura original automaticamente.
