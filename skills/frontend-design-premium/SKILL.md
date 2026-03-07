@@ -217,6 +217,36 @@ Sempre que o contexto permitir, calibre a intensidade ao nicho do cliente e impl
 
 ---
 
+### 7. UX, QA e Elementos Funcionais Obrigatórios
+
+Para garantir que a imersão visual não prejudique a usabilidade diária, aplique sempre as seguintes regras funcionais premium:
+
+- **QA Visual de Logotipos e Contrastes:**
+  - Garantir legibilidade máxima. Antes de finalizar o header e footer, verificar se o logo tem contraste. Se o fundo for escuro e o logo não tiver: aplicar `filter: brightness(0) invert(1)` ou drop-shadow intenso. Se for claro e escurecer, manter original ou adicionar pill badge. Nunca deixe o logo "apagado".
+  - Teste de Contraste OBRIGATÓRIO (mínimo WCAG AA) para textos sobre imagens ou color blocks.
+- **Cards de Depoimento - Altura Uniforme:**
+  - Todos os cards de depoimento devem obrigatoriamente ter a mesma altura. No container CSS, garanta `align-items: stretch` (ou Grid com layout esticado).
+  - Cada card deve possuir `display: flex; flex-direction: column; justify-content: space-between` contendo um `min-height` fixo (para lidar com textos pequenos vs grandes).
+  - O texto do depoimento em si deve usar `flex: 1` para preencher o espaço flutuante de forma elegante.
+- **Estrelas de Avaliação Dinâmicas:**
+  - Estrelas estáticas são proibidas. Ao entrarem na viewport (scroll), elas devem explodir (`scale(0) -> scale(1.2) -> scale(1)`) de forma estagiada (delay de 0.15s entre cada estrela).
+  - Em casos de nota máxima (5.0), aplicar também um `text-shadow` de Glow Dourado contínuo após a abertura.
+  - A nota numérica associada (ex: `5.0`) deve surgir dinamicamente via script com ease interpolado (0 até a nota real).
+- **Navbar Comportamental Responsiva:**
+  - Ao scrollar além de 80px, a altura da Navbar deve reduzir suavemente (ex: padding menor, logo levemente reduzido) numa transição `0.3s ease`.
+  - Ao retornar ao topo (y=0), deve restaurar a altura original automaticamente.
+  - Ao scrollar, deve acionar a classe `backdrop-filter: blur(16px)` com um fundo de cor semi-translúcido para emoldurar o conteúdo em rolagem.
+- **WhatsApp Flutuante Fixo:**
+  - Se for disponibilizado número de WhatsApp, inclua um botão flutuante no canto inferior direito.
+  - Estilo: O botão deve imitar os de chat nativos (fundo verde), contendo um efeito de "pulse" ou anéis em animação contínua para prender atenção, além de um tooltip "Fale conosco" ao Hover.
+  - Ao clicar, abrir a API do WhatsApp (wa.me) em target `_blank`.
+- **Botão "Scroll to Top" Discreto:**
+  - Botão fixo no canto inferior direito (posicionado ligeiramente acima do WhatsApp).
+  - Oculto no primeiro fold: deve realizar `fade-in` apenas após 300px de scroll da tela inicial.
+  - Evento de clique dispara script com `behavior: smooth` até o topo da página HTML.
+
+---
+
 ## Checklist de Qualidade Visual (rodar antes de entregar)
 
 **Tipografia:**
@@ -257,6 +287,16 @@ Sempre que o contexto permitir, calibre a intensidade ao nicho do cliente e impl
 - [ ] Efeito Parallax em elementos decorativos ou imagens fluídas
 - [ ] Hover 3D ativo nos Cards principais
 - [ ] Contadores animados para números de prova social
+
+**UX e Elementos Funcionais:**
+
+- [ ] Logo rigorosamente destacado (aplicar brigthness/invert caso o fundo escureça a marca)
+- [ ] Textos testados contra fundo, sem ofuscação (contraste AA)
+- [ ] Cards de Portfólio ou Depoimento alinhados perfeitamente (flex + height uniforme)
+- [ ] Estrelas de rating animadas (pop stagger e glow 5 star) e contagem decimal atuante
+- [ ] Navbar reduz de altura ao scrollar para maximizar área de tela
+- [ ] Botão do WhatsApp flutuante vivo, animado e com tooltip funcional
+- [ ] Botão "Voltar ao topo" que só existe após 300px de barra descida
 
 ---
 
