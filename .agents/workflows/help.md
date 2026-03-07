@@ -20,6 +20,7 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
 | **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
+| **Ops** | Agentes de produtividade pessoal e criatividade do CEO |
 <!-- SQUAD_TABLE_END -->
 
 ---
@@ -48,6 +49,8 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | **🔎 Apex (@seo-specialist)** | Success | SEO Specialist | Otimizador |
 | **🔌 Wire (@wire)** | Automations | Arquiteto de Fluxos n8n | Builder |
 | **🌉 Bridge (@bridge)** | Automations | Integrador de APIs e Sistemas | Connector |
+| **🗂️ Donna (@secretaria)** | Ops | Assistente Executiva | Estrategista de Tempo |
+| **💡 Leo (@leo)** | Ops | Curador de Ideias | Polímata |
 <!-- AGENT_TABLE_END -->
 
 ---
@@ -66,8 +69,10 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | `canva-creative` | Ferramenta do sistema. |
 | `context-engineering` | Metodologias avançadas para gerenciamento, compressão e preservação do contexto do LLM em sessões longas, prevenindo alucinações e degradação de memória. |
 | `creative-director` | Transforma o agente focado em design (Prism) em um Diretor Criativo capaz de usar 20+ metodologias de ideação e se auto-avaliar via métricas de Cannes/D&AD antes da entrega final. |
+| `SKILL.md` | Script utilitario do sistema. |
 | `doc-synchronizer` | Sincroniza tabelas de Agentes, Squads e Skills do registry.json com README.md e help.md. |
 | `docx` | Ferramenta avançada para criar, editar e analisar documentos DOCX corporativos com formatação premium. |
+| `frontend-design-premium` | Use esta skill sempre que for criar sites, landing pages ou qualquer interface web. Ela define os princípios de design de alto nível que transformam código funcional em ativos digitais visualmente impactantes e memoráveis. Combinar com lp-cinematografica e map2web. |
 | `lead-scoring` | Script utilitario do sistema. |
 | `lp-cinematografica` | Use esta skill sempre que for solicitada a criação de uma landing page ou site de alta fidelidade com estética cinematográfica. Suporta captura de sites de referência via MCP Firecrawl (instalado automaticamente se necessário). Gera código React 19 + Tailwind CSS + GSAP com animações premium, design system completo e presets estéticos. |
 | `marketing-stack-cro` | Conjunto unificado de práticas de marketing (B2B Cold Email, Copywriting de LPs, CRO de páginas e Gatilhos Mentais) oriundas de engenharia reversa de campanhas de alta conversão. |

@@ -101,7 +101,8 @@
         "skills/context-engineering/SKILL.md",
         "skills/marketing-stack-cro/SKILL.md",
         "skills/creative-director/SKILL.md",
-        "skills/criar-apresentacao/SKILL.md"
+        "skills/criar-apresentacao/SKILL.md",
+        "skills/frontend-design-premium/SKILL.md"
       ],
       "workflows": [
         ".agents/workflows/workflow-auto-eval.md",
@@ -147,7 +148,8 @@
         "skills/agent-orchestration-improve-agent/SKILL.md",
         "skills/app-builder/SKILL.md",
         "skills/api-design-principles/SKILL.md",
-        "skills/context-engineering/SKILL.md"
+        "skills/context-engineering/SKILL.md",
+        "skills/frontend-design-premium/SKILL.md"
       ]
     },
     "performance": {
