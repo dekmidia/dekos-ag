@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karuna Clínica Veterinária - Cuidado Acolhedor 24h em São José dos Campos</title>
+    <meta name="description"
+        content="Atendimento especializado, cirurgias, exames e vacinas. Na Karuna Clínica Veterinária seu pet é tratado de forma humanizada. Plantão veterinário e convênio Petlove.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366', // Royal Blue
+                        secondary: '#D4AF37', // Gold
+                        light: '#F8FAFC',
+                        dark: '#1E293B',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Flowbite Form UI optional -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD (SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Karuna Clínica Veterinária",
+        "image": "img/logo.jpg",
+        "url": "https://www.instagram.com/karunaclinicaveterinaria/",
+        "telephone": "+551239172777",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Cidade Jardim, 4662 - Bosque dos Eucaliptos",
+            "addressLocality": "São José dos Campos",
+            "addressRegion": "SP",
+            "postalCode": "12233-002",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -23.2544467,
+            "longitude": -45.8862394
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Wednesday"],
+                "opens": "08:00",
+                "closes": "21:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday"],
+                "opens": "08:00",
+                "closes": "22:00"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body class="bg-light text-dark font-sans antialiased">
+
+    <!-- Header / Nav -->
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 top-0 start-0 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/logo.jpg" class="h-12 rounded-lg" alt="Karuna Logo"
+                    onerror="this.src='https://placehold.co/100x40/003366/FFF?text=KARUNA'" />
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="https://wa.me/5512996647171" target="_blank"
+                    class="hidden md:flex text-white bg-secondary hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-full text-sm px-6 py-2.5 text-center items-center gap-2 transition-transform hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Abrir menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li><a href="#inicio"
+                            class="block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0 font-bold"
+                            aria-current="page">Início</a></li>
+                    <li><a href="#sobre"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-colors">Sobre</a>
+                    </li>
+                    <li><a href="#servicos"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-colors">Serviços</a>
+                    </li>
+                    <li><a href="#equipe"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-colors">Corpo
+                            Clínico</a></li>
+                    <li><a href="#depoimentos"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-colors">Avaliações</a>
+                    </li>
+                    <li class="md:hidden mt-4"><a href="https://wa.me/5512996647171" target="_blank"
+                            class="block text-center text-white bg-secondary font-medium rounded-full text-sm px-4 py-2">Falar
+                            no WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-primary fade-in">
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <!-- Imagem de fundo, usando placeholder caso não exista a imagem correta -->
+        <div class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('img/Captura de tela 2026-02-27 130856.png'); background-color: #003366;">
+        </div>
+
+        <div
+            class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 text-white">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-secondary text-primary font-bold text-sm mb-4 tracking-wide uppercase">Seu
+                    pet em boas mãos</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Amor, cuidado e excelência na medicina veterinária.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Na Karuna, priorizamos o atendimento humanizado e o acolhimento do seu melhor amigo. Consultas,
+                    cirurgias e exames com quem ama o que faz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/5512996647171" target="_blank"
+                        class="px-8 py-4 rounded-full bg-secondary text-white font-bold text-lg hover:bg-yellow-600 transition-all flex items-center justify-center gap-2 shadow-lg shadow-secondary/30 btn-gold">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Falar com Emergência
+                    </a>
+                    <a href="#servicos"
+                        class="px-8 py-4 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold text-lg hover:bg-white/30 transition-all flex items-center justify-center">
+                        Nossos Serviços
+                    </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-star text-secondary"></i>
+                        <span>Avaliação 5 Estrelas no Google</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-secondary"></i>
+                        <span>Atendimento até as 22h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden lg:block lg:w-1/2 relative mt-12 lg:mt-0">
+                <div class="relative w-full max-w-lg mx-auto floating">
+                    <div class="absolute inset-0 bg-secondary rounded-full blur-3xl opacity-30"></div>
+                    <img src="img/Captura de tela 2026-02-27 130926.png" alt="Pet fofo"
+                        class="relative z-10 w-full rounded-2xl border-4 border-white/20 shadow-2xl object-cover aspect-square"
+                        onerror="this.src='https://placehold.co/600x600/FFF/003366?text=Foto+Pet'">
+
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-4 z-20 flex items-center gap-3">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i class="fa-solid fa-check-double text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Aceitamos</p>
+                            <p class="font-bold text-primary">Plano Petlove</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-secondary font-bold tracking-wide uppercase text-sm mb-2">O que fazemos</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-primary mb-4">Estrutura Completa para seu Pet</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos os melhores tratamentos com equipamentos de ponta
+                    para garantir a saúde e o bem-estar do seu animal de estimação.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Serviço 1 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Clínica Médica</h4>
+                    <p class="text-gray-600 text-sm">Consultas de rotina, diagnósticos e acompanhamento completo por
+                        profissionais capacitados.</p>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Vacinas</h4>
+                    <p class="text-gray-600 text-sm">Proteja seu mehor amigo com protocolos vacinais modernos e
+                        importados.</p>
+                </div>
+                <!-- Serviço 3 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Exames</h4>
+                    <p class="text-gray-600 text-sm">Laboratoriais e de imagem com resultado rápido para diagnósticos
+                        precisos.</p>
+                </div>
+                <!-- Serviço 4 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 300ms;">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Cirurgias</h4>
+                    <p class="text-gray-600 text-sm">Centro cirúrgico equipado com anestesia inalatória e monitoramento
+                        intensivo.</p>
+                </div>
+                <!-- Serviço 5 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal">
+                    <div
+                        class="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Oftalmologia</h4>
+                    <p class="text-gray-600 text-sm">Cuidados específicos para os olhos do seu pet com a Dra. Natalhia
+                        Alegretti.</p>
+                </div>
+                <!-- Serviço 6 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center text-pink-500 text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Castração</h4>
+                    <p class="text-gray-600 text-sm">Prevenção de doenças e qualidade de vida com cirurgias seguras.</p>
+                </div>
+                <!-- Serviço 7 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-500 text-2xl mb-6">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Microchipagem</h4>
+                    <p class="text-gray-600 text-sm">Identificação eletrônica segura para o seu pet não se perder.</p>
+                </div>
+                <!-- Serviço 8 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-gray-100 reveal"
+                    style="transition-delay: 300ms;">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Plantão</h4>
+                    <p class="text-gray-600 text-sm">Atendimento estendido até as 22h para emergências e consultas fora
+                        do horário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre & Equipe Section -->
+    <section id="sobre" class="py-20 bg-light relative overflow-hidden">
+        <!-- Decorational shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-secondary opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-primary opacity-5 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 reveal">
+                    <h2 class="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Nosso Time</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-primary mb-6">Profissionais que amam o que fazem
+                    </h3>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Fundada com o propósito de oferecer medicina veterinária de excelência, a Karuna alia tecnologia
+                        a um atendimento profundamente humanizado.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Tratamos cada paciente como se fosse nosso próprio pet, guiando os tutores com clareza em todas
+                        as etapas, seja em uma consulta de rotina ou em procedimentos cirúrgicos complexos.
+                    </p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-gray-700 font-medium">Equipe em constante atualização científica.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-gray-700 font-medium">Rede de especialistas (Karuna Indica).</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-gray-700 font-medium">Ambiente tranquilo para reduzir o estresse do
+                                animal.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:w-1/2 w-full reveal">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Profile Dra Juliana -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group">
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="img/dra-juliana.png" alt="Dra. Juliana"
+                                    class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                                    onerror="this.src='https://placehold.co/400x400/003366/FFF?text=Dra+Juliana'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4">
+                                    <h4 class="text-white font-bold text-xl">Dra. Juliana</h4>
+                                    <span class="text-secondary text-sm font-medium">Médica Veterinária</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white">
+                                <p class="text-gray-500 text-sm">Amor verdadeiro pela profissão, com dedicação
+                                    incansável aos pacientes há mais de 5 anos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Profile Dra Natalhia -->
+                        <div
+                            class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transform sm:translate-y-8">
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="img/dra-natalhia.png" alt="Dra. Natalhia"
+                                    class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                                    onerror="this.src='https://placehold.co/400x400/D4AF37/FFF?text=Dra+Natalhia'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4">
+                                    <h4 class="text-white font-bold text-xl">Dra. Natalhia</h4>
+                                    <span class="text-secondary text-sm font-medium">Cirurgia e Oftalmologia</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white">
+                                <p class="text-gray-500 text-sm">Especialista em procedimentos cirúrgicos e oftálmicos
+                                    com técnica precisa e carinho.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section (Proof) -->
+    <section id="depoimentos" class="py-20 bg-primary relative text-white">
+        <!-- SVG Wave Top -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#F8FAFC"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Prova Social</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">O que dizem os tutores</h3>
+                <div class="flex justify-center items-center gap-1 text-secondary text-2xl mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 max-w-2xl mx-auto">Temos orgulho das nossas avaliações no Google. O bem-estar do
+                    seu pet é nossa maior recompensa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl reveal rounded-tr-none">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center font-bold text-white text-xl">
+                            M</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Matheus De Paula</h4>
+                            <div class="flex text-secondary text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 italic">"Gostaria de agradecer ao atendimento incrível da Dra Natalhia
+                        Alegretti, minha filha precisou passar por um processo cirúrgico com ela e foi muito bem
+                        tratada, desde o começo com as recepcionistas até a saída da cirurgia. Foi tudo rápido..."</p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl reveal rounded-t-none">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center font-bold text-white text-xl">
+                            I</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Ivana Lima</h4>
+                            <div class="flex text-secondary text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 italic">"Excelente atendimento, desde a atenção da secretaria (Lana), aos
+                        médicos que nos atenderam, e que resolveram rapidamente em horário de plantão exames pelo
+                        convênio. Deixo 5 estrelas pela competência de todos."</p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl reveal rounded-tl-none">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center font-bold text-white text-xl">
+                            E</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Erica Santos</h4>
+                            <div class="flex text-secondary text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 italic">"Sempre muito bom! Conheço a Ju ah mais de 5 anos amor verdadeiro
+                        pela profissão, apoio e carinho imenso num dos momentos mais difíceis com meu pet! É uma honra
+                        ver o seu sucesso! Parabéns a toda equipe, meninas da recepção um docinho!"</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center reveal">
+                <img src="img/Captura de tela 2026-02-27 130937.png" alt="Tutores e Pets Felizes"
+                    class="w-full max-w-2xl mx-auto rounded-2xl shadow-xl border-4 border-white/10 object-cover opacity-80"
+                    onerror="this.onerror=null; this.style.display='none'">
+            </div>
+        </div>
+
+        <!-- SVG Wave Bottom -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0 transform rotate-180">
+            <svg class="relative block w-full h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#F8FAFC"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Convênio e Destaques Section -->
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 flex flex-col md:flex-row items-center gap-10 reveal">
+                <div class="md:w-1/3 flex justify-center">
+                    <img src="img/Captura de tela 2026-02-27 130919.png" alt="Cachorro estiloso com chapéu azul"
+                        class="w-48 h-48 rounded-full border-8 border-light object-cover shadow-lg"
+                        onerror="this.src='https://placehold.co/200x200/eee/aaa?text=Dog'">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h3 class="text-3xl font-bold text-primary mb-4">Cuide do seu pet com vantagens exclusivas</h3>
+                    <p class="text-gray-600 mb-6 text-lg">A Karuna Clínica Veterinária é parceira oficial da Petlove.
+                        Aceitamos planos de saúde pet para oferecer a melhor segurança para o seu amigo e tranquilidade
+                        pro seu bolso.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="https://wa.me/5512996647171?text=Ol%C3%A1%2C%20queria%20saber%20sobre%20atendimento%20pelo%20plano%20Petlove"
+                            target="_blank"
+                            class="btn-primary rounded-full px-8 py-3 font-bold flex items-center justify-center gap-2">
+                            Consultar Cobertura
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Dúvidas Frequentes</h2>
+                <h3 class="text-3xl font-extrabold text-primary mb-4">Perguntas sobre a Karuna</h3>
+            </div>
+
+            <!-- Accordion Container -->
+            <div class="space-y-4 reveal" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="faq-question w-full text-left px-6 py-4 font-bold text-gray-800 focus:outline-none flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <span>Qual o horário de funcionamento?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-answer px-6 py-0 max-h-0 overflow-hidden text-gray-600 text-sm transition-all duration-300 bg-white">
+                        <div class="py-4 border-t border-gray-100">
+                            Nós funcionamos de Segunda a Sábado (exceto Quarta) das 08h às 22h. Quartas-feiras das 08h
+                            às 21h. Aos Domingos também atendemos das 08h às 22h. Estamos presentes como plantão até
+                            tarde!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="faq-question w-full text-left px-6 py-4 font-bold text-gray-800 focus:outline-none flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <span>Vocês aceitam quais planos de saúde?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-answer px-6 py-0 max-h-0 overflow-hidden text-gray-600 text-sm transition-all duration-300 bg-white">
+                        <div class="py-4 border-t border-gray-100">
+                            Sim! Nós aceitamos o plano de saúde da Petlove, entre outros. Para saber detalhes de
+                            cobertura, basta entrar em contato pelo nosso WhatsApp.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="faq-question w-full text-left px-6 py-4 font-bold text-gray-800 focus:outline-none flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <span>Onde vocês estão localizados?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-answer px-6 py-0 max-h-0 overflow-hidden text-gray-600 text-sm transition-all duration-300 bg-white">
+                        <div class="py-4 border-t border-gray-100">
+                            Estamos na Av. Cidade Jardim, 4662 - Bosque dos Eucaliptos, São José dos Campos - SP,
+                            12233-002. Com fácil acesso e estacionamento no local.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="faq-question w-full text-left px-6 py-4 font-bold text-gray-800 focus:outline-none flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <span>Vocês realizam cirurgias e internação?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-answer px-6 py-0 max-h-0 overflow-hidden text-gray-600 text-sm transition-all duration-300 bg-white">
+                        <div class="py-4 border-t border-gray-100">
+                            Sim! Contamos com um centro cirúrgico equipado para procedimentos de rotina e emergência,
+                            com anestesia segura, e áreas para a recuperação e estabilização de cães e gatos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .faq-item.active .faq-answer {
+                    max-height: 200px;
+                }
+
+                .faq-item.active .fa-chevron-down {
+                    transform: rotate(180deg);
+                }
+
+                .faq-item.active .faq-question {
+                    color: var(--primary-blue);
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+                <div class="col-span-1 lg:col-span-1">
+                    <img src="img/logo.jpg" alt="Logo KarunaBranca" class="h-14 bg-white p-1 rounded mb-6"
+                        onerror="this.src='https://placehold.co/150x50/333/FFF?text=KARUNA'">
+                    <p class="text-gray-400 text-sm mb-6">Amor, cuidado e excelência na medicina veterinária para o bem
+                        mais precioso da sua família.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/karunaclinicaveterinaria/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5512996647171" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#25D366] transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-white/20 pb-2 inline-block">Contato
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
+                            <span>Av. Cidade Jardim, 4662<br>Bosque dos Eucaliptos<br>São José dos Campos - SP</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span>(12) 3917-2777</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-secondary font-bold"></i>
+                            <a href="https://wa.me/5512996647171" target="_blank"
+                                class="hover:text-white transition-colors">(12) 99664-7171</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-white/20 pb-2 inline-block">Horários
+                    </h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex justify-between"><span>Seg, Ter, Qui, Sex</span> <span class="text-white">08:00
+                                - 22:00</span></li>
+                        <li class="flex justify-between"><span>Quarta-feira</span> <span class="text-white">08:00 -
+                                21:00</span></li>
+                        <li class="flex justify-between"><span>Sábado</span> <span class="text-white">08:00 -
+                                22:00</span></li>
+                        <li class="flex justify-between"><span>Domingo</span> <span
+                                class="text-secondary font-bold">08:00 - 22:00</span></li>
+                        <li class="mt-2 text-xs text-secondary italic">Plantão disponível.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-white/20 pb-2 inline-block">Acesso
+                        Rápido</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm flex flex-col">
+                        <a href="#inicio" class="hover:text-secondary transition-colors w-fit">Início</a>
+                        <a href="#sobre" class="hover:text-secondary transition-colors w-fit">Sobre Nós</a>
+                        <a href="#servicos" class="hover:text-secondary transition-colors w-fit">Serviços</a>
+                        <a href="#equipe" class="hover:text-secondary transition-colors w-fit">O Corpo Clínico</a>
+                        <a href="politica-privacidade.html"
+                            class="hover:text-secondary transition-colors mt-4 w-fit">Política de Privacidade</a>
+                        <a href="termos-uso.html" class="hover:text-secondary transition-colors w-fit">Termos de Uso</a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div
+                class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; <span id="current-year"></span> Karuna Clínica Veterinária. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://www.dekmidia.com.br" target="_blank"
+                        class="text-gray-300 hover:text-secondary font-bold transition-colors">DekMídia</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA (Joinchat style) -->
+    <a href="https://wa.me/5512996647171" target="_blank" id="sticky-cta"
+        class="items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#128C7E] transition-colors focus:outline-none group">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+        <!-- Tooltip Joinchat -->
+        <span
+            class="absolute right-20 bg-white text-gray-800 text-sm font-bold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap hidden md:block">
+            Como podemos ajudar?<br>Fale no WhatsApp!
+        </span>
+    </a>
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookie-consent"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <h3 class="text-xl font-bold text-primary mb-2">Usamos Cookies 🍪</h3>
+            <p class="text-gray-600 text-sm mb-6">Utilizamos cookies essenciais para o funcionamento do site e para
+                melhorar a sua experiência. Ao continuar navegando, você concorda com a nossa <a
+                    href="politica-privacidade.html" class="text-secondary font-bold hover:underline">Política de
+                    Privacidade</a>.</p>
+            <div class="flex justify-end gap-3">
+                <button type="button"
+                    class="px-5 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+                    onclick="document.getElementById('cookie-consent').classList.add('hidden')">Recusar</button>
+                <button type="button" id="accept-cookies"
+                    class="px-5 py-2 text-sm text-white bg-primary rounded-lg hover:bg-blue-900 focus:ring-4 focus:ring-blue-300">Aceitar
+                    e Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Extra -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

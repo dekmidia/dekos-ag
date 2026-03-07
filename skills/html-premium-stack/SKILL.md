@@ -256,12 +256,49 @@ Se qualquer um destes aparecer no código, reescreva antes de entregar:
 | Espaçamento apertado entre seções (`py-8`) | Seções com respiro (`py-20` a `py-32`) |
 | Ícones emoji como decoração principal | Lucide Icons via CDN |
 | Nenhum efeito no navbar ao scroll | Navbar com blur + background ao scrollar |
+| Hero sem `display:flex; align-items:center` | Hero sempre centralizado verticalmente com `min-height:100vh` |
+| Conteúdo do hero colado no topo da tela | `display:flex; align-items:center` no container do hero |
+| Reduzir `font-size` quando título quebrar em 3 linhas | **O problema é o `max-width` do container, não o font-size** — ampliar `max-width` do `<h1>` até 700px |
+| `max-width` restritivo no `<h1>` do hero | H1 sem `max-width` — deixar respirar horizontalmente até 700-800px |
+| Título do hero em 3 linhas no desktop | Máximo 2 linhas em 1280px — ajustar `max-width` do container se necessário |
+
+### ⚠️ Diagnóstico obrigatório quando o título do hero quebrar em 3 linhas
+
+Antes de reduzir o `font-size`, verificar nesta ordem:
+
+1. O container pai tem `max-width` pequeno demais? → Aumentar para `700px` ou remover
+2. O `<h1>` tem `max-width` próprio? → Remover
+3. O hero usa `flex-direction: column` com `align-items: center`? → Mudar alinhamento de texto para `text-align: left`
+4. Só depois de verificar os 3 acima → considerar ajuste de `font-size`
+
+**Referência de font-size correto para hero:**
+```css
+h1.hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 720px; /* máximo permitido — nunca abaixo de 600px */
+}
+```
+
+---
+
+## Integrações Obrigatórias por Disponibilidade de Dados
+
+Verificar no `SESSAO_ATIVA.md` e briefing antes de codar:
+
+| Dado disponível | Integração obrigatória | Skill de referência |
+|---|---|---|
+| Endereço físico ou link Google Meu Negócio | Seção "Como Chegar" com Google Maps embed | `effects-library` — Efeito 17 |
+| @ do Instagram | Seção de feed com grid 3×3 + link | `effects-library` — Efeito 18 |
+| Número de WhatsApp | Botão flutuante + CTA no hero | `effects-library` — Efeito 11 |
+| Avaliações Google | Seção de estrelas animadas + nota | `effects-library` — Efeito 09 |
 
 ---
 
 ## Loop de Auto-Crítica (executar antes de entregar)
 
-Após gerar o HTML completo, responda mentalmente estas 6 perguntas. Se qualquer resposta for "não", corrija antes de entregar:
+Após gerar o HTML completo, responda mentalmente estas perguntas. Se qualquer resposta for "não", corrija antes de entregar:
 
 ```
 1. Se eu mostrar este site sem dizer que foi IA, pareceria de uma agência profissional?
@@ -283,6 +320,21 @@ Após gerar o HTML completo, responda mentalmente estas 6 perguntas. Se qualquer
 
 6. O CTA principal está visível, contrastante e clicável no mobile?
    → Sim / Não
+
+7. Se havia endereço no briefing — existe seção Google Maps?
+   → Sim / Não / Não havia endereço
+
+8. Se havia @ do Instagram no briefing — existe seção de feed?
+   → Sim / Não / Não havia Instagram
+
+9. O hero está centralizado verticalmente? (display:flex + align-items:center + min-height:100vh)
+   → Sim / Não — se não, corrigir o container do hero
+
+10. O título do hero tem no máximo 2 linhas em 1280px de largura?
+    → Sim / Não — se não, verificar max-width do container (não reduzir font-size como primeira ação)
+
+11. Badge + título + subtítulo + CTAs estão todos visíveis sem scroll em 1280×800px?
+    → Sim / Não — se não, revisar padding-top do hero e max-width do h1
 ```
 
 **Se 2 ou mais respostas forem "não" — não entregue. Refine primeiro.**

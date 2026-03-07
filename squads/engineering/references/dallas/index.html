@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallas Clínica Veterinária | Cuidamos com Amor e Excelência</title>
+    <meta name="description"
+        content="Na Dallas Clínica Veterinária, seu pet não é apenas um número, faz parte da família! Consultas, vacinas, exames, cirurgias e internação 24h. Agende já!">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dallas Clínica Veterinária | Cuidamos com Amor e Excelência">
+    <meta property="og:description"
+        content="Na Dallas Clínica Veterinária, seu pet não é apenas um número, faz parte da família! Consultas, vacinas, exames, cirurgias e internação 24h.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://clinicaveterinariadallas.com.br/">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7b1e9a',
+                        secondary: '#fed005',
+                        dark: '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SEO Schema: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "Dallas Clínica Veterinária",
+      "image": "https://clinicaveterinariadallas.com.br/img/logo.png",
+      "@id": "",
+      "url": "https://clinicaveterinariadallas.com.br/",
+      "telephone": "+5512982606848",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Cidade Jardim, 5033",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "postalCode": "12232-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.2578311,
+        "longitude": -45.886041
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "PublicHolidays"],
+          "opens": "14:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/clinicaveterinariadallas/"
+      ]
+    }
+    </script>
+
+    <!-- SEO Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A clínica funciona 24 horas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temos internação com acompanhamento 24h e atendimento 24h exclusivo para emergências de pets já acompanhados pela clínica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é Gatificação e Contenção Humanizada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gatificação é a adaptação do ambiente para receber gatos com mínimo estresse. Contenção humanizada é a forma carinhosa e respeitosa como imobilizamos seu pet durante os exames ou procedimentos para evitar traumas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais exames a clínica oferece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oferecemos uma ampla gama de exames laboratoriais e de imagem (como ultrassom e raio-x), garantindo diagnósticos rápidos e precisos para o seu pet."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-gray-800 antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header id="header" class="fixed w-full top-0 z-50 glass-header py-4 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="img/logo.png" alt="Dallas Clínica Veterinária Logo" class="h-12 w-auto hover-scale">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#sobre" class="text-dark hover:text-primary transition-colors">Sobre Nós</a>
+                <a href="#servicos" class="text-dark hover:text-primary transition-colors">Serviços</a>
+                <a href="#diferenciais" class="text-dark hover:text-primary transition-colors">Diferenciais</a>
+                <a href="#contato" class="text-dark hover:text-primary transition-colors">Contato</a>
+                <a href="https://wa.me/5512982606848" target="_blank"
+                    class="btn-primary px-6 py-2 rounded-full font-bold shadow-lg shadow-purple-500/30">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar Agora
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-primary focus:outline-none" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <nav id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white shadow-xl flex flex-col items-center py-6 gap-6 font-medium border-t border-gray-100 md:hidden">
+            <a href="#sobre" class="text-xl text-dark hover:text-primary">Sobre Nós</a>
+            <a href="#servicos" class="text-xl text-dark hover:text-primary">Serviços</a>
+            <a href="#diferenciais" class="text-xl text-dark hover:text-primary">Diferenciais</a>
+            <a href="#contato" class="text-xl text-dark hover:text-primary">Contato</a>
+            <a href="https://wa.me/5512982606848" target="_blank"
+                class="btn-primary px-8 py-3 rounded-full font-bold mt-2">
+                Agendar Consulta
+            </a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <!-- Background Image with Overlay -->
+        <div
+            class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="container relative z-10 mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="w-full lg:w-3/5" data-aos="fade-right">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-primary font-semibold text-sm mb-6 shadow-sm border border-purple-200">
+                    <i class="fas fa-heart text-secondary"></i> Amor e Excelência em Cuidado Animal
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold text-dark leading-tight mb-6">
+                    A <span class="text-primary relative inline-block">melhor<svg
+                            class="absolute w-full h-3 -bottom-1 left-0 text-secondary" viewBox="0 0 100 10"
+                            preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="transparent" />
+                        </svg></span> escolha para a saúde do seu pet
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-light">
+                    Oferecemos atendimento completo, carinho e uma equipe super qualificada dedicada a garantir
+                    qualidade de vida longa e feliz para seu melhor amigo.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="btn-primary group flex items-center justify-center px-8 py-4 rounded-full text-lg font-bold shadow-xl shadow-purple-500/20 hover-lift">
+                        Agendar Urgência <i class="fab fa-whatsapp ml-2 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                    <a href="#servicos"
+                        class="btn-secondary group flex items-center justify-center px-8 py-4 rounded-full text-lg font-bold hover-lift">
+                        Nossos Serviços <i
+                            class="fas fa-arrow-down ml-2 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Blob -->
+        <div
+            class="hidden lg:block absolute right-[-5%] top-1/4 w-[600px] h-[600px] bg-secondary/10 blob-shape z-0 blur-3xl">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                <!-- Image side -->
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl z-10">
+                        <img src="img/3af795f75e3b2bc83d4cc53a8f070be2.jpg" alt="Veterinário cuidando de pet"
+                            class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div
+                        class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 floating border border-gray-100 hidden sm:block">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-16 h-16 bg-purple-100 text-primary rounded-full flex items-center justify-center text-3xl">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-dark">Top Care</p>
+                                <p class="text-sm text-gray-500">Atendimento Premium</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-8 -right-8 w-32 h-32 bg-secondary rounded-full -z-10 blob-shape"></div>
+                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-light/20 rounded-full -z-10 blur-xl">
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Sobre a Clínica</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-dark mb-6 leading-tight">Aqui, seu pet não é
+                        apenas um número, <span class="text-secondary">é parte da família!</span></h3>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Na Dallas Clínica Veterinária, nós tratamos cada animal como acreditamos que devam ser tratados:
+                        com muito respeito e dedicação integral. Vamos em missões resgatar e recuperar e focamos na
+                        excelência clínica em cada procedimento.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-12 h-12 flex-shrink-0 bg-yellow-50 rounded-xl flex items-center justify-center text-secondary text-xl border border-yellow-100">
+                                <i class="fas fa-cat"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">Estrutura Pet Friendly & Gatificação</h4>
+                                <p class="text-gray-600">Ambientes totalmente preparados e projetados para diminuir o
+                                    estresse do seu melhor amigo.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-12 h-12 flex-shrink-0 bg-purple-50 rounded-xl flex items-center justify-center text-primary text-xl border border-purple-100">
+                                <i class="fas fa-hands-holding-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">Contenção Humanizada</h4>
+                                <p class="text-gray-600">Total respeito pela psicologia animal durante avaliações e
+                                    exames.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES LOGO TICKER (OPTIONAL) -->
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="py-24 bg-bg-light relative border-y border-gray-100">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-bl-full"></div>
+
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">O que fazemos</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">Nossos Serviços Especializados</h3>
+                <p class="text-lg text-gray-600">Equipe multiprofissional com tecnologia de ponta para cuidar da saúde
+                    do seu mascote do focinho ao rabo.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-gray-50 group hover:border-primary-light/30 flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-purple-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-dark mb-3">Consultas Especializadas</h4>
+                        <p class="text-gray-600 text-lg mb-4">Clínicos e especialistas qualificados para diagnóstico
+                            detalhado da saúde e bem-estar do seu pet.</p>
+                    </div>
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="text-primary font-bold inline-flex items-center group-hover:text-primary-dark mt-auto">
+                        Saber mais <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-gray-50 group hover:border-secondary/30 relative overflow-hidden flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+                    <div
+                        class="w-16 h-16 bg-yellow-50 text-secondary border border-yellow-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-dark mb-3">Vacinas Importadas</h4>
+                        <p class="text-gray-600 text-lg mb-4">Protocolos vacinais de excelência utilizando apenas os
+                            melhores laboratórios parceiros globais.</p>
+                    </div>
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="text-primary font-bold inline-flex items-center group-hover:text-primary-dark mt-auto">
+                        Agendar <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-gray-50 group hover:border-primary-light/30 flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-purple-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-dark mb-3">Exames Diagnósticos</h4>
+                        <p class="text-gray-600 text-lg mb-4">Laboratoriais e Imagem rápida garantem resultados fiéis
+                            para procedimentos assertivos.</p>
+                    </div>
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="text-primary font-bold inline-flex items-center group-hover:text-primary-dark mt-auto">
+                        Saber mais <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-gray-50 group hover:border-primary-light/30 flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-purple-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-dark mb-3">Procedimentos e Cirurgias</h4>
+                        <p class="text-gray-600 text-lg mb-4">Bloco cirúrgico equipado com anestesia inalatória e
+                            monitorização para máxima segurança.</p>
+                    </div>
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="text-primary font-bold inline-flex items-center group-hover:text-primary-dark mt-auto">
+                        Agendar <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-gray-50 group hover:border-primary-light/30 flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-purple-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <h4 class="text-2xl font-bold text-dark">Internação 24H</h4>
+                            <span
+                                class="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded-full animate-pulse">Emergências</span>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-4">Mão de obra capacitada 24 horas zelando pelos animais
+                            internados e pronto atendimento.</p>
+                    </div>
+                    <a href="https://wa.me/5512982606848" target="_blank"
+                        class="text-primary font-bold inline-flex items-center group-hover:text-primary-dark mt-auto">
+                        Saber mais <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS / THERAPIES SECTION -->
+    <section id="diferenciais" class="py-24 bg-primary relative overflow-hidden text-white">
+        <!-- Abstract patterns -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#fff 2px, transparent 2px); background-size: 30px 30px;"></div>
+        <div
+            class="absolute right-[-10%] bottom-[-20%] w-[500px] h-[500px] bg-secondary rounded-full opacity-20 blur-[100px]">
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5" data-aos="fade-right">
+                    <h2 class="text-sm font-bold tracking-widest text-secondary uppercase mb-2">Abordagem Única</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-6">Terapias Complementares Avançadas</h3>
+                    <p class="text-xl text-purple-100 mb-8 font-light">
+                        Fazemos o uso inteligente de <strong>Nutracêuticos</strong> nas consultas e internações para o
+                        melhor suporte terapêutico integrado possível.
+                    </p>
+                    <p class="text-lg text-white mb-8">
+                        Ao longo de todos os atendimentos, nosso paciente se beneficia de:
+                    </p>
+                    <ul class="space-y-4 mb-8 text-lg font-medium">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-secondary text-xl"></i>
+                            Aromaterapia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-secondary text-xl"></i>
+                            Cromoterapia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-secondary text-xl"></i>
+                            Musicoterapia</li>
+                    </ul>
+
+                    <!-- Clube Dallas highlight -->
+                    <div
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mt-6 hover-scale transform transition-all">
+                        <div class="flex items-center gap-4 mb-3">
+                            <i class="fas fa-crown text-secondary text-3xl"></i>
+                            <h4 class="text-2xl font-bold text-white">Clube Dallas</h4>
+                        </div>
+                        <p class="text-purple-100">Membros possuem benefícios exclusivos e contínuos. Pergunte-nos como
+                            associar seu melhor amigo!</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <img src="img/gato.png" alt="Gato fofo" class="w-full max-w-md mx-auto floating drop-shadow-2xl">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS & FAQ -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Comunidade</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">O que dizem os tutores</h3>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center gap-1 text-secondary mb-4 text-sm">
+                        <i class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Levei meu gato e eles usaram técnicas que eu nunca
+                        tinha visto, super tranquilo. O cheirinho na sala deixou ele muito calmo. Nota mil!"</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center font-bold text-white bg-gradient-to-br from-primary to-primary-light">
+                            M</div>
+                        <div>
+                            <h5 class="font-bold text-dark">Marina Silva</h5>
+                            <span class="text-sm text-gray-500">Tutor de Felino</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center gap-1 text-secondary mb-4 text-sm">
+                        <i class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Clínica impecável! A internação 24h fez toda a
+                        diferença quando meu cachorro precisou. Sempre me mandavam mensagens para tranquilizar."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center font-bold text-white bg-gradient-to-br from-secondary to-yellow-600">
+                            J</div>
+                        <div>
+                            <h5 class="font-bold text-dark">João Mendes</h5>
+                            <span class="text-sm text-gray-500">Tutor de Canino</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center gap-1 text-secondary mb-4 text-sm">
+                        <i class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i><i class="fas fa-star block"></i><i
+                            class="fas fa-star block"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Fui muito bem atendida. Os médicos explicam os exames
+                        com uma paciência incrível. Realmente sentem o pet como parte da família deles."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center font-bold text-white bg-gradient-to-br from-primary-dark to-primary">
+                            A</div>
+                        <div>
+                            <h5 class="font-bold text-dark">Aline Barros</h5>
+                            <span class="text-sm text-gray-500">Tutor de Canino</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-extrabold text-dark">Dúvidas Frequentes</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button
+                            class="accordion-button w-full px-6 py-5 text-left font-bold text-xl text-dark hover:text-primary transition-colors flex justify-between items-center focus:outline-none"
+                            aria-expanded="false">
+                            A clínica funciona 24 horas?
+                            <i class="fas fa-chevron-down accordion-icon text-primary"></i>
+                        </button>
+                        <div class="accordion-content bg-slate-50 border-t border-gray-100">
+                            <div class="px-6 py-5 text-gray-600 text-lg leading-relaxed">
+                                Temos estrutura de <strong>internação com acompanhamento 24h</strong> por nossa
+                                capacitada equipe. O <strong>pronto atendimento 24 horas</strong> é dedicado apenas para
+                                emergências de pacientes que já são acompanhados pela clínica.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button
+                            class="accordion-button w-full px-6 py-5 text-left font-bold text-xl text-dark hover:text-primary transition-colors flex justify-between items-center focus:outline-none"
+                            aria-expanded="false">
+                            O que é Gatificação e Contenção Humanizada?
+                            <i class="fas fa-chevron-down accordion-icon text-primary"></i>
+                        </button>
+                        <div class="accordion-content bg-slate-50 border-t border-gray-100">
+                            <div class="px-6 py-5 text-gray-600 text-lg leading-relaxed">
+                                Gatificação é o preparo do nosso ambiente físico e sonoro pensando unicamente nos
+                                felinos, para eles não se sentirem ameaçados. Já a contenção humanizada é o nosso pacto
+                                de mobilizar os pets com muito carinho e cuidado durante procedimentos, preservando a
+                                psicologia animal acima de tudo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button
+                            class="accordion-button w-full px-6 py-5 text-left font-bold text-xl text-dark hover:text-primary transition-colors flex justify-between items-center focus:outline-none"
+                            aria-expanded="false">
+                            Quais especialidades e exames encontro na Dallas?
+                            <i class="fas fa-chevron-down accordion-icon text-primary"></i>
+                        </button>
+                        <div class="accordion-content bg-slate-50 border-t border-gray-100">
+                            <div class="px-6 py-5 text-gray-600 text-lg leading-relaxed">
+                                Temos consultas com especialistas em diversas áreas. Além disso, no próprio local
+                                realizamos exames laboratoriais completos (sangue), e exames de imagem diagnóstica em
+                                tempo ágil.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button
+                            class="accordion-button w-full px-6 py-5 text-left font-bold text-xl text-dark hover:text-primary transition-colors flex justify-between items-center focus:outline-none"
+                            aria-expanded="false">
+                            Vocês atendem em domicílio?
+                            <i class="fas fa-chevron-down accordion-icon text-primary"></i>
+                        </button>
+                        <div class="accordion-content bg-slate-50 border-t border-gray-100">
+                            <div class="px-6 py-5 text-gray-600 text-lg leading-relaxed">
+                                Sim! Oferecemos Consultas Domiciliares para evitar estresse aos pets que não gostam de
+                                sair de casa. Por favor, entre em contato via WhatsApp para verificarmos a
+                                disponibilidade na sua região.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT -->
+    <section id="contato" class="py-24 bg-gray-900 text-white relative flex items-center border-t-4 border-secondary">
+        <!-- Abstract patterns -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: radial-gradient(#fff 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10" data-aos="fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-secondary uppercase mb-2">Venha nos Visitar</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Contato & Localização</h3>
+                <p class="text-lg text-gray-400">Entre em contato para agendar uma consulta ou venha nos visitar em
+                    nossa clínica. Estamos prontos para receber você e seu pet!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div
+                    class="bg-gray-800/50 border border-gray-700/50 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 text-center flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-3xl text-secondary mb-6 shadow-lg shadow-primary/10">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Endereço</h4>
+                    <p class="text-gray-400 text-lg">Avenida Cidade Jardim, 5033<br>Bosque dos Eucalíptos<br>São José
+                        dos Campos - SP</p>
+                </div>
+
+                <!-- Hours -->
+                <div
+                    class="bg-gray-800/50 border border-gray-700/50 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 text-center flex flex-col items-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-3xl text-secondary mb-6 shadow-lg shadow-secondary/10">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Funcionamento</h4>
+                    <div class="text-gray-400 text-lg space-y-1">
+                        <p><span class="text-white">Seg a Sex:</span> 08:00 às 20:00</p>
+                        <p><span class="text-white">Sábados:</span> 09:00 às 16:00</p>
+                        <p><span class="text-white">Dom e Feriados:</span> 14:00 às 17:00</p>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div
+                    class="bg-gray-800/50 border border-gray-700/50 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 text-center flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-3xl text-secondary mb-6 shadow-lg shadow-primary/10">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Fale Conosco</h4>
+                    <div class="text-gray-400 text-lg space-y-3 mt-2 w-full max-w-[200px]">
+                        <a href="tel:+551239167619"
+                            class="block bg-gray-700 hover:bg-gray-600 text-white rounded-xl py-3 transition-colors font-semibold shadow-md whitespace-nowrap">(12)
+                            3916-7619</a>
+                        <a href="https://wa.me/5512982606848" target="_blank"
+                            class="block bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white rounded-xl py-3 transition-colors font-bold shadow-md whitespace-nowrap">
+                            <i class="fab fa-whatsapp mr-1"></i> (12) 98260-6848
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+                <div class="flex items-center gap-4">
+                    <img src="img/logo.png" alt="Dallas Logo Footer"
+                        class="h-10 opacity-70 grayscale hover:grayscale-0 transition-all">
+                    <p class="text-sm">© <span id="year">2026</span> Dallas Clínica Veterinária.<br>Todos os direitos
+                        reservados.</p>
+                </div>
+
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="politica-privacidade.html" class="hover:text-white transition-colors">Política de
+                        Privacidade</a>
+                    <a href="termos-uso.html" class="hover:text-white transition-colors">Termos de Uso</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end gap-2 text-sm">
+                    <a href="https://www.instagram.com/clinicaveterinariadallas/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.dekmidia.com.br" target="_blank"
+                        class="text-gray-500 hover:text-secondary transition-colors text-xs font-semibold uppercase tracking-widest mt-2">
+                        Desenvolvido por <span class="text-gray-300">DekMídia</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY WHATSAPP (Mobile Focus) -->
+    <a href="https://wa.me/5512982606848" target="_blank" id="sticky-whatsapp" class="sticky-whatsapp"
+        aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-2xl z-[100] transform translate-y-full transition-transform duration-500 p-4 md:p-6">
+        <div class="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-sm text-gray-600 md:pr-12">
+                Utilizamos cookies essenciais para otimizar sua experiência no nosso site. Ao continuar navegando, você
+                declara estar ciente de nossa <a href="politica-privacidade.html"
+                    class="text-primary font-bold underline">Política de Privacidade</a>.
+            </div>
+            <div class="flex-shrink-0 flex gap-3">
+                <button id="cookie-accept" class="btn-primary px-6 py-2 rounded-xl font-bold text-sm">Entendi e
+                    Aceito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Cookie Banner Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+
+            if (!localStorage.getItem('cookies-accepted')) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-full');
+                }, 1000);
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookies-accepted', 'true');
+                cookieBanner.classList.add('translate-y-full');
+            });
+        });
+    </script>
+</body>
+
+</html>

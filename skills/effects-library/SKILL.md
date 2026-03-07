@@ -530,6 +530,169 @@ document.querySelectorAll('#skill-section').forEach(el => barsObserver.observe(e
 
 ---
 
+## 17. GOOGLE MAPS INCORPORADO
+**Quando usar:** Sempre que o briefing ou `SESSAO_ATIVA.md` tiver endereço físico ou link do Google Meu Negócio. Obrigatório para negócios locais.
+
+```html
+<!-- SEÇÃO COMO CHEGAR -->
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-label">Localização</div>
+    <h2>Como Chegar</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start">
+
+      <!-- Dados de contato ao lado do mapa -->
+      <div>
+        <div class="reveal" style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem">
+          <i data-lucide="map-pin" style="width:20px;height:20px;color:var(--accent);flex-shrink:0;margin-top:2px"></i>
+          <div>
+            <div style="font-weight:600;margin-bottom:0.25rem">Endereço</div>
+            <div style="color:var(--muted);font-size:0.9rem">[RUA, NÚMERO — BAIRRO]<br>[CIDADE — ESTADO — CEP]</div>
+          </div>
+        </div>
+        <div class="reveal" style="display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem">
+          <i data-lucide="phone" style="width:20px;height:20px;color:var(--accent);flex-shrink:0"></i>
+          <div>
+            <div style="font-weight:600;margin-bottom:0.25rem">Telefone</div>
+            <a href="tel:[TELEFONE]" style="color:var(--muted);font-size:0.9rem;text-decoration:none">[TELEFONE]</a>
+          </div>
+        </div>
+        <div class="reveal" style="display:flex;gap:1rem;align-items:flex-start">
+          <i data-lucide="clock" style="width:20px;height:20px;color:var(--accent);flex-shrink:0;margin-top:2px"></i>
+          <div>
+            <div style="font-weight:600;margin-bottom:0.25rem">Horário</div>
+            <div style="color:var(--muted);font-size:0.9rem">[DIAS E HORÁRIOS DE FUNCIONAMENTO]</div>
+          </div>
+        </div>
+        <!-- Botão abrir no Google Maps -->
+        <a href="https://maps.google.com/?q=[ENDEREÇO]" target="_blank"
+           class="btn-primary reveal" style="display:inline-flex;margin-top:2rem">
+          <i data-lucide="navigation" style="width:16px;height:16px"></i>
+          Abrir no Google Maps
+        </a>
+      </div>
+
+      <!-- Mapa embed -->
+      <div class="reveal" style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.08)">
+        <iframe
+          src="https://maps.google.com/maps?q=[ENDEREÇO COMPLETO DO CLIENTE]&output=embed&z=16"
+          width="100%" height="420"
+          style="border:0;display:block"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+```
+
+**Como gerar o embed URL correto:**
+1. Abrir Google Maps no browser
+2. Pesquisar o endereço do cliente
+3. Clicar em "Compartilhar" → "Incorporar mapa"
+4. Copiar o `src` do iframe gerado — é mais preciso que montar manualmente
+5. Substituir no código acima
+
+**Regras de QA:**
+- Mapa nunca com height fixo em mobile — usar `height: 280px` em telas < 768px
+- Sempre com `loading="lazy"` para não impactar performance
+- Sempre com `border-radius` e `overflow:hidden` no container para respeitar o design
+- Em dark mode, adicionar `filter: grayscale(20%) contrast(1.05)` no iframe para integrar visualmente
+
+---
+
+## 18. WIDGET DE FEED DO INSTAGRAM
+**Quando usar:** Sempre que o briefing ou `SESSAO_ATIVA.md` tiver @ do Instagram. Mostra os últimos posts em grid.
+
+**Solução recomendada: Behold.so** (gratuito, estável, sem quebrar com mudanças de API)
+
+```html
+<!-- SEÇÃO INSTAGRAM FEED -->
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto" style="text-align:center">
+
+    <div class="section-label">Instagram</div>
+    <h2 class="reveal">Acompanhe nosso trabalho</h2>
+    <p class="reveal" style="color:var(--muted);margin-bottom:3rem">
+      Últimas publicações de <a href="https://instagram.com/[HANDLE]" target="_blank"
+      style="color:var(--accent);text-decoration:none">@[HANDLE]</a>
+    </p>
+
+    <!-- PLACEHOLDER: substituir pelo código embed do Behold.so -->
+    <!-- Instruções para o cliente: -->
+    <!--
+      1. Acesse behold.so e crie uma conta gratuita
+      2. Conecte seu Instagram (@[HANDLE])
+      3. Escolha o layout "Grid" com 9 posts
+      4. Copie o código embed gerado
+      5. Substitua o bloco abaixo pelo código copiado
+    -->
+    <div class="reveal" id="instagram-feed-placeholder"
+         style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:700px;margin:0 auto">
+      <!-- 9 placeholders visuais enquanto o embed não for configurado -->
+      <script>
+        for(let i=0;i<9;i++){
+          document.currentScript.insertAdjacentHTML('beforebegin',
+            `<div style="aspect-ratio:1;background:var(--surface);border-radius:8px;
+             border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;
+             justify-content:center;color:var(--muted)">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+               </svg>
+             </div>`
+          );
+        }
+      </script>
+    </div>
+    <!-- FIM DO PLACEHOLDER — substituir pelo embed do Behold -->
+
+    <a href="https://instagram.com/[HANDLE]" target="_blank"
+       class="btn-secondary reveal" style="display:inline-flex;margin-top:2.5rem">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+      </svg>
+      Ver mais no Instagram
+    </a>
+
+  </div>
+</section>
+
+<!-- CSS do grid Instagram -->
+<style>
+/* Grid hover overlay */
+#instagram-feed-placeholder > div {
+  position: relative; overflow: hidden; cursor: pointer;
+  transition: transform 0.25s;
+}
+#instagram-feed-placeholder > div:hover { transform: scale(1.02); }
+</style>
+```
+
+**Nota obrigatória na entrega ao cliente:**
+> ⚠️ Para ativar o feed do Instagram: acesse behold.so, conecte seu Instagram @[handle], gere o código embed e substitua no arquivo HTML no local indicado. O processo leva menos de 5 minutos e funciona sem precisar de desenvolvedor.
+
+**Alternativa sem configuração (apenas link visual):**
+Se o cliente não quiser configurar o Behold, substituir o grid por um CTA clean:
+```html
+<a href="https://instagram.com/[HANDLE]" target="_blank"
+   style="display:block;padding:3rem;background:var(--surface);border-radius:16px;
+   border:1px solid rgba(255,255,255,0.08);text-decoration:none;transition:border-color 0.3s"
+   onmouseover="this.style.borderColor='rgba(123,97,255,0.3)'"
+   onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+  <div style="font-size:2.5rem;margin-bottom:1rem">📸</div>
+  <div style="font-weight:700;font-size:1.2rem;color:var(--text)">@[HANDLE]</div>
+  <div style="color:var(--muted);margin-top:0.5rem">Siga no Instagram para acompanhar nosso trabalho</div>
+</a>
+```
+
+---
+
 ## Referência de uso por Nicho
 
 | Efeito | Tech/SaaS | Restaurante | Clínica | Construção | Escola |
@@ -547,3 +710,5 @@ document.querySelectorAll('#skill-section').forEach(el => barsObserver.observe(e
 | Noise texture | ✅ | ✅ luxury | — | ✅ | — |
 | Processo passos | ✅ | ✅ | ✅ | ✅ | ✅ |
 | WhatsApp + ScrollTop | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Google Maps embed | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Instagram feed | ✅ | ✅ | ✅ | ✅ | ✅ |

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valepetsjc.com.br/sitemap.xml

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reidapizza.com.br/sitemap.xml

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Lamim - Psicóloga em Jacareí - SP | Acolhimento e Bem-estar</title>
+    <meta name="description"
+        content="Psicóloga Mariana Lamim em Jacareí - SP. Atendimento especializado, acolhimento humanizado para adolescentes e adultos. Agende sua consulta.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mariana Lamim - Psicóloga em Jacareí - SP">
+    <meta property="og:description"
+        content="Atendimento psicológico humanizado e especializado em Jacareí. Recupere seu equilíbrio mental.">
+    <meta property="og:image" content="img/hero.png">
+    <meta property="og:type" content="website">
+
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D5A27',
+                        accent: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mariana Lamim - Psicóloga",
+      "image": "img/logo.png",
+      "@id": "",
+      "url": "https://www.psicologalamim.com.br",
+      "telephone": "(12) 98877-1971",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. das Letras, 1265 Sobreloja - loja 1 - Lot. Villa Branca",
+        "addressLocality": "Jacareí",
+        "addressRegion": "SP",
+        "postalCode": "12301-330",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.2645461,
+        "longitude": -45.9445044
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "32"
+      }
+    }
+    </script>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="img/logo.png" alt="Logo Mariana Lamim" class="w-10 h-10">
+                <span class="text-xl font-bold text-primary tracking-tighter">Mariana Lamim</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="text-gray-700 hover:text-primary transition">Início</a>
+                <a href="#sobre" class="text-gray-700 hover:text-primary transition">Sobre</a>
+                <a href="#servicos" class="text-gray-700 hover:text-primary transition">Serviços</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-primary transition">Depoimentos</a>
+                <a href="#contato"
+                    class="bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition">Agendar</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-primary" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img/hero.png" alt="Consultório de Terapia" class="w-full h-full object-cover brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12">
+            <div class="fade-up" id="hero-content">
+                <h1 class="text-5xl md:text-7xl font-bold text-primary leading-tight mb-6">
+                    Resgate sua <br><span class="text-accent italic">leveza</span> interior.
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 max-w-lg">
+                    Um espaço seguro e acolhedor para você trilhar seu caminho de autodescoberta e saúde mental em
+                    Jacareí.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato"
+                        class="bg-primary text-white px-8 py-4 rounded-full text-center font-semibold hover:shadow-xl transition-all transform hover:-translate-y-1">
+                        Agendar Consulta
+                    </a>
+                    <a href="#sobre"
+                        class="border-2 border-primary text-primary px-8 py-4 rounded-full text-center font-semibold hover:bg-primary hover:text-white transition-all">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative slide-left">
+                    <div class="absolute -top-6 -left-6 w-full h-full border-2 border-accent rounded-2xl"></div>
+                    <img src="img/mariana.png" alt="Mariana Lamim - Psicóloga"
+                        class="relative z-10 rounded-2xl shadow-2xl">
+                </div>
+                <div class="slide-right">
+                    <span class="text-accent font-semibold tracking-widest uppercase text-sm">A Profissional</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-primary mt-2 mb-6">Mariana Lamim</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Com foco em um atendimento humanizado, busco oferecer muito mais do que terapia: ofereço luz,
+                        escuta ativa e acolhimento. Acredito que o processo terapêutico é uma jornada leve e profunda ao
+                        mesmo tempo, onde a segurança e a empatia são fundamentais.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Especializada em atender adolescentes e adultos, meu compromisso é segurar sua mão com maestria
+                        em seus momentos mais frágeis, ajudando-o a se sentir inteiro novamente.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3 text-secondary font-medium">
+                            <i class="fa-solid fa-check text-accent"></i>
+                            <span>Atendimento Humanizado</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-secondary font-medium">
+                            <i class="fa-solid fa-check text-accent"></i>
+                            <span>Ambiente LGBTQ+ Friendly</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-secondary font-medium">
+                            <i class="fa-solid fa-check text-accent"></i>
+                            <span>Consultório Acessível</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Como posso te ajudar?</h2>
+            <div class="w-24 h-1 bg-accent mx-auto"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group fade-up">
+                <div
+                    class="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary text-3xl mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">Terapia Individual</h3>
+                <p class="text-gray-600">Espaço dedicado para trabalhar questões emocionais, traumas, ansiedade e
+                    depressão de forma personalizada.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group fade-up"
+                style="transition-delay: 0.2s;">
+                <div
+                    class="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center overflow-hidden mb-8 group-hover:bg-primary transition-colors">
+                    <img src="img/adolescente.png" alt="Desenho Adolescente"
+                        class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert transition-all">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">Adolescentes</h3>
+                <p class="text-gray-600">Abordagem focada em conquistar a confiança e auxiliar nas complexas transições
+                    da fase adolescente.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group fade-up"
+                style="transition-delay: 0.4s;">
+                <div
+                    class="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary text-3xl mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">Saúde Mental</h3>
+                <p class="text-gray-600">Processo de autoconhecimento profundo para quem busca maior equilíbrio e
+                    qualidade de vida no dia a dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">O que dizem os pacientes</h2>
+            <div class="flex justify-center text-accent text-xl space-x-1 mb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-500">Nota 5.0 no Google com 32 avaliações</p>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-gray-50 p-8 rounded-3xl relative">
+                <i class="fa-solid fa-quote-left absolute top-6 right-6 text-3xl text-primary/10"></i>
+                <p class="text-gray-600 italic mb-6">"A Mari é muito mais do que uma profissional incrível — ela é luz,
+                    escuta, acolhimento e sabedoria em forma de gente. Sensibilidade e inteligência transbordam em cada
+                    atendimento."</p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                        G</div>
+                    <div>
+                        <h4 class="font-bold text-primary">Gabriela Albuquerque</h4>
+                        <span class="text-sm text-gray-500 italic">Paciente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-gray-50 p-8 rounded-3xl relative">
+                <i class="fa-solid fa-quote-left absolute top-6 right-6 text-3xl text-primary/10"></i>
+                <p class="text-gray-600 italic mb-6">"Melhor profissional e ser humano!! Que bom que eu tive a chance de
+                    conhecer. Recomendo imensamente para todos que buscam evoluir."</p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                        C</div>
+                    <div>
+                        <h4 class="font-bold text-primary">Carine Andrade</h4>
+                        <span class="text-sm text-gray-500 italic">Paciente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-gray-50 p-8 rounded-3xl relative">
+                <i class="fa-solid fa-quote-left absolute top-6 right-6 text-3xl text-primary/10"></i>
+                <p class="text-gray-600 italic mb-6">"Minha filha passa com a dra. Mariana, ela é maravilhosa, muito
+                    atenciosa, sabe como conquistar a confiança dos pacientes adolescentes. Eu já estava desistindo."
+                </p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                        J</div>
+                    <div>
+                        <h4 class="font-bold text-primary">Jacque Morais</h4>
+                        <span class="text-sm text-gray-500 italic">Mãe de Paciente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-4xl font-bold text-primary text-center mb-12">Dúvidas Frequentes</h2>
+
+            <div class="space-y-4">
+                <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                        <span class="font-bold text-lg text-primary">Como funcionam as sessões?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-600">
+                            As sessões têm duração média de 50 minutos e ocorrem semanalmente, criando um espaço de fala
+                            seguro para o desenvolvimento do paciente.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                        <span class="font-bold text-lg text-primary">Vocês aceitam planos de saúde?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-600">
+                            Atendemos majoritariamente de forma particular, mas emitimos recibos para que você possa
+                            solicitar reembolso junto ao seu convênio.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                        <span class="font-bold text-lg text-primary">Qual o endereço do consultório?</span>
+                        <i class="fa-solid fa-chevron-down text-accent transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-6 text-gray-600">
+                            Estamos localizados na Av. das Letras, 1265 Sobreloja - loja 1 - Loteamento Villa Branca,
+                            Jacareí - SP.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato / Localização -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-primary mb-8">Vamos conversar?</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary text-xl mb-1">Endereço</h4>
+                                <p class="text-gray-600 italic">Av. das Letras, 1265 Sobreloja - loja 1, Villa Branca,
+                                    Jacareí - SP</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary text-xl mb-1">Telefone</h4>
+                                <p class="text-gray-600 font-medium">(12) 98877-1971</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary text-xl mb-1">Horários de Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Quinta: 09h às 21h</p>
+                                <p class="text-gray-600">Sexta: 09h às 17h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5512988771971?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+                        target="_blank"
+                        class="inline-block mt-12 bg-[#25d366] text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition hover:-translate-y-1">
+                        Falar no WhatsApp <i class="fa-brands fa-whatsapp ml-2 text-2xl"></i>
+                    </a>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden shadow-2xl h-[450px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.2345!2d-45.9445044!3d-23.2645461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc350e242b7177%3A0xf2474b970922cc17!2sMariana%20Lamim%20-%20Psic%C3%B3loga!5e0!3m2!1spt-BR!2sbr!4v1711200000000!5m2!1spt-BR!2sbr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-10">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-2">
+                <a href="#" class="flex items-center space-x-2 mb-6">
+                    <img src="img/logo.png" alt="Logo" class="w-8 h-8">
+                    <span class="text-2xl font-bold text-primary">Mariana Lamim</span>
+                </a>
+                <p class="text-gray-500 max-w-sm">Dedicada a transformar vidas através de um atendimento psicológico
+                    humanizado e ético em Jacareí.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary mb-6">Links Rápidos</h4>
+                <ul class="space-y-4 text-gray-600">
+                    <li><a href="#inicio" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="#sobre" class="hover:text-primary transition">Sobre</a></li>
+                    <li><a href="#servicos" class="hover:text-primary transition">Serviços</a></li>
+                    <li><a href="#depoimentos" class="hover:text-primary transition">Depoimentos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary mb-6">Legal</h4>
+                <ul class="space-y-4 text-gray-600">
+                    <li><a href="politica-privacidade.html" class="hover:text-primary transition">Privacidade</a></li>
+                    <li><a href="termos-uso.html" class="hover:text-primary transition">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 pt-10 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="year"></span> Mariana Lamim - Psicóloga. Todos os direitos reservados.</p>
+            <p class="mt-4">Desenvolvido por <a href="https://www.dekmidia.com.br" target="_blank"
+                    class="text-primary font-bold hover:underline">DekMídia</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5512988771971?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+        class="whatsapp-float group whatsapp-pulse" id="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="whatsapp-badge">1</span>
+        <div class="whatsapp-tooltip lg:block hidden">Olá! Como posso ajudar?</div>
+    </a>
+
+    <!-- LGPD Modal -->
+    <div id="cookie-modal"
+        class="fixed bottom-0 left-0 w-full z-[1001] bg-white p-6 shadow-[0_-5px_25px_rgba(0,0,0,0.1)] border-t border-gray-100 transform translate-y-full transition-transform duration-500">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-600 text-sm max-w-2xl">
+                Utilizamos cookies para melhorar sua experiência e analisar nosso tráfego. Ao continuar navegando, você
+                concorda com nossa <a href="politica-privacidade.html" class="text-primary underline">Política de
+                    Privacidade</a>.
+            </div>
+            <div class="flex space-x-4">
+                <button id="accept-cookies"
+                    class="bg-primary text-white px-8 py-2 rounded-full font-bold hover:bg-opacity-90 transition">Aceitar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

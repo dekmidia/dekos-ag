@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso | Pizzaria Yoyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#ffb703',
+                        dark: '#0a0a0a',
+                        surface: '#121212',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark font-['Outfit'] text-gray-100 leading-relaxed overflow-x-hidden">
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-20 relative z-10">
+        <a href="index.html"
+            class="inline-flex items-center gap-2 text-primary hover:text-secondary font-bold mb-12 transition group">
+            <svg class="w-5 h-5 group-hover:-translate-x-1 transition" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Voltar para o Início
+        </a>
+
+        <h1 class="text-5xl font-extrabold mb-12 text-white">Termos de <span class="text-primary">Uso</span></h1>
+
+        <div class="space-y-8 bg-surface p-10 rounded-[2.5rem] shadow-2xl border border-white/5 backdrop-blur-sm">
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">01</span>
+                    Aceitação dos Termos
+                </h2>
+                <p class="text-gray-400">Ao acessar o site da <strong class="text-white">Pizzaria Yoyo</strong>, você
+                    concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">02</span>
+                    Uso de Licença
+                </h2>
+                <p class="text-gray-400">É concedida permissão para baixar temporariamente uma cópia dos materiais
+                    (informações ou software) no site apenas para visualização transitória pessoal e não comercial.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">03</span>
+                    Isenção de Responsabilidade
+                </h2>
+                <p class="text-gray-400">Os materiais no site da Pizzaria Yoyo são fornecidos 'como estão'. Não
+                    oferecemos garantias, expressas ou implícitas.</p>
+                <div class="pt-6 border-t border-white/5">
+                    <p class="text-sm text-gray-500 italic">Este site foi desenvolvido por <a
+                            href="https://www.dekmidia.com.br" class="text-primary hover:underline"
+                            target="_blank">DekMídia</a> para fins informativos e de conversão de clientes.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

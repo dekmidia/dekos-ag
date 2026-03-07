@@ -51,6 +51,19 @@ A fonte é a personalidade do site. Nunca use fontes genéricas como escolha pad
 - H2: mix de serif + sans cria tensão visual interessante
 - Body: tamanho confortável (base ou lg), line-height generoso (1.6–1.8)
 
+**Tamanho do Título no Hero (Regra Permanente):**
+
+- **Máximo de 2 linhas** no desktop — nunca 3 ou mais. Se for maior, reduza a fonte.
+- **Responsividade fluída:** Utilize sempre a regra estrita `font-size: clamp(2.4rem, 4.5vw, 3.8rem)`, garantindo proporção impecável sem quebrar linhas indesejadas.
+- **Line-height fechado:** Títulos de Display devem usar exatamente `line-height: 1.05`.
+- **Alinhamento Vertical Absoluto:** Hero sempre com `display: flex; align-items: center; min-height: 100vh`. O conteúdo deve estar perfeitamente ancorado no centro visual da tela.
+- **Controle de Quebra e Max-Width:** O H1 do hero **NUNCA** deve possuir `max-width` restritivo local, o texto precisa respirar horizontalmente. O título do hero deve ter no máximo 2 linhas em 1280px — se quebrar para 3, aumente o `max-width` do container pai ou reprograme a quebra real (`<br>`), ao invés de reduzir o `font-size`.
+- **Above the Fold Obrigatório:** O espaço vertical entre badge, título, subtítulo e os Botões CTA DEVEM estar inteiramente visíveis na viewport de `1280x800px` sem nenhuma necessidade de rolagem. Modere as margens internas (`margin-top`/`margin-bottom`).
+- **Palavra de Destaque:** A palavra accent no título hero deve conter profundidade visual obrigatória através de `text-shadow: 0 0 40px rgba([R,G,B], 0.3)` na cor raiz.
+
+> **REGRA GERAL DE HERO (O TESTE MENTAL):**
+> *Abrir o site em 1280×800px e fazer um screenshot mental: badge + título (2 linhas) + subtítulo + 2 CTAs devem estar TODOS visíveis. Se não estiverem, o hero está errado — reduza font-size, line-height e margin/padding até caberem perfeitamente dentro da tela original primária.*
+
 ---
 
 ### 2. Cor com Intenção
@@ -250,6 +263,23 @@ Para garantir que a imersão visual não prejudique a usabilidade diária, apliq
   - Botão fixo no canto inferior direito (posicionado ligeiramente acima do WhatsApp).
   - Oculto no primeiro fold: deve realizar `fade-in` apenas após 300px de scroll da tela inicial.
   - Evento de clique dispara script com `behavior: smooth` até o topo da página HTML.
+
+### 8. Integrações Obrigatórias de Mídia
+
+Sempre que os dados estiverem disponíveis no briefing ou no arquivo de Referência/Sessão Ativa, injete compulsoriamente os seguintes blocos sociais:
+
+- **Google Maps Integrado:**
+  - Se houver endereço fornecido, inclua uma seção dedicada "Como chegar" imediatamente antes do Footer (ou em contato).
+  - Componentes: Título (`Como chegar`), Contatos ao Lado (Endereço e Telefone) acompanhando o iframe.
+  - Iframe API (Sem-Chave/Embed Básico): `<iframe src="https://maps.google.com/maps?q=[ENDEREÇO]&output=embed">`
+  - Design do Iframe: Altura fixa de `400px`, largura `100%`, encapsulado com bordas arredondadas e `border` sutil alinhado ao tema Glassmorphism da página. Em Mobile ocupando 100% (block full).
+
+- **Widget de Instagram (Últimos Posts):**
+  - Se houver menção ao `@` do Instagram do cliente, inclua uma seção pré-Rodapé para o Feed Social.
+  - Solução Tecnológica: Reserve o espaço para SnapWidget ou Behold.so.
+  - UI/UX Demandada: Configure a área com o placeholder constando a exata instrução *"Para ativar o feed do Instagram, cadastre seu @ em behold.so, copie o código embed gerado e substitua no local indicado no HTML"*.
+  - Dimensão: Layout em Grid Quadrado (3 colunas x 3 linhas = 9 posts). Efeito default do app: Hover mostrando overlay / ícone do Instagram.
+  - Adicione abaixo do contêiner o CTA: `Ver mais no Instagram @handle`.
 
 ---
 

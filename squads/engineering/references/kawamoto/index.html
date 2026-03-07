@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawamoto Team - Unidade Bosque | Jiu-Jitsu em São José dos Campos</title>
+    <meta name="description"
+        content="A melhor academia de Jiu-Jitsu em São José dos Campos. Aulas para adultos e crianças na Unidade Bosque. Venha fazer uma aula experimental!">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/kawamoto.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#000000',
+                        chumbo: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="img/kawamoto.jpg" alt="Kawamoto Team Logo"
+                    class="h-12 w-12 rounded-full border-2 border-gold object-cover">
+                <span class="text-xl font-bold font-outfit tracking-tighter">KAWAMOTO <span
+                        class="text-gold">TEAM</span></span>
+            </div>
+
+            <div class="hidden md:flex gap-8 items-center font-medium">
+                <a href="#inicio" class="hover:text-gold transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-gold transition-colors">A Escola</a>
+                <a href="#servicos" class="hover:text-gold transition-colors">Modalidades</a>
+                <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+                <a href="https://wa.me/5512991643120" target="_blank"
+                    class="bg-gold text-dark px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform">
+                    AULA EXPERIMENTAL
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-gold" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-dark/95 z-40 flex flex-col items-center justify-center gap-8 text-2xl font-bold">
+            <a href="#inicio" class="mobile-link">Início</a>
+            <a href="#sobre" class="mobile-link">A Escola</a>
+            <a href="#servicos" class="mobile-link">Modalidades</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <button id="close-menu" class="absolute top-6 right-6 text-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 parallax-bg"
+                style="background-image: url('img/Captura de tela 2026-02-27 143948.png');">
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-8xl font-black font-outfit uppercase leading-tight">
+                    Domine a <span class="text-gold-gradient">Técnica</span>,<br>Vença o Desafio.
+                </h1>
+                <p class="mt-6 text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                    Jiu-Jitsu de alto nível na Unidade Bosque. Transforme seu corpo e mente com a metodologia Kawamoto
+                    Team.
+                </p>
+                <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/5512991643120" target="_blank"
+                        class="bg-gold text-dark px-10 py-4 rounded-full font-black text-xl hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                        COMECE AGORA <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 float-animation hidden md:block">
+                <a href="#sobre" class="text-gold opacity-50 hover:opacity-100 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sobre / Diferenciais -->
+        <section id="sobre" class="py-24 bg-dark relative overflow-hidden">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-gold uppercase tracking-widest font-bold mb-4">A verdadeira essência do Jiu-Jitsu
+                    </h2>
+                    <h3 class="text-4xl md:text-6xl font-black mb-8 leading-tight font-outfit">Muito mais que uma
+                        escola,<br>uma <span class="text-gold">Comunidade.</span></h3>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Na Kawamoto Team Unidade Bosque, acreditamos que o Jiu-Jitsu é para todos. Nossa metodologia
+                        foca na excelência técnica, disciplina e respeito mútuo. Ambiente climatizado, tatame
+                        profissional e professores dedicados ao seu crescimento.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8" id="stats-container">
+                        <div>
+                            <span class="text-gold text-4xl md:text-6xl font-black block mb-2 font-outfit"><span
+                                    class="counter-value" data-target="100">0</span>%</span>
+                            <span class="text-xs md:text-sm text-gray-500 uppercase font-bold tracking-widest">Foco na
+                                Técnica</span>
+                        </div>
+                        <div>
+                            <span class="text-gold text-4xl md:text-6xl font-black block mb-2 font-outfit">+<span
+                                    class="counter-value" data-target="500">0</span></span>
+                            <span class="text-xs md:text-sm text-gray-500 uppercase font-bold tracking-widest">Alunos
+                                Graduados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="glass-effect p-4 rounded-3xl rotate-3 scale-95 md:scale-100">
+                        <img src="img/Captura de tela 2026-02-27 144219.png" alt="Treino Kawamoto"
+                            class="rounded-2xl w-full grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 bg-gold p-8 rounded-3xl hidden md:block">
+                        <img src="img/kawamoto.jpg" alt="Logo" class="w-16 h-16 rounded-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modalidades -->
+        <section id="servicos" class="py-24 bg-chumbo relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-gold uppercase tracking-widest font-bold mb-4">Nossas Modalidades</h2>
+                    <h3 class="text-4xl md:text-6xl font-black font-outfit">Excelência para todos</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-effect p-8 rounded-3xl hover:border-gold/50 transition-all group"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gold" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-outfit">Jiu-Jitsu Adulto</h4>
+                        <p class="text-gray-400 mb-6">Treinos focados em defesa pessoal, competição e condicionamento
+                            físico extremo.</p>
+                        <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Defesa Pessoal Aplicada</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Metodologia Estruturada</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-effect p-8 rounded-3xl border-gold border hover:bg-gold/5 transition-all group scale-105"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-16 h-16 bg-gold/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gold" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-outfit">Jiu-Jitsu Kids</h4>
+                        <p class="text-gray-400 mb-6">Educação através do esporte. Foco em disciplina, anti-bullying e
+                            coordenação.</p>
+                        <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Ambiente Seguro</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Professores Especializados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-effect p-8 rounded-3xl hover:border-gold/50 transition-all group"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gold" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-outfit">Escola de Lutas</h4>
+                        <p class="text-gray-400 mb-6">Módulos integrados de Wrestling e submissão para atletas de todos
+                            os níveis.</p>
+                        <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Treinos de Wrestling</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg> Aulas aos Sábados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="py-24 bg-dark">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div data-aos="fade-right">
+                        <h2 class="text-gold uppercase tracking-widest font-bold mb-4">Prova Social</h2>
+                        <h3 class="text-4xl md:text-5xl font-black font-outfit">O que dizem nossos alunos</h3>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="glass-effect p-8 rounded-2xl" data-aos="zoom-in">
+                        <div class="flex text-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Os treinos na Kawamoto team bosque são muito bem
+                            estruturados e focados na técnica... os professores Christian e Caio estão de parabéns."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-gold rounded-full flex items-center justify-center font-bold text-dark">
+                                A</div>
+                            <span class="font-bold">Adir Abrantes</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="glass-effect p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="flex text-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Melhor academia de Jiu Jitsu, professores competentes,
+                            inclusivos e super atenciosos! Eu e meu filho amamos!"</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-gold rounded-full flex items-center justify-center font-bold text-dark">
+                                T</div>
+                            <span class="font-bold">Thalita Machado</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="glass-effect p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="flex text-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"A academia é excelente, os professores são incríveis,
+                            atenciosos e cuidadosos, sabem cuidar muito bem das crianças."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-gold rounded-full flex items-center justify-center font-bold text-dark">
+                                D</div>
+                            <span class="font-bold">Debora Mariane</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-chumbo">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-gold uppercase tracking-widest font-bold mb-4">FAQ</h2>
+                    <h3 class="text-4xl font-black font-outfit">Dúvidas Frequentes</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div class="faq-item glass-effect rounded-2xl overflow-hidden cursor-pointer p-6"
+                        data-aos="fade-up">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold">Preciso ter experiência para começar?</h4>
+                            <span class="faq-icon transition-transform duration-300 text-gold">▼</span>
+                        </div>
+                        <div class="faq-content mt-4 text-gray-400">
+                            Não! Temos turmas para iniciantes absolutos. Nossos professores farão seu acompanhamento
+                            desde o primeiro dia no tatame.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="faq-item glass-effect rounded-2xl overflow-hidden cursor-pointer p-6"
+                        data-aos="fade-up">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold">Quais são as turmas para crianças?</h4>
+                            <span class="faq-icon transition-transform duration-300 text-gold">▼</span>
+                        </div>
+                        <div class="faq-content mt-4 text-gray-400">
+                            Temos turmas de Jiu-Jitsu Kids a partir de 4 anos de idade, focadas no desenvolvimento
+                            motor, disciplina e socialização.
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item glass-effect rounded-2xl overflow-hidden cursor-pointer p-6"
+                        data-aos="fade-up">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-bold">Vocês fornecem o Kimono?</h4>
+                            <span class="faq-icon transition-transform duration-300 text-gold">▼</span>
+                        </div>
+                        <div class="faq-content mt-4 text-gray-400">
+                            Para a aula experimental, recomendamos o uso de roupas confortáveis de treino. Caso decida
+                            se matricular, orientaremos sobre a compra do seu primeiro kimono.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section class="py-24 bg-dark">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row gap-16">
+                    <div class="flex-1" data-aos="fade-right">
+                        <h2 class="text-gold uppercase tracking-widest font-bold mb-4">Onde Estamos</h2>
+                        <h3 class="text-4xl md:text-5xl font-black mb-8 font-outfit">Visite nossa <span
+                                class="text-gold">Unidade.</span></h3>
+                        <p class="text-gray-400 mb-8 max-w-md">
+                            R. Lázara Augusta Silva Lisboa, 318 - Bosque dos Eucaliptos<br>São José dos Campos - SP,
+                            12233-390
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <span class="text-gold font-bold">WhatsApp:</span> (12) 99164-3120
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-gold font-bold">Instagram:</span> @kawamoto.bosque
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-left">
+                        <div
+                            class="glass-effect p-8 rounded-3xl border border-gold/20 hover:border-gold/50 transition-all">
+                            <h4 class="text-gold font-bold mb-4 uppercase tracking-tighter">Horários de Treino</h4>
+                            <ul class="text-sm text-gray-400 space-y-2">
+                                <li class="flex justify-between"><span>Seg/Qua/Sex:</span> <span
+                                        class="text-white">09:00 - 21:00</span></li>
+                                <li class="flex justify-between"><span>Ter/Qui:</span> <span class="text-white">07:00 -
+                                        22:00</span></li>
+                                <li class="flex justify-between"><span>Sábado:</span> <span class="text-white">09:00 -
+                                        11:00</span></li>
+                            </ul>
+                        </div>
+                        <div
+                            class="glass-effect p-8 rounded-3xl border border-gold/20 hover:border-gold/50 transition-all">
+                            <h4 class="text-gold font-bold mb-4 uppercase tracking-tighter">Nossa Localização</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">
+                                Localizada no coração do Bosque dos Eucaliptos, nossa unidade conta com infraestrutura
+                                completa para seu treinamento.
+                            </p>
+                            <a href="https://www.google.com/maps/place/Dallas+Cl%C3%ADnica+Veterin%C3%A1ria/@-23.2565434,-45.8856418,19.5z/data=!4m17!1m10!3m9!1s0x94cdb5a1f6cbf575:0x64ef35aac07f5103!2sDallas+Cl%C3%ADnica+Veterin%C3%A1ria!8m2!3d-23.2578311!4d-45.886041!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11xl1d6m7k!3m5!1s0x94cdb5a1f6cbf575:0x64ef35aac07f5103!8m2!3d-23.2578311!4d-45.886041!16s%2Fg%2F11xl1d6m7k?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"
+                                class="text-gold text-xs font-bold mt-4 inline-block hover:underline uppercase tracking-widest">ABRIR
+                                NO GOOGLE MAPS →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black text-center border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <img src="img/kawamoto.jpg" alt="Logo" class="w-16 h-16 rounded-full mx-auto mb-6">
+            <p class="text-gray-500 mb-4">&copy; 2026 Kawamoto Team - Unidade Bosque. Todos os direitos reservados.</p>
+            <div class="flex justify-center gap-6 text-sm text-gray-400">
+                <a href="politica-privacidade.html" class="hover:text-gold">Privacidade</a>
+                <a href="termos-uso.html" class="hover:text-gold">Termos</a>
+            </div>
+            <p class="mt-8 text-xs text-gray-600">Desenvolvido por <a href="https://www.dekmidia.com.br" target="_blank"
+                    class="hover:text-gold">DekMídia</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp JoinChat Premium Style -->
+    <div id="whatsapp-joinchat"
+        class="fixed bottom-10 md:bottom-8 right-6 z-[3000] flex flex-col items-end opacity-0 pointer-events-none transition-all duration-500 scale-90">
+        <!-- Tooltip/Bubble -->
+        <div
+            class="bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-2xl mb-4 text-sm font-medium relative animate-bounce max-w-[200px]">
+            <span class="block">Olá! Como posso te ajudar hoje? 👋</span>
+            <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white rotate-45"></div>
+        </div>
+        <!-- Button -->
+        <a href="https://wa.me/5512991643120" target="_blank"
+            class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform relative joinchat-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.608zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+            <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full border-2 border-white animate-pulse">
+            </div>
+        </a>
+    </div>
+
+    <!-- Cookie Modal -->
+    <div id="cookie-modal"
+        class="fixed bottom-0 left-0 right-0 z-[4000] glass-effect m-4 p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 pointer-events-auto opacity-0 translate-y-full transition-all duration-700">
+        <div class="text-left">
+            <h5 class="text-gold font-bold mb-2 uppercase tracking-tighter">Respeitamos sua privacidade</h5>
+            <p class="text-xs text-gray-400">Utilizamos cookies para oferecer uma melhor experiência de navegação e
+                analisar o tráfego do site.</p>
+        </div>
+        <div class="flex gap-4 w-full md:w-auto">
+            <button id="accept-cookies"
+                class="bg-gold text-dark px-8 py-3 rounded-full font-bold w-full md:w-auto hover:bg-white transition-colors">ACEITAR</button>
+            <a href="politica-privacidade.html"
+                class="text-gray-400 text-xs flex items-center hover:text-white transition-colors">Ver Mais</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* Custom Styles for Vale Pet */
+
+:root {
+    --primary-yellow: #facc15;
+    --primary-blue: #1e3a8a;
+    --dark-blue: #172554;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Header transition */
+#main-header.scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* FAQ Accordion */
+.faq-content {
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.faq-item.active .faq-content {
+    max-height: 500px;
+    padding-bottom: 1.25rem;
+}
+
+.faq-item.active i {
+    transform: rotate(180deg);
+}
+
+/* Custom Animations */
+@keyframes pulse-yellow {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(250, 204, 21, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+}
+
+.animate-pulse-yellow {
+    animation: pulse-yellow 2s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue);
+}
