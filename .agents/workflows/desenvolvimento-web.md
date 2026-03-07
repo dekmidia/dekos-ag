@@ -15,9 +15,9 @@ description: Sempre utilize este workflow quando o usuário solicitar o desenvol
    - Crie uma pasta `references` dentro do diretório do projeto criado no passo 1.
    - Pare e pergunte ao usuário (utilizando a tool de notificação) pelos seguintes requisitos indispensáveis, caso ele não os tenha fornecido na primeira mensagem:
      - **Copy/Conteúdo:** Pergunte se o usuário deseja fornecer os textos ou se devemos pedir para a equipe Creative (copywriters) desenvolverem.
-     - **Identidade Visual:** Cores da marca, preferência de tipografia.
+     - **Identidade Visual:** Cores da marca, preferência de tipografia. Pergunte também se possuem uma referência visual pronta ou se preferem que o nosso time de Creative desenvolva do zero.
      - **Imagens e Referências:** Peça ao usuário que coloque todas as referências visuais, como logo, modelos, imagens e referências de sites/landing pages, dentro da pasta `references` recém-criada para pesquisa.
-     - **Contato:** Informações de destino para Calls to Action (CTAs), como número de WhatsApp, link ou formulário.
+     - **Contato:** Informações de destino para Calls to Action (CTAs), como número de WhatsApp, e-mail, link ou formulário.
 
 3. **Aguardar Resposta do Usuário:**
    - Fique bloqueado aguardando as informações do usuário (*BlockedOnUser: true*).
