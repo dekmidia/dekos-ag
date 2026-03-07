@@ -201,6 +201,22 @@ Sites planos parecem baratos. Atmosfera é criada com camadas e textura.
 
 ---
 
+### 6. Elementos Visuais Premium Obrigatórios
+
+Sempre que o contexto permitir, calibre a intensidade ao nicho do cliente e implemente os seguintes recursos:
+
+- **Glassmorphism:** Use `backdrop-filter: blur()`, bordas semi-transparentes e fundo rgba em cards e painéis, especialmente sobre fundos com gradiente ou imagem.
+- **Contadores Animados:** Números escaláveis que contam de 0 até o valor final ao entrar na viewport (ex: anos de experiência, projetos entregues).
+- **Parallax Decorativo:** Círculos, formas geométricas ou gradientes que se movem suavemente em parallax com o scroll da página.
+- **Blobs Animados no Hero:** Formas orgânicas no background de hero sections animadas via `keyframes` em loop lento para criar profundidade.
+- **Bordas/Linhas Animadas:** Elementos SVG decorativos que se "desenham" usando `stroke-dashoffset` ao entrarem na viewport.
+- **Backgrounds com Parallax:** Seções onde a imagem de fundo tem uma velocidade diferente do scroll (usando `background-attachment: fixed` ou via JS).
+- **Hover 3D em Cards:** Uso de `perspective` aliado a `rotateX` e `rotateY` suaves no evento de movimento do mouse para sensação tátil/espacial.
+- **Mesh Gradients Complexos:** Fundos formados por múltiplos `radial-gradient` coloridos sobrepostos simulando malhas volumétricas.
+- **Texto com Gradiente Animado:** Títulos ou *highlights* utilizando `background-clip: text` com um background size maior (ex: 200% 200%) e animação de background pulse/motion fluid.
+
+---
+
 ## Checklist de Qualidade Visual (rodar antes de entregar)
 
 **Tipografia:**
@@ -232,6 +248,15 @@ Sites planos parecem baratos. Atmosfera é criada com camadas e textura.
 - [ ] Hero com imagem ou gradiente rico (não fundo branco)
 - [ ] Textura sutil ou efeito de profundidade em pelo menos uma seção
 - [ ] Sombras nos cards e elementos elevados
+
+**Elementos Premium (Nova Regra Ouro):**
+
+- [ ] Elementos de Glassmorphism aplicados onde couber
+- [ ] Texto com gradiente animado no Hero/Títulos de destaque
+- [ ] Blobs e Mesh Gradients para profundidade de fundo
+- [ ] Efeito Parallax em elementos decorativos ou imagens fluídas
+- [ ] Hover 3D ativo nos Cards principais
+- [ ] Contadores animados para números de prova social
 
 ---
 
