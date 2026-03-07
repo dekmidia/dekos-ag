@@ -34,6 +34,7 @@ dekos-ag/
 - Criar arquivos dentro de `.agents/workflows/`
 - Criar arquivos dentro de `PROJETOS/` (outputs de execução)
 - Editar conteúdo de arquivos existentes dentro dessas pastas
+- Ler e atualizar `SESSAO_ATIVA.md` na raiz (obrigatório antes de qualquer entrega criativa)
 
 ---
 
@@ -57,6 +58,9 @@ Antes de realizar qualquer uma das ações abaixo, PARE e pergunte:
 Todo arquivo gerado por qualquer agente do DEK-OS AG deve ser salvo
 EXCLUSIVAMENTE dentro de `PROJETOS/`. Nunca em `assets/`, nunca na raiz,
 nunca em pastas temporárias.
+> 🔒 **Regra de Sessão Ativa:** Todo agente criativo (Dex, Ink, Prism, Hype, Boost) DEVE ler
+> `SESSAO_ATIVA.md` antes de qualquer ação de entrega. Se `cliente_ativo` estiver `null`,
+> PARE imediatamente e pergunte ao usuário qual é o cliente/projeto ativo.
 
 ### Regra de Criação de Skills
 

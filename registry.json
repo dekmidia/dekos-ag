@@ -60,7 +60,8 @@
         "playbooks/docs-experiencia-disney.md"
       ],
       "skills": [
-        "skills/lead-scoring.ts",
+        "skills/lead-scoring/SKILL.md",
+        "skills/map2web/SPECS.md",
         "skills/playbook-formatter/SKILL.md",
         "skills/skill-formatter/SKILL.md",
         "skills/doc-synchronizer/SKILL.md",
