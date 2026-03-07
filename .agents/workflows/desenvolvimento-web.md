@@ -17,7 +17,7 @@ description: Sempre utilize este workflow quando o usuário solicitar o desenvol
      - **Copy/Conteúdo:** Pergunte se o usuário deseja fornecer os textos ou se devemos pedir para a equipe Creative (copywriters) desenvolverem.
      - **Identidade Visual:** Cores da marca, preferência de tipografia. Pergunte também se possuem uma referência visual pronta ou se preferem que o nosso time de Creative desenvolva do zero.
      - **Imagens e Referências:** Peça ao usuário que coloque todas as referências visuais, como logo, modelos, imagens e referências de sites/landing pages, dentro da pasta `references` recém-criada para pesquisa.
-     - **Contato:** Informações de destino para Calls to Action (CTAs), como número de WhatsApp, e-mail, link ou formulário.
+     - **Contato e Redes Sociais:** Informações de destino para Calls to Action (CTAs), como número de WhatsApp, e-mail, link ou formulário. Peça também os links das redes sociais (Instagram, Facebook, YouTube, TikTok) e o link do Google Perfil da Empresa (GMB) para a criação dos ícones sociais e SEO.
 
 3. **Aguardar Resposta do Usuário:**
    - Fique bloqueado aguardando as informações do usuário (*BlockedOnUser: true*).
