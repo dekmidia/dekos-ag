@@ -261,6 +261,7 @@ Se qualquer um destes aparecer no código, reescreva antes de entregar:
 | Reduzir `font-size` quando título quebrar em 3 linhas | **O problema é o `max-width` do container, não o font-size** — ampliar `max-width` do `<h1>` até 700px |
 | `max-width` restritivo no `<h1>` do hero | H1 sem `max-width` — deixar respirar horizontalmente até 700-800px |
 | Título do hero em 3 linhas no desktop | Máximo 2 linhas em 1280px — ajustar `max-width` do container se necessário |
+| Evitar `<br>` manual no título por "não ser semântico" | **`<br>` é permitido e recomendado** quando a fonte é larga e impede quebra natural em 2 linhas |
 
 ### ⚠️ Diagnóstico obrigatório quando o título do hero quebrar em 3 linhas
 
@@ -270,6 +271,16 @@ Antes de reduzir o `font-size`, verificar nesta ordem:
 2. O `<h1>` tem `max-width` próprio? → Remover
 3. O hero usa `flex-direction: column` com `align-items: center`? → Mudar alinhamento de texto para `text-align: left`
 4. Só depois de verificar os 3 acima → considerar ajuste de `font-size`
+5. Se a fonte for larga (Bebas Neue, Oswald, Impact) e mesmo assim quebrar em 3 linhas → **usar `<br>` manual** para forçar a quebra no ponto certo
+
+**Exemplo com `<br>` manual:**
+```html
+<!-- ✅ Correto — controle total da quebra -->
+<h1>Adesivos que<br><span class="accent">Destacam</span> sua Marca.</h1>
+
+<!-- ❌ Errado — deixar o browser decidir onde quebrar com fonte larga -->
+<h1>Adesivos que <span class="accent">Destacam</span> sua Marca.</h1>
+```
 
 **Referência de font-size correto para hero:**
 ```css
