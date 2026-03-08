@@ -94,6 +94,7 @@ Subpastas padrão por cliente:
 | `seo/` | Apex (@seo-specialist) |
 | `qa/` | Guard (@qa-tester) |
 | `leads/` | Vox (@concierge) |
+| `Propostas/` | Todos (Propostas comerciais em .docx) |
 | `referencias/` | Materiais do cliente (logos, cores, fotos, manual da marca) |
 
 Se o caminho de destino não existir: criar a subpasta dentro de `PROJETOS/`,
@@ -128,6 +129,7 @@ Quando um agente é invocado diretamente para uma entrega pontual, **sem ter pas
 | Relatório / Dados | Success / Cipher ou Relay | `PROJETOS/[projeto]/reports/` |
 | Automação / Integração / N8N | Automations / Wire ou Bridge | `PROJETOS/[projeto]/automations/` |
 | QA / Testes | Engineering / Guard | `PROJETOS/[projeto]/qa/` |
+| Propostas Comerciais | Qualquer Squad | `PROJETOS/[projeto]/Propostas/` |
 
 > 💡 **Regra de ouro:** crie APENAS a pasta do que está sendo desenvolvido agora. Se o projeto crescer e houver onboarding, as demais pastas serão criadas pelo workflow.
 
