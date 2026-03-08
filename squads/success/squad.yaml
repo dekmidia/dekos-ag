@@ -1,0 +1,20 @@
+name: Squad Success
+version: "1.0.0"
+description: Customer success, reporting, SEO e analise de dados
+dekos:
+  minVersion: "1.0"
+agents:
+  - concierge
+  - data-scientist
+  - reporting
+  - seo-specialist
+playbooks:
+  - playbooks/docs-google-perfil-da-empresa.md
+  - playbooks/docs-experiencia-disney.md
+skills:
+  - pptx
+  - docx
+  - xlsx
+  - pdf
+  - context-engineering
+  - activity-logger

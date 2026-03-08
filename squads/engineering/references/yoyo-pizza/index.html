@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Yoyo | A Melhor Pizza de São José dos Campos</title>
+    <meta name="description"
+        content="Saboreie a melhor pizza de SJC na Pizzaria Yoyo. Bom, bonito e barato! No Campo dos Alemães, abertos diariamente. Peça agora!">
+
+    <!-- Meta OpenGraph -->
+    <meta property="og:title" content="Pizzaria Yoyo | São José dos Campos">
+    <meta property="og:description"
+        content="A pizza mais querida do Campo dos Alemães. Qualidade e preço justo todos os dias.">
+    <meta property="og:image" content="img/storefront.png">
+    <meta property="og:type" content="website">
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#ffb703',
+                        dark: '#0a0a0a',
+                        surface: '#121212',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark text-gray-100 font-['Outfit']">
+
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <img src="img/chef-logo.png" alt="Pizzaria Yoyo Logo" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-primary">YOYO</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#inicio" class="text-gray-400 hover:text-secondary transition">Início</a>
+                    <a href="#destaques" class="text-gray-400 hover:text-secondary transition">Destaques</a>
+                    <a href="#unidades" class="text-gray-400 hover:text-secondary transition">Unidades</a>
+                    <a href="#depoimentos" class="text-gray-400 hover:text-secondary transition">Avaliações</a>
+                    <a href="#faq" class="text-gray-400 hover:text-secondary transition">FAQ</a>
+                </div>
+                <a href="tel:1239668390"
+                    class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-600 transition shadow-lg shadow-primary/20">
+                    Ligar Agora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 overflow-hidden hero-bg min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 relative z-10">
+            <div class="md:w-1/2 space-y-8 animate-on-scroll">
+                <div
+                    class="inline-block bg-primary/10 border border-primary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest">
+                    🚀 A Melhor de SJC
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white">
+                    A Pizza que <span class="gradient-text">Explode</span> em Sabor!
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Na Pizzaria Yoyo, unimos ingredientes selecionados, massa artesanal e o melhor preço de São José dos
+                    Campos. Venha provar e comprove!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/551239668390"
+                        class="bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition flex items-center justify-center gap-2 group shadow-xl shadow-green-500/10">
+                        Peça pelo WhatsApp
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="#sobre"
+                        class="border-2 border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/5 transition text-center">
+                        Conhecer Mais
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative animate-on-scroll hidden md:block">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                <img src="img/pizza-premium.png" alt="Pizza Yoyo Premium"
+                    class="relative z-10 rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition duration-500 max-w-lg mx-auto">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Destaques Section -->
+    <section id="destaques" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold mb-4 text-white uppercase tracking-tighter">Nossos Destaques</h2>
+                <p class="text-gray-400">As mais pedidas do Campo dos Alemães</p>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Pizza 1 -->
+                <div
+                    class="group relative bg-dark border border-white/5 rounded-3xl overflow-hidden hover:border-primary/30 transition duration-500 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop"
+                        alt="Pizza Calabresa"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-white">Calabresa Premium</h3>
+                            <span class="text-secondary font-bold">R$ 35,00</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Mussarela, calabresa artesanal fatiada, cebola roxa e um
+                            toque de orégano.</p>
+                        <a href="https://wa.me/551239668390?text=Quero+uma+Calabresa+Premium"
+                            class="block text-center py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Pedir
+                            Agora</a>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="group relative bg-dark border border-white/5 rounded-3xl overflow-hidden hover:border-primary/30 transition duration-500 animate-on-scroll"
+                    style="transition-delay: 200ms">
+                    <img src="img/portuguesa.png" alt="Pizza Portuguesa"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-white">Portuguesa Especial</h3>
+                            <span class="text-secondary font-bold">R$ 40,00</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">O clássico: presunto, ovos, cebola, ervilha e muita
+                            mussarela derretida.</p>
+                        <a href="https://wa.me/551239668390?text=Quero+uma+Portuguesa+Especial"
+                            class="block text-center py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Pedir
+                            Agora</a>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="group relative bg-dark border border-white/5 rounded-3xl overflow-hidden hover:border-primary/30 transition duration-500 animate-on-scroll"
+                    style="transition-delay: 400ms">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop"
+                        alt="Pizza Frango Catupiry"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-white">Frango c/ Catupiry</h3>
+                            <span class="text-secondary font-bold">R$ 38,00</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Peito de frango desfiado temperado com o legítimo Catupiry
+                            original.</p>
+                        <a href="https://wa.me/551239668390?text=Quero+uma+Frango+com+Catupiry"
+                            class="block text-center py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Pedir
+                            Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unidades -->
+    <section id="unidades" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold mb-4 text-white uppercase tracking-tighter">Nossas Unidades</h2>
+                <p class="text-gray-400 italic">Tradição e sabor em São José dos Campos e Jacareí</p>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Unidade 1: SJC -->
+                <div class="bg-surface p-8 rounded-[2.5rem] border border-white/5 shadow-2xl animate-on-scroll">
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">São José dos Campos</h3>
+                                <p class="text-sm text-gray-400">Campo dos Alemães</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">Av. dos Evangélicos, 1242<br>São José dos Campos - SP</p>
+                        <div class="flex items-center gap-3 text-secondary font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            (12) 3966-8390
+                        </div>
+                    </div>
+                    <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-white/5">
+                        <iframe
+                            src="https://www.google.com/maps?q=Pizzaria+Yoyo+Av.+dos+Evang%C3%A9licos+1242+SJC&output=embed"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="grayscale group-hover:grayscale-0 transition duration-500"></iframe>
+                    </div>
+                </div>
+
+                <!-- Unidade 2: Jacareí -->
+                <div class="bg-surface p-8 rounded-[2.5rem] border border-white/5 shadow-2xl animate-on-scroll"
+                    style="transition-delay: 200ms">
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Jacareí</h3>
+                                <p class="text-sm text-gray-400">Parque Itamarati</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">Rua Carlos de Campos, 386<br>Jacareí - SP</p>
+                        <div class="flex items-center gap-3 text-secondary font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            (12) 98707-8728
+                        </div>
+                    </div>
+                    <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-white/5">
+                        <iframe
+                            src="https://www.google.com/maps?q=Yoyo+Pizzaria+Jacarei+Carlos+de+Campos+386&output=embed"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="grayscale group-hover:grayscale-0 transition duration-500"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="depoimentos" class="py-20 bg-dark overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold mb-4 text-white uppercase tracking-tighter">Voz dos Clientes</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-card p-8 rounded-3xl animate-on-scroll">
+                    <div class="flex text-secondary mb-4 gap-1">★★★★★</div>
+                    <p class="italic text-gray-300 mb-6 font-light leading-relaxed">
+                        "Pizza muito boa! Valor melhor ainda! Acho que é o melhor valor de pizza que encontrei até agora
+                        em SJC! Não demorou quase nada!"
+                    </p>
+                    <p class="font-bold text-white">— Keiko Kumisaki</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="glass-card p-8 rounded-3xl animate-on-scroll" style="transition-delay: 200ms">
+                    <div class="flex text-secondary mb-4 gap-1">★★★★★</div>
+                    <p class="italic text-gray-300 mb-6 font-light leading-relaxed">
+                        "Excelente pizza. Bom bonito e barato. Atendimento rápido e pizza sempre quentinha."
+                    </p>
+                    <p class="font-bold text-white">— Wellington Lourenço Costa</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="glass-card p-8 rounded-3xl animate-on-scroll" style="transition-delay: 400ms">
+                    <div class="flex text-secondary mb-4 gap-1">★★★★★</div>
+                    <p class="italic text-gray-300 mb-6 font-light leading-relaxed">
+                        "A melhor opção para o fim de noite. O sabor da portuguesa é incomparável e a entrega é sempre
+                        pontual."
+                    </p>
+                    <p class="font-bold text-white">— Cliente Satisfeito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-dark border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold mb-4 text-white">Dúvidas Frequentes</h2>
+                <p class="text-gray-500 italic">Tudo o que você precisa saber</p>
+            </div>
+            <div class="space-y-4 animate-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span class="font-bold text-lg text-gray-200">Quais os horários de funcionamento?</span>
+                        <span class="faq-icon text-primary font-bold text-xl">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="pb-6 text-gray-400">Estamos abertos todos os dias, de Segunda a Domingo, das 19:00 às
+                            23:45.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span class="font-bold text-lg text-gray-200">Vocês fazem entrega em toda SJC e Jacareí?</span>
+                        <span class="faq-icon text-primary font-bold text-xl">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="pb-6 text-gray-400">Atendemos a região do Campo dos Alemães (SJC) e Parque Itamarati
+                            (Jacareí), além de bairros próximos em ambas as cidades. Consulte sua taxa pelo WhatsApp!
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span class="font-bold text-lg text-gray-200">Quais formas de pagamento aceitam?</span>
+                        <span class="faq-icon text-primary font-bold text-xl">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="pb-6 text-gray-400">Aceitamos cartões de crédito, débito, PIX e pagamentos por
+                            aproximação (NFC).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <img src="img/chef-logo.png" alt="Logo Footer" class="h-8 grayscale opacity-50">
+                        <span class="text-white font-bold tracking-widest text-sm">PIZZARIA YOYO</span>
+                    </div>
+                    <p class="text-gray-500 text-xs leading-relaxed uppercase tracking-widest">A melhor opção para o seu
+                        fim de noite em SJC e Jacareí.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em]">SJC</h4>
+                    <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
+                        Av. dos Evangélicos, 1242<br>Campo dos Alemães<br>(12) 3966-8390
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em]">Jacareí</h4>
+                    <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
+                        Rua Carlos de Campos, 386<br>Parque Itamarati<br>(12) 98707-8728
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5">
+                <div class="flex gap-8 text-[10px] text-gray-500 font-medium uppercase tracking-[0.2em]">
+                    <a href="politica-privacidade.html" class="hover:text-primary transition">Privacidade</a>
+                    <a href="termos-uso.html" class="hover:text-primary transition">Termos</a>
+                </div>
+                <div class="text-[10px] text-gray-600 uppercase tracking-[0.2em]">
+                    <p>Desenvolvido por <a href="https://www.dekmidia.com.br"
+                            class="text-gray-500 hover:text-primary transition" target="_blank">DekMídia</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div id="whatsapp-btn">
+        <div class="relative group">
+            <div
+                class="absolute -top-12 right-0 bg-white text-gray-900 px-4 py-2 rounded-lg shadow-xl text-sm font-bold opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
+                Olá! Como posso ajudar? 🍕
+            </div>
+            <a href="https://wa.me/551239668390" target="_blank"
+                class="w-16 h-16 bg-[#25d366] rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition relative">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span class="absolute top-0 right-0 w-4 h-4 bg-red-600 rounded-full border-2 border-white"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Cookie Modal -->
+    <div id="cookie-modal" class="fixed bottom-0 left-0 w-full z-[1100] p-4 hidden">
+        <div
+            class="max-w-4xl mx-auto w-full bg-surface border border-white/5 rounded-2xl shadow-2xl p-6 flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1">
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Utilizamos cookies para personalizar sua experiência. Ao continuar, você concorda com nossa <a
+                        href="politica-privacidade.html" class="text-primary hover:underline font-bold">Política de
+                        Privacidade</a>.
+                </p>
+            </div>
+            <button id="accept-cookies"
+                class="w-full md:w-auto bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-red-600 transition shadow-lg shadow-primary/20">
+                Aceito Tudo
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <!-- Schema LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PizzaRestaurant",
+      "name": "Pizzaria Yoyo",
+      "image": "img/storefront.png",
+      "url": "https://pizzariayoyo.com.br",
+      "location": [
+        {
+          "@type": "PizzaRestaurant",
+          "name": "Pizzaria Yoyo - SJC",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. dos Evangélicos, 1242",
+            "addressLocality": "São José dos Campos",
+            "addressRegion": "SP",
+            "postalCode": "12239-060",
+            "addressCountry": "BR"
+          },
+          "telephone": "(12) 3966-8390"
+        },
+        {
+          "@type": "PizzaRestaurant",
+          "name": "Pizzaria Yoyo - Jacareí",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Carlos de Campos, 386",
+            "addressLocality": "Jacareí",
+            "addressRegion": "SP",
+            "postalCode": "12307-430",
+            "addressCountry": "BR"
+          },
+          "telephone": "(12) 98707-8728"
+        }
+      ]
+    }
+    </script>
+</body>
+
+</html>

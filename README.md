@@ -30,7 +30,7 @@ Ao invés de depender de um CLI baseado em prompts rígidos para o usuário huma
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
 | **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
-| **Ops** | Produtividade do CEO: priorização de agenda e curadoria de ideias |
+| **Ops** | Agentes de produtividade pessoal e criatividade do CEO |
 <!-- SQUAD_TABLE_END -->
 
 ## 🤖 Agentes Ativos
@@ -75,6 +75,7 @@ As *Skills* são scripts executáveis ou prompts estruturados que os Agentes usa
 | **diagnostico-digital** | Prospection | Avaliação rápida da presença digital para criar iscas de qualificação. |
 | **doc-synchronizer** | Dev Tools | Script que sincroniza os MDs documentais com os dados do registry.json. |
 | **document-generator** | Success | Geração programática de contratos e apresentações em DOCX/PDF. |
+| **frontend-design-premium** | Engineering | Princípios de design de alto nível (tipografia, cor, movimento) para interfaces inesquecíveis. |
 | **landing-page-analyzer** | Marketing | Analisa páginas concorrentes focando em conversão e CRO. |
 | **lead-scoring** | Prospection | *(Código)* Algoritmo Typescript de ponderação para prioridade de leads. |
 | **lp-cinematografica** | Engineering | Design visual e técnico para Landing Pages ultrarrealistas (React+GSAP). |

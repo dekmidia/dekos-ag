@@ -20,6 +20,7 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | **Performance** | Gestao de trafego pago e compliance de anuncios |
 | **Success** | Customer success, reporting, SEO e analise de dados |
 | **Automations** | Automações n8n, WhatsApp Business e integração entre sistemas |
+| **Ops** | Agentes de produtividade pessoal e criatividade do CEO |
 <!-- SQUAD_TABLE_END -->
 
 ---
@@ -48,6 +49,8 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | **🔎 Apex (@seo-specialist)** | Success | SEO Specialist | Otimizador |
 | **🔌 Wire (@wire)** | Automations | Arquiteto de Fluxos n8n | Builder |
 | **🌉 Bridge (@bridge)** | Automations | Integrador de APIs e Sistemas | Connector |
+| **🗂️ Donna (@secretaria)** | Ops | Assistente Executiva | Estrategista de Tempo |
+| **💡 Leo (@leo)** | Ops | Curador de Ideias | Polímata |
 <!-- AGENT_TABLE_END -->
 
 ---
@@ -57,6 +60,7 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 <!-- SKILL_TABLE_START -->
 | Skill | Descricao |
 | --- | --- |
+| `activity-logger` | Use esta skill ao FINALIZAR qualquer tarefa no DEK-OS AG. Registra silenciosamente a atividade no log central (squads/ops/data/activity-log.json). Não notifica, não analisa, não propõe nada — apenas registra. A análise é responsabilidade exclusiva do workflow-optimizer. |
 | `agent-orchestration-improve-agent` | Habilidade de metalinguagem para otimizar, melhorar prompts e analisar performance de outros agentes e skills do sistema. |
 | `api-design-principles` | Mestre em princípios de design de APIs REST e GraphQL. Para construir, revisar ou estabelecer padrões escaláveis, legíveis e perfeitos em endpoints e webhooks. |
 | `app-builder` | Orquestrador massivo de geração de apps (Fullstack, SaaS, CLI, Mobile). Analisa requisitos e coordena agentes para criar pastas estruturadas. |
@@ -66,10 +70,13 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | `canva-creative` | Ferramenta do sistema. |
 | `context-engineering` | Metodologias avançadas para gerenciamento, compressão e preservação do contexto do LLM em sessões longas, prevenindo alucinações e degradação de memória. |
 | `creative-director` | Transforma o agente focado em design (Prism) em um Diretor Criativo capaz de usar 20+ metodologias de ideação e se auto-avaliar via métricas de Cannes/D&AD antes da entrega final. |
+| `SKILL.md` | Script utilitario do sistema. |
 | `doc-synchronizer` | Sincroniza tabelas de Agentes, Squads e Skills do registry.json com README.md e help.md. |
 | `docx` | Ferramenta avançada para criar, editar e analisar documentos DOCX corporativos com formatação premium. |
-| `lead-scoring` | Script utilitario do sistema. |
+| `frontend-design-premium` | Use esta skill sempre que for criar sites, landing pages ou qualquer interface web. Ela define os princípios de design de alto nível que transformam código funcional em ativos digitais visualmente impactantes e memoráveis. Combinar com lp-cinematografica e map2web. |
+| `lead-scoring` | Ferramenta do sistema. |
 | `lp-cinematografica` | Use esta skill sempre que for solicitada a criação de uma landing page ou site de alta fidelidade com estética cinematográfica. Suporta captura de sites de referência via MCP Firecrawl (instalado automaticamente se necessário). Gera código React 19 + Tailwind CSS + GSAP com animações premium, design system completo e presets estéticos. |
+| `SPECS.md` | Script utilitario do sistema. |
 | `marketing-stack-cro` | Conjunto unificado de práticas de marketing (B2B Cold Email, Copywriting de LPs, CRO de páginas e Gatilhos Mentais) oriundas de engenharia reversa de campanhas de alta conversão. |
 | `marketing-strategist-reasoning` | Instrui o agente a consultar o playbook docs-estruturas-marketing.md e utilizar frameworks mentais avançados (DECAF, Systems Thinking, etc) antes de gerar propostas, campanhas de growth e SEO. |
 | `mcp-builder` | Guia de desenvolvimento de servidores MCP (Model Context Protocol). Ajuda a planejar, codar, revisar e avaliar servidores MCP robustos baseados nas documentações oficiais da Anthropic. |
@@ -82,6 +89,7 @@ Bem-vindo ao **DEK-OS Antigravity**. Abaixo estão as informações principais p
 | `skill-formatter` | Garante que novas skills (Markdown ou Código) sigam o padrão técnico do DEK-OS. |
 | `web-artifacts-builder` | Suite de ferramentas para criar artefatos HTML multi-componentes complexos usando tecnologias frontend modernas (React, Tailwind CSS, shadcn/ui). Use para landing pages, calculadoras e dashboards que precisam de estado ou roteamento. |
 | `webapp-testing` | Ferramentas para interagir e testar aplicações web via Playwright. Suporta navegação automatizada, screenshots e validação de seletores DOM em QA. |
+| `workflow-optimizer` | Analisa o activity-log.json em busca de padrões repetitivos e propõe otimizações (novos workflows, playbooks ou melhorias de agentes) apenas quando há evidência suficiente. Só age após aprovação humana explícita. Acionar com o comando "otimizar sistema" ou via varredura semanal pela Donna. |
 | `xlsx` | Criação, edição e análise avançada de planilhas Excel (XLSX). Garante fórmulas, formatações e integração com modelos financeiros. |
 <!-- SKILL_TABLE_END -->
 

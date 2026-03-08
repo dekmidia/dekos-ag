@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | Pizzaria Yoyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#ffb703',
+                        dark: '#0a0a0a',
+                        surface: '#121212',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark font-['Outfit'] text-gray-100 leading-relaxed overflow-x-hidden">
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-20 relative z-10">
+        <a href="index.html"
+            class="inline-flex items-center gap-2 text-primary hover:text-secondary font-bold mb-12 transition group">
+            <svg class="w-5 h-5 group-hover:-translate-x-1 transition" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Voltar para o Início
+        </a>
+
+        <h1 class="text-5xl font-extrabold mb-12 text-white">Política de <span class="text-primary">Privacidade</span>
+        </h1>
+
+        <div class="space-y-8 bg-surface p-10 rounded-[2.5rem] shadow-2xl border border-white/5 backdrop-blur-sm">
+            <p class="text-lg text-gray-300">Sua privacidade é importante para nós. É política da <strong
+                    class="text-white">Pizzaria Yoyo</strong> respeitar a sua privacidade em relação a qualquer
+                informação sua que possamos coletar no site.</p>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">01</span>
+                    Coleta de Informações
+                </h2>
+                <p class="text-gray-400">Solicitamos informações pessoais apenas quando realmente precisamos delas para
+                    lhe fornecer um serviço (como pedidos via WhatsApp). Fazemo-lo por meios justos e legais, com o seu
+                    conhecimento e consentimento.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">02</span>
+                    Uso de Cookies
+                </h2>
+                <p class="text-gray-400">Utilizamos cookies para melhorar sua experiência. Você pode optar por recusar
+                    cookies através das configurações do seu navegador ou do nosso modal de consentimento.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-bold text-secondary flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-sm">03</span>
+                    Segurança
+                </h2>
+                <p class="text-gray-400">Protegemos os dados armazenados dentro de meios comercialmente aceitáveis para
+                    evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+                <div class="pt-6 border-t border-white/5">
+                    <p class="text-sm text-gray-500 italic text-right text-gray-600">Última atualização: 4 de Março de
+                        2026</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -60,13 +60,15 @@
         "playbooks/docs-experiencia-disney.md"
       ],
       "skills": [
-        "skills/lead-scoring.ts",
+        "skills/lead-scoring/SKILL.md",
+        "skills/map2web/SPECS.md",
         "skills/playbook-formatter/SKILL.md",
         "skills/skill-formatter/SKILL.md",
         "skills/doc-synchronizer/SKILL.md",
         "skills/xlsx/SKILL.md",
         "skills/context-engineering/SKILL.md",
-        "skills/marketing-stack-cro/SKILL.md"
+        "skills/marketing-stack-cro/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ],
       "workflows": [
         ".agents/workflows/prospection-nicho.md",
@@ -100,7 +102,10 @@
         "skills/marketing-strategist-reasoning/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/marketing-stack-cro/SKILL.md",
-        "skills/creative-director/SKILL.md"
+        "skills/creative-director/SKILL.md",
+        "skills/criar-apresentacao/SKILL.md",
+        "skills/frontend-design-premium/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ],
       "workflows": [
         ".agents/workflows/workflow-auto-eval.md",
@@ -122,7 +127,8 @@
       "skills": [
         "skills/marketing-strategist-reasoning/SKILL.md",
         "skills/context-engineering/SKILL.md",
-        "skills/marketing-stack-cro/SKILL.md"
+        "skills/marketing-stack-cro/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ]
     },
     "engineering": {
@@ -146,7 +152,9 @@
         "skills/agent-orchestration-improve-agent/SKILL.md",
         "skills/app-builder/SKILL.md",
         "skills/api-design-principles/SKILL.md",
-        "skills/context-engineering/SKILL.md"
+        "skills/context-engineering/SKILL.md",
+        "skills/frontend-design-premium/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ]
     },
     "performance": {
@@ -165,7 +173,8 @@
         "playbooks/compliance-ads.md"
       ],
       "skills": [
-        "skills/context-engineering/SKILL.md"
+        "skills/context-engineering/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ]
     },
     "success": {
@@ -185,7 +194,8 @@
         "skills/docx/SKILL.md",
         "skills/xlsx/SKILL.md",
         "skills/pdf/SKILL.md",
-        "skills/context-engineering/SKILL.md"
+        "skills/context-engineering/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ]
     },
     "automations": {
@@ -211,7 +221,8 @@
         "skills/architecture/SKILL.md",
         "skills/api-design-principles/SKILL.md",
         "skills/context-engineering/SKILL.md",
-        "skills/n8n-expert/SKILL.md"
+        "skills/n8n-expert/SKILL.md",
+        "skills/activity-logger/SKILL.md"
       ]
     },
     "ops": {
@@ -228,6 +239,16 @@
       },
       "data": {
         "tempos-medios": "squads/ops/data/tempos-medios.json"
+      },
+      "skills": [
+        "skills/activity-logger/SKILL.md",
+        "skills/workflow-optimizer/SKILL.md"
+      ],
+      "memory": {
+        "optimizer-memory": "squads/ops/memory/optimizer-memory.json"
+      },
+      "logs": {
+        "activity-log": "squads/ops/data/activity-log.json"
       }
     }
   },

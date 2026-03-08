@@ -1,0 +1,25 @@
+name: Squad Engineering
+version: "1.0.0"
+description: Desenvolvimento de sites, landing pages e QA pre-deploy
+dekos:
+  minVersion: "1.0"
+agents:
+  - developer
+  - qa-tester
+playbooks:
+  - playbooks/docs-wordpress.md
+  - playbooks/docs-elementor.md
+skills:
+  - lp-cinematografica
+  - web-artifacts-builder
+  - webapp-testing
+  - mcp-builder
+  - skill-creator
+  - brainstorming
+  - architecture
+  - agent-orchestration-improve-agent
+  - app-builder
+  - api-design-principles
+  - context-engineering
+  - frontend-design-premium
+  - activity-logger

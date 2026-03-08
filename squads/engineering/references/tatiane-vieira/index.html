@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Tatiane Vieira | Psicóloga em São José dos Campos - SJC</title>
+    <meta name="description"
+        content="Atendimento psicológico humanizado em SJC. Dra. Tatiane Vieira ajuda você a entender suas questões de forma prática e racional. Agende sua sessão.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a8a',
+                        softpink: '#fbcfe8',
+                        accent: '#ec4899',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Tatiane Vieira • Psicóloga",
+      "image": "img/dra-tatiane-vieira-psicologa-perfil.png",
+      "@id": "",
+      "url": "https://www.google.com/maps?cid=8870388484196860909",
+      "telephone": "(12) 98851-3458",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Francisca Maria de Jesus, 347",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "postalCode": "12230-083",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.2214719,
+        "longitude": -45.8887267
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+          "opens": "14:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300 glass border-b border-softpink/30">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 group cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform">
+                    <i data-lucide="heart" class="w-6 h-6"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-navy font-heading">Tatiane Vieira</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold">Psicóloga
+                        Clinica</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="text-navy hover:text-accent transition-all relative group">
+                    Início
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#sobre" class="text-navy hover:text-accent transition-all relative group">
+                    Sobre
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#servicos" class="text-navy hover:text-accent transition-all relative group">
+                    Serviços
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#depoimentos" class="text-navy hover:text-accent transition-all relative group">
+                    Depoimentos
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#faq" class="text-navy hover:text-accent transition-all relative group">
+                    FAQ
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+            <a href="https://wa.me/5512988513458" target="_blank"
+                class="bg-navy text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-accent transition-all transform hover:scale-105 shadow-lg active:scale-95">Agendar
+                Agora</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-soft overflow-hidden">
+        <!-- Floating Shapes Decor -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-softpink/20 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-navy/5 rounded-full blur-2xl animate-float"
+            style="animation-delay: 2s"></div>
+        <div class="absolute top-1/2 left-1/4 w-12 h-12 border-2 border-accent/20 rounded-lg rotate-12 animate-float"
+            style="animation-delay: 1s"></div>
+
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right" data-aos-duration="1200">
+                <span
+                    class="inline-block px-4 py-1 bg-softpink/30 text-navy text-xs font-bold rounded-full mb-6 tracking-widest uppercase"
+                    data-aos="fade-down" data-aos-delay="400">Atendimento humanizado em SJC</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-navy leading-tight mb-6">
+                    Seu bem-estar emocional em <span
+                        class="text-accent underline decoration-softpink decoration-4 underline-offset-8">foco</span>.
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Ajudo você a compreender suas questões de forma racional, prática e humana, promovendo evolução
+                    semanal no seu processo de autoconhecimento.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <a href="https://wa.me/5512988513458" target="_blank"
+                        class="flex items-center justify-center space-x-2 bg-navy text-white px-8 py-4 rounded-full font-bold shadow-xl hover:bg-accent transition-all group">
+                        <i data-lucide="calendar" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                        <span>Começar meu processo</span>
+                    </a>
+                    <a href="#servicos"
+                        class="flex items-center justify-center space-x-2 text-navy border-2 border-navy px-8 py-4 rounded-full font-bold hover:bg-navy hover:text-white transition-all">
+                        <span>Ver especialidades</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="zoom-in-left" data-aos-duration="1500">
+                <div
+                    class="absolute -top-10 -right-10 w-64 h-64 bg-softpink rounded-full filter blur-3xl opacity-30 animate-pulse-soft">
+                </div>
+                <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-navy rounded-full filter blur-3xl opacity-10">
+                </div>
+
+                <!-- Frame Decoration -->
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="absolute inset-0 bg-navy translate-x-4 translate-y-4 rounded-[2rem] opacity-10"></div>
+                    <img src="img/dra-tatiane-vieira-psicologa-perfil.png" alt="Dra. Tatiane Vieira - Psicóloga em SJC"
+                        class="relative rounded-[2rem] shadow-2xl border-4 border-white w-full transform hover:scale-[1.02] transition-transform duration-700">
+
+                    <!-- Floating Card Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 animate-float"
+                        data-aos="fade-right" data-aos-delay="800">
+                        <div class="flex items-center space-x-3">
+                            <div
+                                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Evolução</p>
+                                <p class="text-xs font-bold text-navy italic">"Recuperei minha clareza"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="pt-12">
+                                <img src="img/dra-tatiane-vieira-consultorio-1.png" alt="Consultório Tatiane Vieira"
+                                    class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <img src="img/dra-tatiane-vieira-sala-atendimento.png" alt="Ambiente de Atendimento"
+                                    class="rounded-2xl shadow-lg translate-y-8 hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <!-- Experience Years Badge -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-navy text-white p-6 rounded-3xl shadow-2xl text-center min-w-[120px]"
+                            data-aos="zoom-in" data-aos-delay="500">
+                            <span class="text-3xl font-bold block">+100</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest block">Pacientes
+                                Atendidos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-[2px] bg-accent"></div>
+                        <span class="text-accent font-bold uppercase tracking-[0.2em] text-xs block">Conheça minha
+                            jornada</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-navy mb-8 leading-tight">Atendimento Humanizado com
+                        Foco em Resultados Práticos</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                        Sou apaixonada por pessoas e dedicada a oferecer um espaço seguro e acolhedor em São José dos
+                        Campos. Minha abordagem é racional e direta, focada em ajudar você a desemaranhar as
+                        complexidades da mente de forma objetiva.
+                    </p>
+                    <p class="text-slate-600 mb-10 leading-relaxed text-lg">
+                        Acredito que a terapia não precisa ser um processo lento e sem rumo. Com foco no presente e nas
+                        suas questões reais, trabalhamos juntos para que cada sessão traga clareza e ferramentas para
+                        sua evolução.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <li
+                            class="flex items-center space-x-4 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors">
+                            <i data-lucide="award" class="text-accent w-6 h-6"></i>
+                            <span class="font-bold text-navy text-sm">Escuta Qualificada</span>
+                        </li>
+                        <li
+                            class="flex items-center space-x-4 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors">
+                            <i data-lucide="clock" class="text-accent w-6 h-6"></i>
+                            <span class="font-bold text-navy text-sm">Evolução Semanal</span>
+                        </li>
+                        <li
+                            class="flex items-center space-x-4 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors">
+                            <i data-lucide="accessibility" class="text-accent w-6 h-6"></i>
+                            <span class="font-bold text-navy text-sm">100% Acessível</span>
+                        </li>
+                        <li
+                            class="flex items-center space-x-4 p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors">
+                            <i data-lucide="shield-check" class="text-accent w-6 h-6"></i>
+                            <span class="font-bold text-navy text-sm">Sigilo Total</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-navy/5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-navy mb-4" data-aos="fade-up">Especialidades e Atendimento
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+                Ofereço suporte em diversas áreas da saúde mental, sempre com uma visão racional e pontual.
+            </p>
+        </div>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm magnetic-hover border border-slate-100 group"
+                data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="w-20 h-20 bg-softpink/30 rounded-3xl flex items-center justify-center mb-8 text-navy group-hover:bg-navy group-hover:text-white transition-all transform group-hover:rotate-6">
+                    <i data-lucide="users" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy mb-5">Psicoterapia Individual</h3>
+                <p class="text-slate-600 leading-relaxed mb-8">
+                    Foco no entendimento de conflitos internos, ansiedade e depressão através de uma escuta qualificada
+                    e direta.
+                </p>
+                <div class="flex items-center text-accent font-bold group-hover:translate-x-2 transition-transform">
+                    <span>Saber mais</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 ml-1"></i>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm magnetic-hover border border-slate-100 group"
+                data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="w-20 h-20 bg-softpink/30 rounded-3xl flex items-center justify-center mb-8 text-navy group-hover:bg-navy group-hover:text-white transition-all transform group-hover:-rotate-6">
+                    <i data-lucide="brain" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy mb-5">Desenvolvimento Pessoal</h3>
+                <p class="text-slate-600 leading-relaxed mb-8">
+                    Trabalho focado em ferramentas práticas para melhorar sua relação consigo mesmo e o mundo ao seu
+                    redor.
+                </p>
+                <div class="flex items-center text-accent font-bold group-hover:translate-x-2 transition-transform">
+                    <span>Saber mais</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 ml-1"></i>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm magnetic-hover border border-slate-100 group"
+                data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="w-20 h-20 bg-softpink/30 rounded-3xl flex items-center justify-center mb-8 text-navy group-hover:bg-navy group-hover:text-white transition-all transform group-hover:rotate-6">
+                    <i data-lucide="heart" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy mb-5">Saúde Emocional</h3>
+                <p class="text-slate-600 leading-relaxed mb-8">
+                    Acompanhamento especializado para lidar com luto, términos e transições de vida de forma saudável e
+                    clara.
+                </p>
+                <div class="flex items-center text-accent font-bold group-hover:translate-x-2 transition-transform">
+                    <span>Saber mais</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 ml-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="depoimentos" class="py-24 bg-navy text-white overflow-hidden relative">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 mb-16 text-center relative z-10">
+            <div class="inline-flex items-center bg-white/10 px-6 py-2 rounded-full mb-8 backdrop-blur-sm border border-white/20"
+                data-aos="fade-down">
+                <div class="flex items-center space-x-1 text-yellow-400 mr-3">
+                    <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                </div>
+                <span class="text-sm font-bold tracking-widest uppercase">Excelente no Google</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight" data-aos="fade-up">A Transformação na Vida dos
+                Pacientes</h2>
+        </div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+            <!-- Review 1 -->
+            <div class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/15 transition-all group"
+                data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="quote"
+                    class="text-softpink w-10 h-10 mb-6 opacity-40 group-hover:opacity-100 transition-opacity"></i>
+                <p class="italic mb-8 text-white/90 leading-relaxed text-lg">"Super recomendo! Ótima profissional, muito
+                    atenciosa e disposta a ajudar a incentivar. Já passo nela há mais de 2 anos e tive melhoras
+                    significativas."</p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-softpink rounded-full flex items-center justify-center text-navy font-bold">
+                        MA</div>
+                    <div class="font-bold text-softpink tracking-wide">Milena Andrade</div>
+                </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/15 transition-all group"
+                data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="quote"
+                    class="text-softpink w-10 h-10 mb-6 opacity-40 group-hover:opacity-100 transition-opacity"></i>
+                <p class="italic mb-8 text-white/90 leading-relaxed text-lg">"A Tati é uma profissional maravilhosa!
+                    Sempre focada em me ajudar a entender minhas questões de forma muito racional, pontual e prática."
+                </p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-softpink rounded-full flex items-center justify-center text-navy font-bold">
+                        JA</div>
+                    <div class="font-bold text-softpink tracking-wide">Jana Andrade</div>
+                </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] border border-white/20 hover:bg-white/15 transition-all group"
+                data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="quote"
+                    class="text-softpink w-10 h-10 mb-6 opacity-40 group-hover:opacity-100 transition-opacity"></i>
+                <p class="italic mb-8 text-white/90 leading-relaxed text-lg">"Recomendo fortemente o trabalho da
+                    Tatiane. Sinto uma evolução no meu processo semanalmente. Uma pessoa incrível."</p>
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-softpink rounded-full flex items-center justify-center text-navy font-bold">
+                        AC</div>
+                    <div class="font-bold text-softpink tracking-wide">Ana Carolina Pereira</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block"
+                    data-aos="fade-down">Suas dúvidas respondidas</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-navy" data-aos="fade-up">Perguntas Frequentes</h2>
+            </div>
+            <div class="space-y-6">
+                <div class="faq-item border border-slate-200 rounded-[2rem] overflow-hidden shadow-sm transition-all hover:border-softpink hover:shadow-md"
+                    data-aos="fade-up">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-8 text-left font-bold text-navy text-xl">
+                        <span>Como funciona a primeira sessão?</span>
+                        <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-accent"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-8 pt-0 text-slate-600 leading-relaxed text-lg">
+                            A primeira sessão é um momento de acolhimento onde vamos nos conhecer. É o espaço para você
+                            trazer o que te aflige e eu explicar minha forma de trabalho, alinhando expectativas para o
+                            processo jurídico-terapêutico.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item border border-slate-200 rounded-[2rem] overflow-hidden shadow-sm transition-all hover:border-softpink hover:shadow-md"
+                    data-aos="fade-up">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-8 text-left font-bold text-navy text-xl">
+                        <span>Quanto tempo dura cada atendimento?</span>
+                        <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-accent"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-8 pt-0 text-slate-600 leading-relaxed text-lg">
+                            Cada sessão tem duração de aproximadamente 50 minutos. A frequência recomendada é semanal
+                            para garantir a evolução do processo, mas pode ser ajustada conforme a necessidade.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item border border-slate-200 rounded-[2rem] overflow-hidden shadow-sm transition-all hover:border-softpink hover:shadow-md"
+                    data-aos="fade-up">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-8 text-left font-bold text-navy text-xl">
+                        <span>Você atende convênios?</span>
+                        <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-accent"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-8 pt-0 text-slate-600 leading-relaxed text-lg">
+                            No momento realizo apenas atendimentos particulares, mas posso fornecer recibos detalhados
+                            para você solicitar o reembolso junto ao seu convênio médico, caso seu plano ofereça essa
+                            opção.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Marquee -->
+    <section class="py-16 bg-slate-50 overflow-hidden relative">
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
+        <div class="flex space-x-6 animate-scroll hover:pause whitespace-nowrap">
+            <img src="img/dra-tatiane-vieira-consultorio-detalhe-1.png" alt="Detalhes Consultório"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg hover:scale-105 transition-transform">
+            <img src="img/dra-tatiane-vieira-consultorio-detalhe-2.png" alt="Ambiente"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg hover:scale-105 transition-transform">
+            <img src="img/dra-tatiane-vieira-poltrona-atendimento.png" alt="Conforto"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg hover:scale-105 transition-transform">
+            <img src="img/dra-tatiane-vieira-sala-atendimento.png" alt="Sala de Atendimento"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg hover:scale-105 transition-transform">
+            <img src="img/dra-tatiane-vieira-consultorio-1.png" alt="Consultório"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg hover:scale-105 transition-transform">
+            <!-- Repeat for infinite -->
+            <img src="img/dra-tatiane-vieira-consultorio-detalhe-1.png" alt="Detalhes Consultório"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg">
+            <img src="img/dra-tatiane-vieira-consultorio-detalhe-2.png" alt="Ambiente"
+                class="h-80 rounded-[2.5rem] inline-block shadow-lg">
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="bg-navy rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl"
+                data-aos="zoom-in">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-6xl font-bold mb-8 leading-tight">Pronto para dar o<br>primeiro passo?
+                    </h2>
+                    <p class="text-white/70 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Agende uma conversa inicial e vamos começar a trilhar o caminho para o seu bem-estar emocional
+                        hoje mesmo.
+                    </p>
+                    <a href="https://wa.me/5512988513458" target="_blank"
+                        class="inline-flex items-center space-x-3 bg-white text-navy px-12 py-5 rounded-full font-bold text-xl hover:bg-softpink transition-all transform hover:scale-105 active:scale-95 shadow-xl">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        <span>Falar com a Dra. Tatiane</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 pt-24 pb-12 text-slate-800 border-t border-slate-200">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-3 mb-8">
+                    <div class="w-12 h-12 bg-navy rounded-2xl flex items-center justify-center text-white">
+                        <i data-lucide="heart" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold font-heading text-navy">Tatiane Vieira</h2>
+                </div>
+                <p class="text-slate-500 mb-8 max-w-sm leading-relaxed text-lg">
+                    Psicóloga Clínica em São José dos Campos. Transformando através de uma escuta racional e humanizada.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-navy transition-all"><i data-lucide="instagram"
+                            class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-navy transition-all"><i data-lucide="facebook"
+                            class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-navy transition-all"><i data-lucide="linkedin"
+                            class="w-6 h-6"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-navy mb-8 text-xl">Links Rápidos</h4>
+                <ul class="space-y-4 text-slate-600 text-lg">
+                    <li><a href="#sobre" class="hover:text-accent transition-colors">Sobre mim</a></li>
+                    <li><a href="#servicos" class="hover:text-accent transition-colors">Especialidades</a></li>
+                    <li><a href="#depoimentos" class="hover:text-accent transition-colors">Avaliações</a></li>
+                    <li><a href="politica-privacidade.html" class="hover:text-accent transition-colors">Privacidade</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-navy mb-8 text-xl">Onde Estarei</h4>
+                <ul class="space-y-6 text-slate-600 text-lg">
+                    <li class="flex items-start space-x-4">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-accent shrink-0"></i>
+                        <span class="leading-tight">R. Francisca Maria de Jesus, 347 - Floradas de São José, SJC -
+                            SP</span>
+                    </li>
+                    <li class="flex items-center space-x-4">
+                        <i data-lucide="phone" class="w-6 h-6 text-accent shrink-0"></i>
+                        <span class="font-bold">(12) 98851-3458</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-6 pt-12 border-t border-slate-200 text-center text-slate-400 text-sm flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p>&copy; <span id="current-year"></span> Dra. Tatiane Vieira. Todos os direitos reservados.</p>
+            <p>Criado com excelência por <a href="https://www.dekmidia.com.br" target="_blank"
+                    class="text-navy hover:text-accent transition-colors font-bold">Agência DekMídia</a></p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA (Mobile) -->
+    <a href="https://wa.me/5512988513458" id="whatsapp-btn"
+        class="fixed bottom-8 right-8 z-50 transform transition-all duration-500 translate-y-32 flex items-center bg-green-500 text-white px-8 py-5 rounded-full shadow-2xl space-x-3 group">
+        <div class="relative">
+            <div class="absolute inset-0 bg-white rounded-full animate-ping opacity-25"></div>
+            <i data-lucide="message-circle" class="w-8 h-8 relative z-10"></i>
+        </div>
+        <span class="font-bold text-lg">Agendar Agora</span>
+    </a>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent"
+        class="fixed bottom-0 left-0 w-full z-[100] transform transition-transform duration-700 translate-y-full">
+        <div
+            class="container mx-auto px-6 py-8 border-t border-softpink/30 shadow-[0_-20px_50px_rgba(0,0,0,0.1)] glass rounded-t-[3rem] flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-slate-700 leading-relaxed text-center md:text-left text-lg max-w-2xl">
+                Nós utilizamos cookies para oferecer a melhor experiência. Ao continuar, você concorda com nossos <a
+                    href="termos-uso.html"
+                    class="underline font-bold text-navy hover:text-accent transition-colors">Termos de Uso</a>.
+            </p>
+            <button id="accept-cookies"
+                class="whitespace-nowrap bg-navy text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-accent transition-all shadow-xl transform active:scale-95">Aceitar
+                e Prosseguir</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

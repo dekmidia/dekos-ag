@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicólogo Roberto Almeida | Terapia Baseada em Evidências</title>
+    <meta name="description"
+        content="Roberto Almeida é Psicólogo em São José dos Campos. Tratamento especializado (TCC, ACT, Mindfulness) para ansiedade, depressão e autodescoberta.">
+
+    <!-- Open Graph/SEO -->
+    <meta property="og:title" content="Psicólogo Roberto Almeida | Terapia Online e Presencial">
+    <meta property="og:description"
+        content="Saúde Mental | Terapia Online | Regulação Emocional. Psicoterapia prática baseada em evidências.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            900: '#0f172a', // Navy/Slate
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Roberto Almeida Psi",
+      "image": "img/dr-roberto.avif",
+      "telephone": "+5512999999999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "url": "https://robertoalmeidapsi.com.br"
+    }
+    </script>
+</head>
+
+<body class="text-slate-800 antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar Sticky Glassmorphism -->
+    <header id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-slate-800 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center group cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div
+                        class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center mr-3 transform group-hover:rotate-12 transition-transform shadow-lg">
+                        <span class="text-white font-heading font-bold text-xl">R</span>
+                    </div>
+                    <span class="text-2xl font-bold font-heading tracking-tight text-slate-900">Roberto Almeida</span>
+                </div>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#psicoterapia"
+                        class="text-sm font-semibold tracking-wide hover:text-brand-500 transition-colors uppercase">A
+                        Terapia</a>
+                    <a href="#sobre"
+                        class="text-sm font-semibold tracking-wide hover:text-brand-500 transition-colors uppercase">Sobre
+                        Mim</a>
+                    <a href="#depoimentos"
+                        class="text-sm font-semibold tracking-wide hover:text-brand-500 transition-colors uppercase">Depoimentos</a>
+                </nav>
+                <div class="hidden md:flex flex-shrink-0">
+                    <a href="#contato"
+                        class="bg-slate-900 hover:bg-brand-500 text-white px-7 py-3 rounded-full font-bold transition-all shadow-xl hover:shadow-brand-500/30 hover:-translate-y-1">
+                        Agendar Sessão
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Super Hero Section with Wave & Blobs -->
+    <section id="inicio"
+        class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-wave-gradient min-h-screen flex items-center">
+        <!-- Floating abstract blobs -->
+        <div class="absolute top-20 left-10 w-64 h-64 bg-teal-300/30 blob blur-3xl mix-blend-multiply"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-300/30 blob blur-3xl mix-blend-multiply"
+            style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-float-slow">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        <span class="text-sm font-bold text-slate-800 tracking-wide uppercase">Terapia Online e
+                            Presencial (SJC)</span>
+                    </div>
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading text-slate-900 leading-[1.1] mb-8">
+                        Construa uma vida com maior <br />
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-600">vitalidade
+                            e sentido.</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-10 max-w-xl leading-relaxed font-medium">
+                        "Visão sem ação é um sonho; ação sem visão é um pesadelo." Encontre um espaço seguro para sua
+                        jornada de autoconhecimento e regulação emocional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#psicoterapia"
+                            class="inline-flex justify-center items-center bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-2xl hover:shadow-brand-500/40 hover:-translate-y-1">
+                            Conhecer o Método
+                        </a>
+                        <a href="#contato"
+                            class="inline-flex justify-center items-center bg-white text-slate-900 hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-md hover:shadow-xl hover:-translate-y-1 border border-slate-200">
+                            Falar com o Roberto
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative lg:ml-auto" data-aos="zoom-in-left" data-aos-delay="200">
+                    <!-- Glass floating cards -->
+                    <div class="absolute -left-12 top-10 glass px-6 py-4 rounded-2xl z-20 animate-float-slow shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Especialidade</p>
+                                <p class="text-lg font-bold text-slate-900">Ciência Behaviorista</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute -right-8 bottom-20 glass px-6 py-4 rounded-2xl z-20 animate-float-fast shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Metodologia</p>
+                                <p class="text-lg font-bold text-slate-900">Privacidade Absoluta</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 max-w-md mx-auto aspect-[4/5]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent z-10">
+                        </div>
+                        <img src="img/dr-roberto.avif" alt="Psicólogo Roberto Almeida"
+                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Psicoterapia Deep Section -->
+    <section id="psicoterapia" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-sm mb-3 block">A
+                    Psicoterapia</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold font-heading text-slate-900 leading-tight">Um processo
+                    terapêutico focado na sua saúde mental e bem-estar.</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-3xl p-10 hover-float border border-slate-100 relative overflow-hidden group"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="absolute -right-10 -top-10 w-40 h-40 bg-brand-100 rounded-full blur-3xl group-hover:bg-brand-200 transition-colors">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-brand-500 border border-slate-100">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-heading text-slate-900 mb-4">Para quem é indicada?</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Ideal para pessoas lidando com ansiedade,
+                            depressão, estresse, luto ou fobias. Auxilia na superação de traumas passados e na melhora
+                            profunda dos relacionamentos focando na comunicação e autoestima.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-sm text-slate-700 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2"></span>Questões Emocionais</li>
+                            <li class="flex items-center text-sm text-slate-700 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2"></span>Melhora de Relacionamentos
+                            </li>
+                            <li class="flex items-center text-sm text-slate-700 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-2"></span>Autoconhecimento Profundo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900 rounded-3xl p-10 hover-float relative overflow-hidden group text-white shadow-xl shadow-slate-900/20"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-slate-900"></div>
+                    <div class="absolute -left-10 -bottom-10 w-60 h-60 bg-brand-500/20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-white/10 text-brand-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-heading text-white mb-4">A Terapia Online</h3>
+                        <p class="text-slate-300 leading-relaxed mb-6">Oferece exatamente a mesma eficácia do
+                            atendimento presencial. Com o uso de plataformas criptografadas asseguramos um ambiente 100%
+                            confidencial sem a necessidade de deslocamentos.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-sm text-slate-200 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-2"></span>Conforto Absoluto</li>
+                            <li class="flex items-center text-sm text-slate-200 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-2"></span>Privacidade Intacta</li>
+                            <li class="flex items-center text-sm text-slate-200 font-medium"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 mr-2"></span>Flexibilidade de Horários
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-3xl p-10 hover-float border border-slate-100 relative overflow-hidden group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute right-0 bottom-0 w-32 h-32 bg-blue-100 rounded-tl-[100px] border-l border-t border-white shadow-inner opacity-50">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-blue-500 border border-slate-100">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold font-heading text-slate-900 mb-4">Dinâmica das Sessões</h3>
+                        <p class="text-slate-600 leading-relaxed">Você desenvolverá ferramentas para transformar padrões
+                            disfuncionais. Entendemos seu passado detalhadamente, não para ficar preso nele, mas para
+                            agir consistentemente na construção do seu futuro no momento presente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Profile Section (Sobre) -->
+    <section id="sobre" class="py-24 bg-slate-50 border-y border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 relative" data-aos="fade-right">
+                    <!-- Composition of images/graphics to make it premium -->
+                    <div class="relative w-full aspect-square max-w-lg mx-auto">
+                        <div
+                            class="absolute inset-0 border-2 border-brand-200 rounded-full transform scale-95 translate-x-4 translate-y-4">
+                        </div>
+                        <div class="absolute inset-0 bg-slate-200 rounded-full overflow-hidden object-cover shadow-2xl">
+                            <img src="img/dr-roberto-2.avif" alt="Roberto Almeida Profile"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute bottom-10 -left-6 glass px-6 py-4 rounded-xl shadow-xl flex items-center gap-3 animate-float-slow">
+                            <div
+                                class="w-10 h-10 bg-brand-500 rounded-full flex justify-center items-center text-white font-heading font-bold">
+                                +15</div>
+                            <div class="font-bold text-slate-800 leading-tight">Anos de<br><span
+                                    class="text-brand-600 text-sm">Experiência</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <span class="text-brand-500 font-bold uppercase tracking-widest text-sm mb-3 block">Muito
+                        Prazer</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 mb-8 leading-tight">Vamos
+                        juntos desenhar um novo caminho?</h2>
+
+                    <div class="space-y-6 text-lg text-slate-600 font-medium">
+                        <p>
+                            Minha jornada na psicologia começou com uma convicção profunda: <span
+                                class="text-slate-900 font-bold">todos nós carregamos uma incrível capacidade de nos
+                                reinventar e florescer</span>, mesmo quando os caminhos parecem incertos.
+                        </p>
+                        <p>
+                            Acredito que a terapia seja um espaço de parceria. Em minha trajetória acadêmica que iniciou
+                            na <strong class="text-brand-600">PUC-SP</strong>, foquei em como nossas histórias moldam
+                            quem somos através da <strong class="text-brand-600">Análise Comportamental Clínica
+                                (PUC-PR)</strong>.
+                        </p>
+                        <p>
+                            Para enriquecer ainda mais nossa jornada, trouxe ferramentas táticas para meu consultório
+                            como especializações em <strong class="text-slate-900">Mindfulness (UNIFESP)</strong>,
+                            <strong class="text-slate-900">Terapia de Aceitação e Compromisso - ACT (USP)</strong> e na
+                            clássica <strong class="text-slate-900">Terapia Cognitivo-Comportamental (FOCO)</strong>.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 p-6 bg-white rounded-2xl border-l-4 border-brand-500 shadow-sm" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <p class="text-slate-600 italic mb-4">"Minha bagagem permite criar uma abordagem terapêutica que
+                            é só sua. Um plano que não visa só a mudança, mas que respeita suas dores e foca em seus
+                            maiores potenciais."</p>
+                        <p class="font-bold font-heading text-slate-900">Roberto Almeida <span
+                                class="text-xs font-sans text-brand-500 uppercase tracking-widest ml-2">CRP 69922</span>
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- End Flex Row -->
+        </div>
+    </section>
+
+    <!-- Depoimentos (Masonry / Cards) -->
+    <section id="depoimentos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-down">
+                <h2 class="text-4xl md:text-5xl font-extrabold font-heading text-slate-900">A Voz dos Pacientes</h2>
+                <p class="mt-4 text-xl text-slate-600">Conheça o impacto do tratamento através das palavras de quem já
+                    tomou a decisão de se priorizar.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="p-10 bg-slate-50 rounded-3xl border border-slate-100 relative group hover-float"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute top-8 right-8 text-brand-200 opacity-50 group-hover:text-brand-300 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center space-x-1 text-amber-400 mb-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xl italic text-slate-700 mb-8 relative z-10 font-medium">
+                        "Encontrei no Roberto um profissional extremamente qualificado e humano. O processo terapêutico
+                        tem me ajudado a entender minhas emoções de uma forma que nunca imaginei ser possível."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center font-bold font-heading">
+                            SJ
+                        </div>
+                        <div>
+                            <p class="font-bold font-heading text-slate-900 text-lg">S. O. J.</p>
+                            <p class="text-sm text-slate-500">Paciente Online</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-10 bg-slate-50 rounded-3xl border border-slate-100 relative group hover-float mt-0 md:mt-12"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute top-8 right-8 text-brand-200 opacity-50 group-hover:text-brand-300 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center space-x-1 text-amber-400 mb-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xl italic text-slate-700 mb-8 relative z-10 font-medium">
+                        "Psicólogo nota 10!!! Tem feito muito bem para minha saúde mental em cada consulta, cada
+                        conversa."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold font-heading">
+                            AN
+                        </div>
+                        <div>
+                            <p class="font-bold font-heading text-slate-900 text-lg">Paciente Anon.</p>
+                            <p class="text-sm text-slate-500">Terapia Presencial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F.A.Q Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-extrabold font-heading text-slate-900 text-center mb-16"
+                data-aos="fade-down">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="faq-item border border-slate-200 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <button
+                        class="faq-button w-full px-8 py-6 text-left flex justify-between items-center bg-transparent focus:outline-none"
+                        aria-expanded="false">
+                        <span class="text-lg font-bold font-heading text-slate-800">A Terapia Online funciona
+                            mesmo?</span>
+                        <div class="text-brand-500 w-6 h-6 flex items-center justify-center relative">
+                            <span class="icon-plus absolute text-2xl leading-none font-light">+</span>
+                            <span class="icon-minus absolute text-2xl leading-none font-light">-</span>
+                        </div>
+                    </button>
+                    <div class="faq-content bg-slate-50">
+                        <p class="px-8 pb-8 pt-2 text-slate-600 leading-relaxed font-medium">As pesquisas científicas e
+                            órgãos reguladores garantem a mesma eficácia do atendimento presencial. É a forma mais
+                            conveniente para profissionais sem tempo a perder com deslocamento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <button
+                        class="faq-button w-full px-8 py-6 text-left flex justify-between items-center bg-transparent focus:outline-none"
+                        aria-expanded="false">
+                        <span class="text-lg font-bold font-heading text-slate-800">Atende Plano de Saúde?</span>
+                        <div class="text-brand-500 w-6 h-6 flex items-center justify-center relative">
+                            <span class="icon-plus absolute text-2xl leading-none font-light">+</span>
+                            <span class="icon-minus absolute text-2xl leading-none font-light">-</span>
+                        </div>
+                    </button>
+                    <div class="faq-content bg-slate-50">
+                        <p class="px-8 pb-8 pt-2 text-slate-600 leading-relaxed font-medium">Trabalho unicamente com
+                            consultas particulares para entregar o máximo de qualidade. Se seu plano de saúde oferecer
+                            sistema de reembolso, eu emito o recibo e relatório com meu CRP para você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Super CTA (Contato Extraído do Site Original) -->
+    <section id="contato" class="relative py-28 bg-slate-900 text-white overflow-hidden">
+        <!-- Abstract Bg -->
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0idHJhbnNwYXJlbnQiPjwvcmVjdD4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSI+PC9jaXJjbGU+Cjwvc3ZnPg==')] opacity-40">
+        </div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-500/30 rounded-full blur-[100px]"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-600/30 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center" data-aos="zoom-in">
+            <span class="text-brand-300 font-bold uppercase tracking-widest text-sm mb-6 block">Vamos Começar?</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading mb-8 leading-tight">
+                Dar o primeiro passo é um ato de coragem e <span class="text-brand-400">autocuidado.</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
+                Estou aqui para facilitar esse processo e tornar o seu contato simples e acolhedor. O meu compromisso é
+                retornar o mais breve possível.
+            </p>
+            <a class="whatsapp-link inline-flex items-center bg-white text-slate-900 px-10 py-5 rounded-full font-bold font-heading text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-brand-500/50 hover-glow group"
+                href="#">
+                <span class="flex h-4 w-4 relative mr-4">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                </span>
+                Iniciar Conversa no WhatsApp
+                <svg class="w-6 h-6 ml-3 transform group-hover:translate-x-2 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="bg-black text-slate-500 py-16 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center mb-8">
+                <span class="text-slate-400 font-heading font-bold text-xl">R</span>
+            </div>
+            <p class="mb-6 font-medium">Copyright © 2026 Roberto Almeida Psicoterapia.<br>Todos os direitos reservados.
+            </p>
+            <div class="flex justify-center space-x-6 mb-12">
+                <a href="#"
+                    class="hover:text-brand-500 transition-colors uppercase tracking-wider text-xs font-bold">Termos de
+                    Uso</a>
+                <a href="#"
+                    class="hover:text-brand-500 transition-colors uppercase tracking-wider text-xs font-bold">Privacidade</a>
+            </div>
+            <p class="text-xs text-slate-600 font-medium tracking-wide">
+                Desenvolvido com tecnologia por
+                <a href="https://www.dekmidia.com.br"
+                    class="text-brand-500 hover:text-brand-400 font-bold border-b border-brand-500/30 pb-1"
+                    target="_blank">DekMídia</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp JoinChat (Ultra Premium) -->
+    <div id="joinchat"
+        class="fixed bottom-8 right-8 z-50 transform translate-y-24 opacity-0 scale-50 transition-all duration-700 ease-out-cubic">
+        <div class="relative group">
+            <div
+                class="absolute -top-16 right-0 bg-slate-900 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-2xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-y-2">
+                Olá! Agende sua consulta aqui 👋
+                <div class="absolute -bottom-2 right-6 w-4 h-4 bg-slate-900 transform rotate-45"></div>
+            </div>
+            <a class="whatsapp-link relative flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:bg-[#128C7E] transition-colors cursor-pointer whatsapp-pulse"
+                href="#">
+                <span class="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-white rounded-full"></span>
+                <svg class="w-8 h-8 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Cookies Premium Modal -->
+    <div id="cookie-modal"
+        class="fixed bottom-6 left-6 right-6 md:right-auto md:w-96 glass-dark p-6 rounded-3xl z-[60] transform translate-y-[150%] transition-transform duration-700 shadow-2xl">
+        <p class="mb-5 text-sm font-medium text-slate-300 leading-relaxed">Priorizamos sua privacidade. Utilizamos
+            cookies funcionais para moldar a melhor estrutura para você. Leia nossos <a href="#"
+                class="text-brand-400 font-bold hover:underline">Termos</a>.</p>
+        <div class="flex gap-3">
+            <button id="accept-cookies"
+                class="flex-1 bg-brand-500 hover:bg-brand-400 text-white py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-brand-500/30">Aceito</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
