@@ -167,11 +167,11 @@
       "references": {
         "readme": "squads/growth/references/README.md",
         "briefing-template": "squads/growth/references/briefing-template.md",
-        "contrato-site-ads-express": "squads/growth/references/Contrato de Criação de Site DekSite + Campanha de Google Ads Express.md",
-        "contrato-landing-page": "squads/growth/references/Contrato de Criação de Site Onepage - Landing Page.md",
-        "contrato-ads-cnpj-qualificacao": "squads/growth/references/Contrato de Tráfego Pago CNPJ - Google Ads + Qualificação Leads.md",
-        "contrato-ads-cnpj": "squads/growth/references/Contrato de Tráfego Pago CNPJ - Google Ads.md",
-        "contrato-ads-cpf": "squads/growth/references/Contrato de Tráfego Pago CPF- Google Ads.md"
+        "contrato-site-ads-express": "squads/growth/references/Contrato de Cria#U00e7#U00e3o de Site DekSite + Campanha de Google Ads Express.md",
+        "contrato-landing-page": "squads/growth/references/Contrato de Cria#U00e7#U00e3o de Site Onepage - Landing Page.md",
+        "contrato-ads-cnpj-qualificacao": "squads/growth/references/Contrato de Tr#U00e1fego Pago CNPJ - Google Ads + Qualifica#U00e7#U00e3o Leads.md",
+        "contrato-ads-cnpj": "squads/growth/references/Contrato de Tr#U00e1fego Pago CNPJ - Google Ads.md",
+        "contrato-ads-cpf": "squads/growth/references/Contrato de Tr#U00e1fego Pago CPF- Google Ads.md"
       }
     },
     "engineering": {
@@ -264,7 +264,7 @@
         "skills/pdf/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/activity-logger/SKILL.md",
-        "skills/dekreport/SKILL.md",
+        "skills/dekreport/skill.md",
         "skills/metrics-analyzer/SPECS.md",
         "skills/report-generator/SPECS.md",
         "skills/sentiment-analyzer/SPECS.md"
@@ -315,12 +315,14 @@
       "descricao": "Agentes de produtividade pessoal e criatividade do CEO",
       "agents": {
         "secretaria": "squads/ops/donna.md",
-        "leo": "squads/ops/leo.md"
+        "leo": "squads/ops/leo.md",
+        "sentinel": "squads/ops/sentinel.md"
       },
       "tasks": {
         "priorizar-dia": "squads/ops/tasks/task-priorizar-dia.md",
         "capturar-ideia": "squads/ops/tasks/task-capturar-ideia.md",
-        "analisar-ideias": "squads/ops/tasks/task-analisar-ideias.md"
+        "analisar-ideias": "squads/ops/tasks/task-analisar-ideias.md",
+        "health-check": "squads/ops/tasks/task-health-check.md"
       },
       "data": {
         "tempos-medios": "squads/ops/data/tempos-medios.json"
@@ -353,7 +355,8 @@
     "desenvolvimento-web": ".agents/workflows/desenvolvimento-web.md",
     "inicio-rapido": ".agents/workflows/inicio-rapido.md",
     "prospeccao-ativa": ".agents/workflows/prospeccao-ativa.md",
-    "prospeccao": ".agents/workflows/prospeccao.md"
+    "prospeccao": ".agents/workflows/prospeccao.md",
+    "health-check": "squads/ops/tasks/task-health-check.md"
   },
   "projetos": {
     "base_path": "PROJETOS/",
@@ -369,7 +372,6 @@
       "mensagens": "PROJETOS/_prospection/mensagens-prontas/"
     },
     "cliente": {
-      "briefing": "PROJETOS/[cliente]/briefing.md",
       "referencias": "PROJETOS/[cliente]/referencias/",
       "onboarding": "PROJETOS/[cliente]/onboarding/",
       "creative": "PROJETOS/[cliente]/creative/",
