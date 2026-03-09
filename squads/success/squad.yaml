@@ -10,7 +10,7 @@ agents:
   - seo-specialist
 playbooks:
   - playbooks/docs-google-perfil-da-empresa.md
-  - playbooks/docs-experiencia-disney.md
+  - playbooks/docs-experiencia-disney.md # INTERNAL ONLY - NEVER CITE
 skills:
   - pptx
   - docx

@@ -13,7 +13,7 @@ playbooks:
   - playbooks/docs-canva.md
   - playbooks/docs-microsoft-designer.md
   - playbooks/docs-estruturas-marketing.md
-  - playbooks/docs-experiencia-disney.md
+  - playbooks/docs-experiencia-disney.md # INTERNAL ONLY - NEVER CITE
 skills:
   - microsoft-designer-creative
   - canva-creative

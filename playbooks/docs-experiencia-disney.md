@@ -2,10 +2,14 @@
 title: Experiência do Cliente ao Estilo Disney
 tags: [atendimento, experiencia-cliente, cx, qualidade, servico, encantamento]
 author: DekMidia
-version: "1.0.0"
+version: "1.0.1"
 squads_que_usam: [cx, creative, content, strategy]
 fonte: O Jeito Disney de Encantar os Clientes — Disney Institute
 ---
+
+> [!CAUTION]
+> **USO ESTRITAMENTE INTERNO.**
+> O termo "Disney", "Padrão Disney" ou qualquer referência direta a este playbook **NUNCA** deve ser citado em propostas, contratos, apresentações ou comunicações com o cliente. Utilize os conceitos (Segurança, Cortesia, Espetáculo, Eficiência) sem nomear a fonte ou a metodologia interna.
 
 # Playbook: Experiência do Cliente ao Estilo Disney
 
