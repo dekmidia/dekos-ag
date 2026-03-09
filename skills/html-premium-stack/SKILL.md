@@ -298,12 +298,15 @@ h1.hero-title {
 
 Verificar no `SESSAO_ATIVA.md` e briefing antes de codar:
 
-| Dado disponível | Integração obrigatória | Skill de referência |
+| Dado disponível | Integração OBRIGATÓRIA — sem exceção | Skill de referência |
 |---|---|---|
-| Endereço físico ou link Google Meu Negócio | Seção "Como Chegar" com Google Maps embed | `effects-library` — Efeito 17 |
-| @ do Instagram | Seção de feed com grid 3×3 + link | `effects-library` — Efeito 18 |
-| Número de WhatsApp | Botão flutuante + CTA no hero | `effects-library` — Efeito 11 |
+| Endereço físico ou link Google Meu Negócio | ❌ **NÃO entregue sem isso:** Seção "Como Chegar" com Google Maps embed | `effects-library` — Efeito 17 |
+| @ do Instagram | ❌ **NÃO entregue sem isso:** Ícone linkado no footer + CTA visual para o perfil (não apenas ícone) | `effects-library` — Efeito 18 |
+| Outras redes sociais (Facebook, TikTok, LinkedIn, YouTube) | ❌ **NÃO entregue sem isso:** Ícone linkado no footer para cada rede informada | — |
+| Número de WhatsApp | ❌ **NÃO entregue sem isso:** Botão flutuante em todas as páginas + CTA no hero | `effects-library` — Efeito 11 |
 | Avaliações Google | Seção de estrelas animadas + nota | `effects-library` — Efeito 09 |
+
+> ⚠️ **Regra absoluta:** Se o usuário forneceu endereço, redes sociais ou WhatsApp no intake e o site não tem as integrações correspondentes, o site **não passa no checklist de auto-crítica** e não pode ser entregue.
 
 ---
 
@@ -332,11 +335,17 @@ Após gerar o HTML completo, responda mentalmente estas perguntas. Se qualquer r
 6. O CTA principal está visível, contrastante e clicável no mobile?
    → Sim / Não
 
-7. Se havia endereço no briefing — existe seção Google Maps?
-   → Sim / Não / Não havia endereço
+7. Se havia endereço no briefing — existe seção "Como Chegar" com Google Maps embed?
+   → Sim / Não ← se Não e havia endereço: **BLOQUEADO, corrigir antes de entregar**
 
-8. Se havia @ do Instagram no briefing — existe seção de feed?
-   → Sim / Não / Não havia Instagram
+8. Se havia @ do Instagram — existe CTA visual para o perfil (além do ícone no footer)?
+   → Sim / Não ← se Não e havia Instagram: **BLOQUEADO, corrigir antes de entregar**
+
+8a. Todas as redes sociais informadas têm ícone linkado no footer?
+   → Sim / Não ← se Não: **BLOQUEADO, corrigir antes de entregar**
+
+8b. Se havia WhatsApp — existe botão flutuante em todas as páginas?
+   → Sim / Não ← se Não e havia WhatsApp: **BLOQUEADO, corrigir antes de entregar**
 
 9. O hero está centralizado verticalmente? (display:flex + align-items:center + min-height:100vh)
    → Sim / Não — se não, corrigir o container do hero
