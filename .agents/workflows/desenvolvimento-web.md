@@ -28,3 +28,4 @@ description: Sempre utilize este workflow quando o usuário solicitar o desenvol
 
 5. **Executar a Codificação:**
    - Desenvolva os arquivos com foco máximo em design premium e responsividade, aplicando as regras globais de estética.
+   - **OBRIGATÓRIO:** Se o usuário forneceu um link do Google Perfil da Empresa (GMB) ou um endereço físico, você **DEVE** adicionar uma seção dedicada na Landing Page contendo avaliações (Reviews) e um mapa embarcado (Google Maps). Jamais esqueça desta etapa.
