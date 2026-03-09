@@ -1,0 +1,58 @@
+--- BROKEN MAPPINGS (In registry.json but missing on disk) ---
+None.
+
+--- LOST FILES (On disk but missing in registry.json) ---
+squads\automations\references\README.md
+squads\automations\tasks\task-criar-automacao.md
+squads\creative\references\README.md
+squads\creative\tasks\task-brief-design.md
+squads\creative\tasks\task-criar-copy.md
+squads\creative\tasks\task-criar-social-media.md
+squads\engineering\references\README.md
+squads\engineering\tasks\task-criar-site.md
+squads\growth\references\briefing-template.md
+squads\growth\references\Contrato de Criação de Site DekSite + Campanha de Google Ads Express.md
+squads\growth\references\Contrato de Criação de Site Onepage - Landing Page.md
+squads\growth\references\Contrato de Tráfego Pago CNPJ - Google Ads + Qualificação Leads.md
+squads\growth\references\Contrato de Tráfego Pago CNPJ - Google Ads.md
+squads\growth\references\Contrato de Tráfego Pago CPF- Google Ads.md
+squads\growth\references\README.md
+squads\growth\tasks\task-analise-mercado.md
+squads\growth\tasks\task-onboarding-cliente.md
+squads\performance\task-auditar-campanha.md
+squads\performance\references\README.md
+squads\performance\tasks\task-estruturar-campanha.md
+squads\prospection\references\README.md
+squads\prospection\tasks\task-criar-abordagem.md
+squads\prospection\tasks\task-diagnostico-digital.md
+squads\success\references\README.md
+squads\success\tasks\task-gerar-relatorio.md
+squads\success\tasks\task-seo-conteudo.md
+squads\creative\squad.yaml
+squads\engineering\squad.yaml
+squads\growth\squad.yaml
+squads\performance\squad.yaml
+squads\success\squad.yaml
+playbooks\prospection-pme-regional.md
+playbooks\sinais-de-dor-digital.md
+playbooks\templates-mensagens-prospeccao.md
+skills\copywriting-prospection\SKILL.md
+skills\dekreport\SKILL.md
+skills\diagnostico-digital\SKILL.md
+skills\effects-library\SKILL.md
+skills\envato-design-patterns\SKILL.md
+skills\html-premium-stack\SKILL.md
+skills\john-carlton-copy\SKILL.md
+skills\lp-conversion-bible\SKILL.md
+skills\n8n-automation\SKILL.md
+skills\scoring-leads\SKILL.md
+skills\compliance-checker\SPECS.md
+skills\document-generator\SPECS.md
+skills\landing-page-analyzer\SPECS.md
+skills\metrics-analyzer\SPECS.md
+skills\report-generator\SPECS.md
+skills\sentiment-analyzer\SPECS.md
+.agents\workflows\desenvolvimento-web.md
+.agents\workflows\inicio-rapido.md
+.agents\workflows\prospeccao-ativa.md
+.agents\workflows\prospeccao.md
