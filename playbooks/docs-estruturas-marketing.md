@@ -38,5 +38,18 @@ Ideal para criar Categorização de Conteúdos, Hubs de Artigos ou Arvores de Pa
 - Quebre em Subcategorias de Cauda Longa.
 - Defina o Fluxo Lógico partindo do conceito mais genérico no topo para os dados mais específicos na ponta.
 
+## 5. Estrutura de Propostas: Conexão de Pontos (High-Ticket)
+
+Para qualquer serviço (Ads, SEO, Social Media), a proposta deve seguir este fluxo lógico e persuasivo:
+
+1.  **A Jornada (Contexto/Storytelling):** Inicie com a dor ou o sonho do cliente final. Gere identificação imediata.
+2.  **A Oportunidade/FOMO (O Custo da Inação):** Apresente dados (volumes de busca, mercado) que mostram o que o cliente perde ao não agir agora.
+3.  **O Mecanismo (A Solução):** Apresente o serviço como a ponte óbvia. Use metáforas (ex: "Recepcionista 24h").
+4.  **Transparência (Investimento):** Separe claramente o valor de Gestão (Fee) dos custos de terceiros/plataformas.
+5.  **O Próximo Nível (Autoridade):** Use portfólios ou casos de sucesso para pintar o futuro ideal.
+6.  **Call to Action (CTA):** Próximos passos simples e diretos para o fechamento.
+
 ---
 > **Lembrete para o Agente:** A qualidade de uma copy ou de um plano de marketing não está nas "palavras bonitas", mas na força irrefutável da estrutura usada. Escolha o framework que responde melhor à necessidade atual do usuário e guie a sua resposta nos passos descritos acima.
+
+*Playbook Estruturas de Marketing — DekMidia | Versão 1.1 — Março/2026*
