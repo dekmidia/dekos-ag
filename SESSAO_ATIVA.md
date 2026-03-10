@@ -36,29 +36,29 @@ briefing_path: null
 Substitua os campos abaixo ao iniciar uma nova sessão:
 
 ```yaml
-cliente_ativo: "Nome do Cliente"
-pasta_projeto: "PROJETOS/nome-do-cliente"
-briefing_path: "PROJETOS/nome-do-cliente/briefing.md"
-referencias_path: "PROJETOS/nome-do-cliente/referencias/"
+cliente_ativo: "Lumière Depil"
+pasta_projeto: "PROJETOS/lumiere-depil"
+briefing_path: "PROJETOS/lumiere-depil/briefing.md"
+referencias_path: "PROJETOS/lumiere-depil/referencias/"
 
-# Dados do Google Meu Negócio (preencher manualmente ou via workflow)
-gmb_nome_oficial: null
+# Dados do Google Meu Negócio
+gmb_nome_oficial: "Lumière Depil"
 gmb_endereco: null
 gmb_telefone: null
-gmb_website: null
-gmb_categoria: null
+gmb_website: "https://www.lumieredepil.com.br/"
+gmb_categoria: "Depilação"
 gmb_avaliacao: null
 gmb_url: null
 
-# Identidade Visual (preencher após onboarding)
-cor_primaria: null
-cor_secundaria: null
-fonte_principal: null
+# Identidade Visual
+cor_primaria: "#D4AF37" # Assumindo tom dourado/marroquino premium
+cor_secundaria: "#111111"
+fonte_principal: "Montserrat"
 logo_path: null
 
 # Contexto da Sessão
-objetivo_sessao: null
-agentes_envolvidos: []
+objetivo_sessao: "Criar apresentação premium animada sobre IA, mostrando eles como case da DekMídia"
+agentes_envolvidos: [Ink, Prism, Dex]
 ```
 
 ---
