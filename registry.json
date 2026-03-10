@@ -35,7 +35,9 @@
         "qualificar-lista": "squads/prospection/tasks/task-qualificar-lista.md",
         "criar-mensagem": "squads/prospection/tasks/task-criar-mensagem.md",
         "gerar-diagnostico": "squads/prospection/tasks/task-gerar-diagnostico.md",
-        "executar-followup": "squads/prospection/tasks/task-executar-followup.md"
+        "executar-followup": "squads/prospection/tasks/task-executar-followup.md",
+        "criar-abordagem": "squads/prospection/tasks/task-criar-abordagem.md",
+        "diagnostico-digital": "squads/prospection/tasks/task-diagnostico-digital.md"
       },
       "checklists": {
         "ficha-lead": "squads/prospection/checklists/checklist-ficha-lead.md",
@@ -57,7 +59,10 @@
         "playbooks/prospection-pme-regiao.md",
         "playbooks/lead-scoring-system.md",
         "playbooks/cadencia-followup.md",
-        "playbooks/docs-experiencia-disney.md"
+        "playbooks/docs-experiencia-disney.md",
+        "playbooks/prospection-pme-regional.md",
+        "playbooks/sinais-de-dor-digital.md",
+        "playbooks/templates-mensagens-prospeccao.md"
       ],
       "skills": [
         "skills/lead-scoring/SKILL.md",
@@ -68,15 +73,23 @@
         "skills/xlsx/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/marketing-stack-cro/SKILL.md",
-        "skills/activity-logger/SKILL.md"
+        "skills/activity-logger/SKILL.md",
+        "skills/copywriting-prospection/SKILL.md",
+        "skills/diagnostico-digital/SKILL.md",
+        "skills/scoring-leads/SKILL.md"
       ],
       "workflows": [
         ".agents/workflows/prospection-nicho.md",
         ".agents/workflows/abordar-lead.md",
         ".agents/workflows/diagnostico-gratuito.md",
         ".agents/workflows/workflow-human-in-the-loop-prospect.md",
-        ".agents/workflows/cadencia-followup.md"
-      ]
+        ".agents/workflows/cadencia-followup.md",
+        ".agents/workflows/prospeccao-ativa.md",
+        ".agents/workflows/prospeccao.md"
+      ],
+      "references": {
+        "readme": "squads/prospection/references/README.md"
+      }
     },
     "creative": {
       "descricao": "Criacao de conteudo, copies, design e social media",
@@ -105,12 +118,27 @@
         "skills/creative-director/SKILL.md",
         "skills/criar-apresentacao/SKILL.md",
         "skills/frontend-design-premium/SKILL.md",
-        "skills/activity-logger/SKILL.md"
+        "skills/activity-logger/SKILL.md",
+        "skills/copywriting-prospection/SKILL.md",
+        "skills/effects-library/SKILL.md",
+        "skills/envato-design-patterns/SKILL.md",
+        "skills/john-carlton-copy/SKILL.md",
+        "skills/lp-conversion-bible/SKILL.md",
+        "skills/sentiment-analyzer/SPECS.md"
       ],
       "workflows": [
         ".agents/workflows/workflow-auto-eval.md",
         ".agents/workflows/workflow-multi-crew-content.md"
-      ]
+      ],
+      "squad_yaml": "squads/creative/squad.yaml",
+      "tasks": {
+        "brief-design": "squads/creative/tasks/task-brief-design.md",
+        "criar-copy": "squads/creative/tasks/task-criar-copy.md",
+        "criar-social-media": "squads/creative/tasks/task-criar-social-media.md"
+      },
+      "references": {
+        "readme": "squads/creative/references/README.md"
+      }
     },
     "growth": {
       "descricao": "prospection exploratoria e onboarding de novos clientes",
@@ -128,8 +156,23 @@
         "skills/marketing-strategist-reasoning/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/marketing-stack-cro/SKILL.md",
-        "skills/activity-logger/SKILL.md"
-      ]
+        "skills/activity-logger/SKILL.md",
+        "skills/scoring-leads/SKILL.md"
+      ],
+      "squad_yaml": "squads/growth/squad.yaml",
+      "tasks": {
+        "analise-mercado": "squads/growth/tasks/task-analise-mercado.md",
+        "onboarding-cliente": "squads/growth/tasks/task-onboarding-cliente.md"
+      },
+      "references": {
+        "readme": "squads/growth/references/README.md",
+        "briefing-template": "squads/growth/references/briefing-template.md",
+        "contrato-site-ads-express": "squads/growth/references/Contrato de Cria#U00e7#U00e3o de Site DekSite + Campanha de Google Ads Express.md",
+        "contrato-landing-page": "squads/growth/references/Contrato de Cria#U00e7#U00e3o de Site Onepage - Landing Page.md",
+        "contrato-ads-cnpj-qualificacao": "squads/growth/references/Contrato de Tr#U00e1fego Pago CNPJ - Google Ads + Qualifica#U00e7#U00e3o Leads.md",
+        "contrato-ads-cnpj": "squads/growth/references/Contrato de Tr#U00e1fego Pago CNPJ - Google Ads.md",
+        "contrato-ads-cpf": "squads/growth/references/Contrato de Tr#U00e1fego Pago CPF- Google Ads.md"
+      }
     },
     "engineering": {
       "descricao": "Desenvolvimento de sites, landing pages e QA pre-deploy",
@@ -154,7 +197,21 @@
         "skills/api-design-principles/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/frontend-design-premium/SKILL.md",
-        "skills/activity-logger/SKILL.md"
+        "skills/activity-logger/SKILL.md",
+        "skills/envato-design-patterns/SKILL.md",
+        "skills/html-premium-stack/SKILL.md",
+        "skills/lp-conversion-bible/SKILL.md",
+        "skills/landing-page-analyzer/SPECS.md"
+      ],
+      "squad_yaml": "squads/engineering/squad.yaml",
+      "tasks": {
+        "criar-site": "squads/engineering/tasks/task-criar-site.md"
+      },
+      "references": {
+        "readme": "squads/engineering/references/README.md"
+      },
+      "workflows": [
+        ".agents/workflows/desenvolvimento-web.md"
       ]
     },
     "performance": {
@@ -174,8 +231,19 @@
       ],
       "skills": [
         "skills/context-engineering/SKILL.md",
-        "skills/activity-logger/SKILL.md"
-      ]
+        "skills/activity-logger/SKILL.md",
+        "skills/compliance-checker/SPECS.md",
+        "skills/landing-page-analyzer/SPECS.md",
+        "skills/metrics-analyzer/SPECS.md"
+      ],
+      "squad_yaml": "squads/performance/squad.yaml",
+      "tasks": {
+        "auditar-campanha": "squads/performance/task-auditar-campanha.md",
+        "estruturar-campanha": "squads/performance/tasks/task-estruturar-campanha.md"
+      },
+      "references": {
+        "readme": "squads/performance/references/README.md"
+      }
     },
     "success": {
       "descricao": "Customer success, reporting, SEO e analise de dados",
@@ -195,8 +263,20 @@
         "skills/xlsx/SKILL.md",
         "skills/pdf/SKILL.md",
         "skills/context-engineering/SKILL.md",
-        "skills/activity-logger/SKILL.md"
-      ]
+        "skills/activity-logger/SKILL.md",
+        "skills/dekreport/skill.md",
+        "skills/metrics-analyzer/SPECS.md",
+        "skills/report-generator/SPECS.md",
+        "skills/sentiment-analyzer/SPECS.md"
+      ],
+      "squad_yaml": "squads/success/squad.yaml",
+      "tasks": {
+        "gerar-relatorio": "squads/success/tasks/task-gerar-relatorio.md",
+        "seo-conteudo": "squads/success/tasks/task-seo-conteudo.md"
+      },
+      "references": {
+        "readme": "squads/success/references/README.md"
+      }
     },
     "automations": {
       "squad_yaml": "squads/automations/squad.yaml",
@@ -207,7 +287,8 @@
       },
       "tasks": {
         "criar-fluxo": "squads/automations/tasks/task-criar-fluxo.md",
-        "integrar-api": "squads/automations/tasks/task-integrar-api.md"
+        "integrar-api": "squads/automations/tasks/task-integrar-api.md",
+        "criar-automacao": "squads/automations/tasks/task-criar-automacao.md"
       },
       "checklists": {
         "fluxo-n8n": "squads/automations/checklists/checklist-fluxo-n8n.md"
@@ -222,34 +303,46 @@
         "skills/api-design-principles/SKILL.md",
         "skills/context-engineering/SKILL.md",
         "skills/n8n-expert/SKILL.md",
-        "skills/activity-logger/SKILL.md"
-      ]
+        "skills/activity-logger/SKILL.md",
+        "skills/n8n-automation/SKILL.md"
+      ],
+      "references": {
+        "readme": "squads/automations/references/README.md"
+      }
     },
     "ops": {
       "squad_yaml": "squads/ops/squad.yaml",
       "descricao": "Agentes de produtividade pessoal e criatividade do CEO",
       "agents": {
         "secretaria": "squads/ops/donna.md",
-        "leo": "squads/ops/leo.md"
+        "leo": "squads/ops/leo.md",
+        "sentinel": "squads/ops/sentinel.md"
       },
       "tasks": {
         "priorizar-dia": "squads/ops/tasks/task-priorizar-dia.md",
         "capturar-ideia": "squads/ops/tasks/task-capturar-ideia.md",
-        "analisar-ideias": "squads/ops/tasks/task-analisar-ideias.md"
+        "analisar-ideias": "squads/ops/tasks/task-analisar-ideias.md",
+        "health-check": "squads/ops/tasks/task-health-check.md"
       },
       "data": {
         "tempos-medios": "squads/ops/data/tempos-medios.json"
       },
       "skills": [
         "skills/activity-logger/SKILL.md",
-        "skills/workflow-optimizer/SKILL.md"
+        "skills/workflow-optimizer/SKILL.md",
+        "skills/activity-logger/SKILL.md",
+        "skills/workflow-optimizer/SKILL.md",
+        "skills/document-generator/SPECS.md"
       ],
       "memory": {
         "optimizer-memory": "squads/ops/memory/optimizer-memory.json"
       },
       "logs": {
         "activity-log": "squads/ops/data/activity-log.json"
-      }
+      },
+      "workflows": [
+        ".agents/workflows/inicio-rapido.md"
+      ]
     }
   },
   "workflows": {
@@ -258,7 +351,12 @@
     "diagnostico-gratuito": ".agents/workflows/diagnostico-gratuito.md",
     "onboarding-cliente": ".agents/workflows/onboarding-cliente.md",
     "criar-squad": ".agents/workflows/criar-squad.md",
-    "help": ".agents/workflows/help.md"
+    "help": ".agents/workflows/help.md",
+    "desenvolvimento-web": ".agents/workflows/desenvolvimento-web.md",
+    "inicio-rapido": ".agents/workflows/inicio-rapido.md",
+    "prospeccao-ativa": ".agents/workflows/prospeccao-ativa.md",
+    "prospeccao": ".agents/workflows/prospeccao.md",
+    "health-check": "squads/ops/tasks/task-health-check.md"
   },
   "projetos": {
     "base_path": "PROJETOS/",
@@ -274,7 +372,6 @@
       "mensagens": "PROJETOS/_prospection/mensagens-prontas/"
     },
     "cliente": {
-      "briefing": "PROJETOS/[cliente]/briefing.md",
       "referencias": "PROJETOS/[cliente]/referencias/",
       "onboarding": "PROJETOS/[cliente]/onboarding/",
       "creative": "PROJETOS/[cliente]/creative/",

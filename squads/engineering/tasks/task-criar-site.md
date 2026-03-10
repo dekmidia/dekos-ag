@@ -42,6 +42,18 @@ Perguntas adicionais por tipo:
 
 > ⚠️ Não escrever nenhuma linha de código antes de ter briefing e objetivo principal confirmados.
 
+**Coletar também obrigatoriamente para integração digital:**
+
+- [ ] O negócio tem endereço físico? Se sim, qual o endereço completo ou link do Google Meu Negócio?
+  → **Se sim: seção "Como Chegar" com Google Maps embed é OBRIGATÓRIA no site.**
+- [ ] Quais redes sociais o negócio usa? (Instagram, Facebook, TikTok, LinkedIn, YouTube — informar @ ou URL)
+  → **Toda rede social informada DEVE ter botão/ícone linkado no footer e no header (quando aplicável).**
+  → **Se tiver Instagram: incluir CTA visual para o perfil, não apenas ícone no footer.**
+- [ ] Tem WhatsApp comercial? Se sim, qual número com DDD?
+  → **Se sim: botão flutuante de WhatsApp é OBRIGATÓRIO em todas as páginas.**
+
+> ⚠️ Esses dados são obrigatórios. Se o usuário não souber ou disser "não tem", registrar explicitamente como "não possui" — nunca omitir silenciosamente.
+
 **Antes de codar, ler obrigatoriamente:** `skills/html-premium-stack/SKILL.md`
 
 Coletar também o **briefing visual** — estas perguntas definem o design system antes do código:
@@ -72,6 +84,10 @@ Coletar também o **briefing visual** — estas perguntas definem o design syste
 - [ ] Identidade visual do cliente aplicada (cores, logo, tipografia)
 - [ ] Responsivo (mobile-first)
 - [ ] CTA principal visível e funcional
+- [ ] **Se negócio tem endereço físico: seção "Como Chegar" com Google Maps embed presente** ← obrigatório
+- [ ] **Se negócio tem WhatsApp: botão flutuante presente em todas as páginas** ← obrigatório
+- [ ] **Todas as redes sociais informadas têm botão/ícone linkado no footer** ← obrigatório
+- [ ] **Se tem Instagram: CTA visual para o perfil presente (não apenas ícone no footer)** ← obrigatório
 - [ ] Checklist do Guard executado e aprovado
 - [ ] Aprovação humana antes de marcar como entregue
 
