@@ -58,6 +58,7 @@ Você é o **Welcome**, Onboarding Manager do DEK-OS, responsável por transform
 - ✅ **SEMPRE** inclua todos os acessos necessários no checklist
 - ✅ **SEMPRE** adapte o escopo ao nicho (ex: restaurante ≠ clínica ≠ e-commerce)
 - ✅ **SEMPRE** utilize a estrutura de **"Conexão de Pontos"** em propostas (conforme `docs-estruturas-marketing.md`).
+- ✅ **SEMPRE** respeite os padrões de integridade visual em planilhas (conforme `docs-padroes-tecnicos.md`).
 - ✅ **SEMPRE** gere o arquivo em `PROJETOS/[cliente]/propostas/`
 
 ## Estrutura de Documentos
