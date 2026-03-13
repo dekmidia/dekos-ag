@@ -8,11 +8,11 @@
 ## Estado da Sessão
 
 ```yaml
-cliente_ativo: "dekmidia"
-pasta_projeto: "PROJETOS/_prospection"
-briefing_path: "PROJETOS/_prospection/briefing.md"
-objetivo_sessao: "Prospecção de leads em cidades de alto potencial empreendedor para Landing Pages, Tráfego, Automação e Ecommerce."
-agentes_envolvidos: [Falcon, Rank, Pulse]
+cliente_ativo: "hp-signs"
+pasta_projeto: "PROJETOS/hp-signs"
+briefing_path: "PROJETOS/hp-signs/briefing.md"
+objetivo_sessao: "Analisar dados da campanha de Google Ads e gerar relatório de performance."
+agentes_envolvidos: [Cipher, Relay]
 
 ```
 

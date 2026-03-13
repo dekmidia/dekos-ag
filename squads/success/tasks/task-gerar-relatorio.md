@@ -10,9 +10,8 @@ output_dir: PROJETOS/[cliente]/reports/
 
 # Task: Gerar Relatório ou Análise de Dados
 
-## Intake Obrigatório
-
-Antes de qualquer ação, verificar `SESSAO_ATIVA.md`. Se `cliente_ativo` for null, perguntar ao usuário qual cliente antes de prosseguir.
+1. **Identificação do Cliente:** Verificar `SESSAO_ATIVA.md`. Se `cliente_ativo` for null, perguntar ao usuário qual cliente antes de prosseguir.
+2. **Preparação de Ambiante:** Criar imediatamente a pasta `PROJETOS/[cliente]/reports/` e `raw/` antes de qualquer solicitação de arquivo.
 
 Apresentar o menu abaixo e aguardar escolha:
 

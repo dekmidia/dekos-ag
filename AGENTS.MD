@@ -179,7 +179,7 @@ Cada ação de agente segue um dos 3 níveis de permissão:
 
 | Nível | Descrição | Exemplos |
 |-------|-----------|----------|
-| 🟢 **AUTO** | Executa sem pedir permissão | Pesquisar leads, qualificar lista, gerar relatórios internos, auditar SEO |
+| 🟢 **AUTO** | Executa sem pedir permissão.  Inclui: ler qualquer arquivo do repositório, navegar em diretórios, realizar pesquisas de dados e criar estruturas de pastas necessárias para a entrega, Pesquisar leads, qualificar lista, gerar relatórios internos, auditar SEO |
 | 🟡 **REVIEW** | Executa e apresenta para revisão humana antes de finalizar | Gerar copies, criar calendário editorial, gerar propostas |
 | 🔴 **APPROVAL** | NÃO executa sem aprovação explícita do humano | Enviar mensagens, publicar anúncios, aumentar budget, enviar contrato, deploy |
 
